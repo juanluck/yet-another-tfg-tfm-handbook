@@ -4,6 +4,7 @@ project:
   # Hacemos que el libro se genere dentro de la web existente
   output-dir: ../_site/book
 
+lang: es
 
 book:
   title: "Yet Another TFG/TFM Handbook · ETSIIT · UGR"
@@ -24,5 +25,13 @@ book:
 format:
   pdf:
     documentclass: scrbook   # aspecto de libro
+    papersize: a4
+    geometry:
+      - top=25mm
+      - bottom=25mm
+      - inner=30mm
+      - outer=20mm
     toc: true
+    toc-title: "Índice"
     number-sections: true
+    include-in-header: header.tex
