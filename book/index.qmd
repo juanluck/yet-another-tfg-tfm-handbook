@@ -1,0 +1,134 @@
+---
+title: "Yet Another TFG/TFM Handbook · ETSIIT · UGR"
+---
+
+# Yet Another TFG/TFM Handbook · ETSIIT · UGR
+
+Este libro recoge las **reglas del juego** para los TFG/TFM que dirijo en la ETSIIT de la Universidad de Granada.
+
+No pretende ser **la** guía definitiva, sino **“otro handbook más”** (*yet another handbook*) que:
+
+- Explicita cómo suelo trabajar con mis alumnos.
+- Complementa otros recursos existentes en la UGR y en la ETSIIT.
+- Sirve como referencia viva y versionada para los proyectos que dirijo.
+
+Aquí encontrarás:
+
+- Cómo organizaremos tu TFG/TFM usando **metodologías ágiles** (sprints, backlog, issues…).
+- Cómo usaremos **GitHub**:
+  - Creación de una **organización por proyecto** (con un nombre en clave, p.ej. `TempusUGR`, `PastilleroUGR`, etc.).
+  - Repositorios de código y documentación.
+  - Projects, Issues y Milestones para gestionar el trabajo.
+- Qué se espera de la **memoria del TFG/TFM** (estructura, contenido mínimo, calidad).
+
+Además, se incluye un listado de **TFG/TFM dirigidos**, con:
+
+- Un resumen de cada proyecto.
+- Enlaces a sus organizaciones de GitHub.
+- En algunos casos, el **documento de trabajo específico** que se entrega al alumno.
+
+---
+
+## Cómo usar este handbook
+
+Si vas a hacer un TFG/TFM conmigo, el flujo recomendado es:
+
+1. Leer la sección [Metodología ágil](docs/metodologia-agil.qmd) para entender cómo organizaremos el trabajo en sprints.
+2. Revisar [GitHub & organización](docs/github-organizacion.qmd) para crear la organización de tu proyecto y los repositorios mínimos.
+3. Ver [Memoria TFG/TFM](docs/memoria-tfg-tfm.qmd) para saber qué estructura se espera en la memoria.
+4. Consultar, cuando esté disponible, el **documento de trabajo específico** de tu proyecto  
+   (por ejemplo, el del TFG *Pastillero digital inteligente*).
+
+---
+
+## Libro en PDF
+
+Puedes descargar una versión en formato libro (PDF) de este handbook desde:
+
+- [Descargar libro en PDF](book/book.pdf)
+
+---
+
+## Referencias y recursos complementarios
+
+Este handbook **no sustituye** a otros materiales ya existentes en la UGR y en la ETSIIT, sino que los **complementa**.  
+Es muy recomendable que, además de leer estas páginas, revises:
+
+### Libro sobre TFG/TFM en la UGR
+
+- Disponible en la producción científica de la UGR:  
+  <https://produccioncientifica.ugr.es/documentos/67e6f8553f806d20a93a1b2a>
+
+Este libro ofrece una visión más amplia sobre:
+
+- Qué es un TFG/TFM en el contexto de la UGR.
+- Recomendaciones generales sobre redacción académica.
+- Aspectos formales, evaluación, etc.
+
+### Plantilla de TFG de JJ Merelo (ETSIIT)
+
+- Repositorio: <https://github.com/JJ/plantilla-TFG-ETSIIT>
+
+Esta plantilla es especialmente útil si:
+
+- Quieres escribir la memoria en **LaTeX**.
+- Prefieres partir de una estructura ya muy pulida y probada para TFG de la ETSIIT.
+- Te interesa ver un ejemplo de cómo automatizar parte del proceso de compilación.
+
+> **Idea práctica**:  
+> Puedes usar este handbook para la **forma de trabajar** (metodología, GitHub, planning)  
+> y, al mismo tiempo, usar la **plantilla de JJ** o el libro de la UGR como referencia para  
+> el estilo y formato de tu memoria.
+
+---
+
+## Filosofía de trabajo
+
+1. **Transparencia**  
+   Todo el trabajo relevante (código, documentación, tareas) vive en GitHub.
+
+2. **Iteración**  
+   Trabajamos con sprints cortos y entregas incrementales, evitando dejarlo todo para el final.
+
+3. **Calidad y reflexión**  
+   El objetivo no es solo “que funcione”, sino también:
+   - Que la solución tenga sentido en su contexto.
+   - Que el código sea razonablemente limpio y mantenible.
+   - Que la memoria cuente una historia coherente del proyecto.
+
+4. **Adaptación al tipo de proyecto**  
+   No todos los proyectos son iguales:
+   - En algunos habrá más peso de **desarrollo de software**.
+   - En otros, más de **experimentación, análisis de datos o investigación**.
+   Las pautas de este handbook se adaptan a esa diversidad.
+
+---
+
+## TFG/TFM dirigidos (ejemplos)
+
+En la sección **TFG/TFM dirigidos** del menú encontrarás proyectos concretos, por ejemplo:
+
+- 2024–2025 · TempusUGR
+- 2025–2026 · Pastillero digital inteligente
+
+Cada uno incluye un resumen, enlaces a su organización de GitHub y, cuando procede, su documento de trabajo.
+
+---
+
+Si algo de lo que lees aquí no encaja con tu proyecto concreto, consúltalo: este handbook es un marco general, y el **documento de trabajo específico** de cada TFG/TFM siempre tiene prioridad.
+
+## Licencia
+
+Este repositorio contiene principalmente documentación y algo de código de ejemplo.
+
+- El **contenido textual y la documentación** (ficheros `.qmd`, `.md`, descripciones, etc.) se publican bajo la licencia **Creative Commons Atribución 4.0 Internacional (CC BY 4.0)**.
+- El **código y las configuraciones** (por ejemplo, workflows de GitHub Actions y scripts) se publican bajo la licencia **MIT**.
+
+En la práctica, esto significa que puedes reutilizar, adaptar y compartir tanto la documentación como el código, incluso en contextos diferentes a la ETSIIT, siempre que:
+
+- Des el crédito adecuado al autor y a este repositorio.
+- Mantengas el aviso de licencia correspondiente (CC BY para el contenido, MIT para el código).
+- Indiques si has realizado modificaciones cuando corresponda.
+
+Para más detalles, consulta el archivo [`LICENSE`](./LICENSE) en la raíz de este repositorio.
+

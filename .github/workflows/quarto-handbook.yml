@@ -16,15 +16,17 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Set up Quarto
+      - name: Set up Quarto (with TinyTeX)
         uses: quarto-dev/quarto-actions/setup@v2
         with:
           tinytex: true
 
       - name: Render website
         run: |
-          quarto render
-          quarto render book/ --to pdf
+          quarto render                 # web (usa el _quarto.yml de la raíz)
+          quarto render book/ --to pdf  # libro PDF (usa book/_quarto.yml)
+          mkdir -p _site/book
+          cp book/_book/*.pdf _site/book/
 
       - name: Publish to gh-pages
         uses: quarto-dev/quarto-actions/publish@v2

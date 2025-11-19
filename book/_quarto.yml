@@ -13,7 +13,7 @@ book:
   # cover-image: cover.png       # si algún día quieres una imagen de portada
 
   chapters:
-    - ../index.qmd
+    - index.qmd
     - ../docs/metodologia-agil.qmd
     - ../docs/github-organizacion.qmd
     - ../docs/memoria-tfg-tfm.qmd
