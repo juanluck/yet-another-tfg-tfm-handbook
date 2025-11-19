@@ -136,9 +136,7 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#yet-another-tfgtfm-handbook-etsiit-ugr" id="toc-yet-another-tfgtfm-handbook-etsiit-ugr" class="nav-link active" data-scroll-target="#yet-another-tfgtfm-handbook-etsiit-ugr">Yet Another TFG/TFM Handbook · ETSIIT · UGR</a>
-  <ul class="collapse">
-  <li><a href="#cómo-usar-este-handbook" id="toc-cómo-usar-este-handbook" class="nav-link" data-scroll-target="#cómo-usar-este-handbook">Cómo usar este handbook</a></li>
+  <li><a href="#cómo-usar-este-handbook" id="toc-cómo-usar-este-handbook" class="nav-link active" data-scroll-target="#cómo-usar-este-handbook">Cómo usar este handbook</a></li>
   <li><a href="#libro-en-pdf" id="toc-libro-en-pdf" class="nav-link" data-scroll-target="#libro-en-pdf">Libro en PDF</a></li>
   <li><a href="#referencias-y-recursos-complementarios" id="toc-referencias-y-recursos-complementarios" class="nav-link" data-scroll-target="#referencias-y-recursos-complementarios">Referencias y recursos complementarios</a>
   <ul class="collapse">
@@ -148,7 +146,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#filosofía-de-trabajo" id="toc-filosofía-de-trabajo" class="nav-link" data-scroll-target="#filosofía-de-trabajo">Filosofía de trabajo</a></li>
   <li><a href="#tfgtfm-dirigidos-ejemplos" id="toc-tfgtfm-dirigidos-ejemplos" class="nav-link" data-scroll-target="#tfgtfm-dirigidos-ejemplos">TFG/TFM dirigidos (ejemplos)</a></li>
   <li><a href="#licencia" id="toc-licencia" class="nav-link" data-scroll-target="#licencia">Licencia</a></li>
-  </ul></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="index.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
@@ -174,8 +171,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="yet-another-tfgtfm-handbook-etsiit-ugr" class="level1">
-<h1>Yet Another TFG/TFM Handbook · ETSIIT · UGR</h1>
+<!-- # Yet Another TFG/TFM Handbook · ETSIIT · UGR -->
 <p>Este libro recoge las <strong>reglas del juego</strong> para los TFG/TFM que dirijo en la ETSIIT de la Universidad de Granada.</p>
 <p>No pretende ser <strong>la</strong> guía definitiva, sino <strong>“otro handbook más”</strong> (<em>yet another handbook</em>) que:</p>
 <ul>
@@ -309,7 +305,6 @@ No todos los proyectos son iguales:</p>
 
 
 </section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -385,7 +380,7 @@ No todos los proyectos son iguales:</p>
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp("https:\/\/juanluck\.github\.io\/yet-another-tfg-tfm-handbook\/");
+        var filterRegex = new RegExp('/' + window.location.host + '/');
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
