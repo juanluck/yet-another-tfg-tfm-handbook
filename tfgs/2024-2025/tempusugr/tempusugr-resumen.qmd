@@ -1,0 +1,33 @@
+---
+title: "TFG 2024–2025 · TempusUGR"
+format:
+  html:
+    toc: true
+---
+
+# TempusUGR: Gestión de horarios universitarios
+
+- **Curso académico**: 2024–2025  
+- **Centro**: ETSIIT · Universidad de Granada  
+- **Tipo de trabajo**: TFG · Grado en Ingeniería Informática  
+- **Director/a**: *[Nombre del director/a]*  
+- **Alumno/a**: *[Nombre del alumno/a]*  
+- **Organización GitHub**: <https://github.com/TempusUGR>
+
+---
+
+## 1. Descripción general
+
+(Aquí puede incluirse un resumen del problema y de la solución: gestión de horarios universitarios, generación de calendarios personalizados, integración con servicios externos, etc.)
+
+## 2. Objetivos
+
+(Lista breve de objetivos del proyecto, por ejemplo: facilitar la planificación de horarios, evitar solapes, ofrecer vistas personalizadas, etc.)
+
+## 3. Tecnologías utilizadas
+
+(Lista resumida de tecnologías: frameworks frontend, backend, bases de datos, servicios externos, etc.)
+
+## 4. Resultados
+
+(Breve resumen de lo conseguido: estado final del proyecto, despliegues realizados, validación con usuarios, etc.)

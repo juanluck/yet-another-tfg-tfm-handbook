@@ -1,0 +1,30 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Yet Another TFG/TFM Handbook · ETSIIT · UGR"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Inicio
+      - href: docs/metodologia-agil.qmd
+        text: Metodología ágil
+      - href: docs/github-organizacion.qmd
+        text: GitHub & organización
+      - href: docs/memoria-tfg-tfm.qmd
+        text: Memoria
+      - text: TFG/TFM dirigidos
+        menu:
+          - href: tfgs/2024-2025/tempusugr/tempusugr-resumen.qmd
+            text: 2024–2025 · TempusUGR
+          - href: tfgs/2025-2026/pastillero-inteligente/pastillero-resumen.qmd
+            text: 2025–2026 · Pastillero
+
+format:
+  html:
+    toc: true
+    theme: default
+  pdf:
+    toc: true
+    number-sections: true
