@@ -1,0 +1,25 @@
+# book/_quarto.yml
+project:
+  type: book
+  # Hacemos que el libro se genere dentro de la web existente
+  output-dir: ../_site/book
+
+book:
+  title: "Yet Another TFG/TFM Handbook · ETSIIT · UGR"
+  author: "Juan Luis Jiménez Laredo"      # cámbialo por tu nombre
+  date: "2025"
+  # Opcional: subtítulo, portada, etc.
+  subtitle: "Guía de trabajo para proyectos TFG/TFM"
+  # cover-image: cover.png       # si algún día quieres una imagen de portada
+
+  chapters:
+    - ../index.qmd
+    - ../docs/metodologia-agil.qmd
+    - ../docs/github-organizacion.qmd
+    - ../docs/memoria-tfg-tfm.qmd
+
+format:
+  pdf:
+    documentclass: scrbook   # aspecto de libro
+    toc: true
+    number-sections: true

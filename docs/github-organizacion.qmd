@@ -3,12 +3,11 @@ title: "GitHub y organización del proyecto"
 format:
   html:
     toc: true
-  pdf:
-    toc: true
-    number-sections: true
 ---
 
-# 1. Objetivo de este documento
+# GitHub y organización del proyecto
+
+## Objetivo de este documento
 
 Este documento explica **cómo organizaremos el proyecto en GitHub**:
 
@@ -22,7 +21,7 @@ Este documento explica **cómo organizaremos el proyecto en GitHub**:
 
 ---
 
-# 2. Organización de GitHub por proyecto
+## Organización de GitHub por proyecto
 
 En la mayoría de TFG/TFM que dirija seguiremos esta idea:
 
@@ -44,7 +43,7 @@ Ventajas de usar organizaciones:
 
 ---
 
-# 3. Repositorios mínimos recomendados
+## Repositorios mínimos recomendados
 
 Dentro de la organización de tu proyecto, lo normal será tener al menos:
 
@@ -80,9 +79,9 @@ En proyectos más grandes se pueden añadir más repositorios (microservicios, l
 
 ---
 
-# 4. Projects, Milestones e Issues
+## Projects, Milestones e Issues
 
-## 4.1. Milestones (hitos)
+### Milestones (hitos)
 
 Usa **milestones** para agrupar issues según fases del TFG/TFM.
 
@@ -99,7 +98,7 @@ Cada milestone debe tener:
 - Una **fecha objetivo** razonable.
 - Un conjunto de issues asignados.
 
-## 4.2. Issues (tareas)
+### Issues (tareas)
 
 Cada tarea importante del proyecto debe ser un **issue**:
 
@@ -120,7 +119,7 @@ Cada tarea importante del proyecto debe ser un **issue**:
   - Un milestone.
   - Opcionalmente, a ti mismo (siempre serás el responsable principal).
 
-## 4.3. Project (tablero Kanban)
+### Project (tablero Kanban)
 
 Crea un **Project** de GitHub (board) asociado a la organización o a un repo principal.
 
@@ -141,7 +140,7 @@ Esto permite ver de un vistazo:
 
 ---
 
-# 5. Ramificación (branches) y flujo de trabajo básico
+## Ramificación (branches) y flujo de trabajo básico
 
 No vamos a imponer un flujo Git muy complejo, pero sí se recomiendan unas pautas mínimas:
 
@@ -158,9 +157,9 @@ No vamos a imponer un flujo Git muy complejo, pero sí se recomiendan unas pauta
 
 ---
 
-# 6. Integración continua (CI): recomendada, no obligatoria
+## Integración continua (CI): recomendada, no obligatoria
 
-## 6.1. ¿Cuándo tiene sentido usar CI?
+### ¿Cuándo tiene sentido usar CI?
 
 Tiene sentido plantearse CI cuando:
 
@@ -176,7 +175,7 @@ No es obligatorio para el TFG/TFM, pero:
 - Si lo usas bien, **suma puntos** a nivel de calidad y profesionalidad.
 - Puedes tomar como referencia el workflow que usamos en este handbook (`quarto-handbook.yml`).
 
-## 6.2. Ejemplo de workflow mínimo (Python)
+### Ejemplo de workflow mínimo (Python)
 
 Este es solo un ejemplo genérico para proyectos en Python:
 
@@ -218,7 +217,7 @@ Adáptalo a:
 
 ---
 
-# 7. Checklist inicial para el alumno
+## Checklist inicial para el alumno
 
 Cuando empieces tu TFG/TFM, deberías:
 

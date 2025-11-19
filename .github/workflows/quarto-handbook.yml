@@ -18,19 +18,13 @@ jobs:
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
-
-      - name: Set up Quarto
-        uses: quarto-dev/quarto-actions/setup@v2
         with:
           tinytex: true
 
       - name: Render website
         run: |
           quarto render
-
-      - name: Render website
-        run: |
-          quarto render
+          quarto render book/ --to pdf
 
       - name: Publish to gh-pages
         uses: quarto-dev/quarto-actions/publish@v2
@@ -39,5 +33,3 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-
-          # .github/workflows/quarto-handbook.yml

@@ -3,12 +3,11 @@ title: "Memoria de TFG/TFM: estructura y recomendaciones"
 format:
   html:
     toc: true
-  pdf:
-    toc: true
-    number-sections: true
 ---
 
-# 1. Objetivo de este documento
+# Memoria de TFG/TFM: estructura y recomendaciones
+
+## Objetivo de este documento
 
 Este documento describe la **estructura recomendada** para la memoria de tu TFG/TFM y algunas pautas de calidad.
 
@@ -19,7 +18,7 @@ No sustituye a la normativa oficial de la ETSIIT o de la UGR (que siempre tiene 
 
 ---
 
-# 2. Estructura recomendada de la memoria
+## Estructura recomendada de la memoria
 
 La estructura concreta puede variar según el proyecto, pero una plantilla razonable es:
 
@@ -39,7 +38,7 @@ En los apartados siguientes se detalla qué se espera en cada sección.
 
 ---
 
-# 3. Introducción
+## Introducción
 
 La introducción debe responder, en pocas páginas, a:
 
@@ -56,7 +55,7 @@ Elementos recomendados:
 
 ---
 
-# 4. Contexto y estado del arte
+## Contexto y estado del arte
 
 Aquí debes:
 
@@ -81,15 +80,15 @@ En proyectos más “experimentales”:
 
 ---
 
-# 5. Objetivos y alcance
+## Objetivos y alcance
 
 Aunque hayas mencionado los objetivos en la introducción, aquí se formalizan:
 
-## 5.1. Objetivo general
+### Objetivo general
 
 - Una frase que describa el propósito principal del TFG/TFM.
 
-## 5.2. Objetivos específicos
+### Objetivos específicos
 
 - Lista numerada de objetivos concretos (3–7 es un rango razonable).
 
@@ -99,7 +98,7 @@ Ejemplo genérico:
 - Evaluar el rendimiento / precisión / usabilidad de…
 - Integrar X y Y para demostrar que…
 
-## 5.3. Alcance y limitaciones
+### Alcance y limitaciones
 
 - ¿Qué **sí** se va a hacer?
 - ¿Qué **no** entra en el alcance (límites del TFG/TFM)?
@@ -107,7 +106,7 @@ Ejemplo genérico:
 
 ---
 
-# 6. Metodología
+## Metodología
 
 En este capítulo se explica **cómo** se ha trabajado:
 
@@ -128,7 +127,7 @@ Si tu proyecto utiliza técnicas específicas (p.ej. DCU, experimentos controlad
 
 ---
 
-# 7. Análisis y requisitos
+## Análisis y requisitos
 
 En esta sección se pasa del problema general a requisitos concretos.
 
@@ -147,7 +146,7 @@ Recomendaciones:
 
 ---
 
-# 8. Diseño y arquitectura
+## Diseño y arquitectura
 
 Aquí se describe **cómo se ha diseñado la solución**, sin entrar todavía en detalles de código.
 
@@ -175,7 +174,7 @@ Objetivo: que alguien con conocimientos técnicos pueda entender la forma genera
 
 ---
 
-# 9. Implementación
+## Implementación
 
 En este capítulo cuentas **cómo se ha materializado el diseño en código**.
 
@@ -198,7 +197,7 @@ No es necesario mostrar todo el código, pero sí:
 
 ---
 
-# 10. Evaluación / experimentación
+## Evaluación / experimentación
 
 Este capítulo responde a:
 
@@ -229,7 +228,7 @@ Recomendaciones:
 
 ---
 
-# 11. Conclusiones y trabajo futuro
+## Conclusiones y trabajo futuro
 
 En este capítulo cierras el proyecto:
 
@@ -247,7 +246,7 @@ En este capítulo cierras el proyecto:
 
 ---
 
-# 12. Referencias
+## Referencias
 
 Se recomienda:
 
@@ -261,7 +260,7 @@ Asegúrate de:
 
 ---
 
-# 13. Anexos
+## Anexos
 
 En los anexos puedes incluir:
 
@@ -275,7 +274,7 @@ La idea es que la memoria principal no quede saturada, pero la información nece
 
 ---
 
-# 14. Recomendaciones prácticas
+## Recomendaciones prácticas
 
 - **No dejes la memoria para el final**:
   - Ve escribiendo en paralelo.
@@ -289,11 +288,11 @@ La memoria es parte esencial de la evaluación: no solo importa el producto fina
 
 ---
 
-# 15. Recursos complementarios recomendados
+## Recursos complementarios recomendados
 
 Además de este handbook, es muy recomendable que consultes otros recursos ya existentes en la UGR y en la ETSIIT, especialmente para profundizar en la parte **formal** de la memoria:
 
-## 15.1. Libro sobre TFG/TFM en la UGR
+### Libro sobre TFG/TFM en la UGR
 
 - Publicación disponible en la producción científica de la UGR:  
   <https://produccioncientifica.ugr.es/documentos/67e6f8553f806d20a93a1b2a>
@@ -304,7 +303,7 @@ Este libro ofrece:
 - Recomendaciones sobre estructura, estilo y redacción académica.
 - Pautas sobre evaluación y aspectos formales.
 
-## 15.2. Plantilla de TFG de JJ Merelo (ETSIIT)
+### Plantilla de TFG de JJ Merelo (ETSIIT)
 
 - Repositorio: <https://github.com/JJ/plantilla-TFG-ETSIIT>
 
