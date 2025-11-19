@@ -1,8 +1,13 @@
 ---
-title: "Yet Another TFG/TFM Handbook · ETSIIT · UGR"
+title: "Introducción"
 ---
 
-<!-- # Yet Another TFG/TFM Handbook · ETSIIT · UGR -->
+::: {.callout-warning}
+## Importante
+
+Este handbook **no es la guía oficial** de TFG/TFM de la ETSIIT ni de la UGR, ni sustituye a la normativa vigente del centro.  
+Es simplemente *“otro handbook más”* que documenta **cómo suelo trabajar con mis alumnos** y ofrece un marco práctico de referencia.
+:::
 
 Este libro recoge las **reglas del juego** para los TFG/TFM que dirijo en la ETSIIT de la Universidad de Granada.
 
@@ -21,11 +26,22 @@ Aquí encontrarás:
   - Projects, Issues y Milestones para gestionar el trabajo.
 - Qué se espera de la **memoria del TFG/TFM** (estructura, contenido mínimo, calidad).
 
-Además, se incluye un listado de **TFG/TFM dirigidos**, con:
+Este texto forma parte de la versión en formato **libro / PDF** del handbook. Existe también una versión web generada con Quarto que presenta el mismo contenido de forma navegable.
 
-- Un resumen de cada proyecto.
-- Enlaces a sus organizaciones de GitHub.
-- En algunos casos, el **documento de trabajo específico** que se entrega al alumno.
+---
+
+## A quién va dirigido este handbook
+
+Este material está pensado principalmente para:
+
+- Estudiantes de la ETSIIT que van a realizar un **TFG o TFM** conmigo como director (o co-director).
+- Estudiantes que quieran ver **un ejemplo concreto** de cómo estructurar un proyecto de fin de estudios en Ingeniería Informática usando GitHub y metodologías ágiles.
+- Cualquier persona interesada en:
+  - Aplicar enfoques ágiles en proyectos individuales.
+  - Organizar proyectos en GitHub de forma ordenada.
+  - Entender qué se espera de la **memoria** de un TFG/TFM de ingeniería.
+
+En caso de duda o conflicto, la **normativa oficial** de la UGR y de la ETSIIT siempre tiene prioridad sobre lo que se describe aquí.
 
 ---
 
@@ -33,19 +49,22 @@ Además, se incluye un listado de **TFG/TFM dirigidos**, con:
 
 Si vas a hacer un TFG/TFM conmigo, el flujo recomendado es:
 
-1. Leer la sección [Metodología ágil](docs/metodologia-agil.qmd) para entender cómo organizaremos el trabajo en sprints.
-2. Revisar [GitHub & organización](docs/github-organizacion.qmd) para crear la organización de tu proyecto y los repositorios mínimos.
-3. Ver [Memoria TFG/TFM](docs/memoria-tfg-tfm.qmd) para saber qué estructura se espera en la memoria.
+1. Leer la sección [Metodología ágil](../docs/metodologia-agil.qmd) para entender cómo organizaremos el trabajo en sprints.
+2. Revisar [GitHub & organización](../docs/github-organizacion.qmd) para crear la organización de tu proyecto y los repositorios mínimos.
+3. Ver [Memoria TFG/TFM](../docs/memoria-tfg-tfm.qmd) para saber qué estructura se espera en la memoria.
 4. Consultar, cuando esté disponible, el **documento de trabajo específico** de tu proyecto  
    (por ejemplo, el del TFG *Pastillero digital inteligente*).
 
----
+::: {.callout-tip}
+## Primeros pasos recomendados
 
-## Libro en PDF
-
-Puedes descargar una versión en formato libro (PDF) de este handbook desde:
-
-- [Descargar libro en PDF](handbook-tfg-tfm-etsiit-ugr.pdf)
+1. Crea la **organización de GitHub** de tu proyecto con un nombre en clave (por ejemplo, `PastilleroUGR`).
+2. Crea al menos:
+   - Un repositorio para el **código**.
+   - Un repositorio para la **documentación/memoria**.
+3. Configura un **Project** con columnas tipo `Backlog`, `En curso`, `Hecho` y crea los primeros *issues* de tareas.
+4. Abre y revisa regularmente tu **documento de trabajo específico** para mantener alineadas las expectativas con el director.
+:::
 
 ---
 
@@ -75,10 +94,13 @@ Esta plantilla es especialmente útil si:
 - Prefieres partir de una estructura ya muy pulida y probada para TFG de la ETSIIT.
 - Te interesa ver un ejemplo de cómo automatizar parte del proceso de compilación.
 
-> **Idea práctica**:  
-> Puedes usar este handbook para la **forma de trabajar** (metodología, GitHub, planning)  
-> y, al mismo tiempo, usar la **plantilla de JJ** o el libro de la UGR como referencia para  
-> el estilo y formato de tu memoria.
+::: {.callout-tip}
+## Idea práctica
+
+Puedes usar este handbook para la **forma de trabajar** (metodología, GitHub, planificación)  
+y, al mismo tiempo, usar la **plantilla de JJ** o el libro de la UGR como referencia para  
+el estilo y formato de tu memoria.
+:::
 
 ---
 
@@ -106,20 +128,20 @@ Esta plantilla es especialmente útil si:
 
 ## TFG/TFM dirigidos (ejemplos)
 
-En la sección **TFG/TFM dirigidos** del menú encontrarás proyectos concretos, por ejemplo:
+En la versión web de este handbook se incluye una sección de **TFG/TFM dirigidos**, donde se enlazan proyectos concretos, por ejemplo:
 
 - 2024–2025 · TempusUGR
 - 2025–2026 · Pastillero digital inteligente
 
-Cada uno incluye un resumen, enlaces a su organización de GitHub y, cuando procede, su documento de trabajo.
+Cada uno incluye un resumen, enlaces a su organización de GitHub y, cuando procede, su documento de trabajo específico.
+
+En el contexto del libro en PDF puedes usar esa sección como referencia cruzada para consultar ejemplos reales en la versión web.
 
 ---
 
-Si algo de lo que lees aquí no encaja con tu proyecto concreto, consúltalo: este handbook es un marco general, y el **documento de trabajo específico** de cada TFG/TFM siempre tiene prioridad.
-
 ## Licencia
 
-Este repositorio contiene principalmente documentación y algo de código de ejemplo.
+Este handbook contiene principalmente documentación y algo de código de ejemplo.
 
 - El **contenido textual y la documentación** (ficheros `.qmd`, `.md`, descripciones, etc.) se publican bajo la licencia **Creative Commons Atribución 4.0 Internacional (CC BY 4.0)**.
 - El **código y las configuraciones** (por ejemplo, workflows de GitHub Actions y scripts) se publican bajo la licencia **MIT**.
@@ -130,5 +152,4 @@ En la práctica, esto significa que puedes reutilizar, adaptar y compartir tanto
 - Mantengas el aviso de licencia correspondiente (CC BY para el contenido, MIT para el código).
 - Indiques si has realizado modificaciones cuando corresponda.
 
-Para más detalles, consulta el archivo [`LICENSE`](./LICENSE) en la raíz de este repositorio.
-
+Para más detalles, consulta el archivo de licencia incluido en el repositorio original del que se genera este libro `https://github.com/juanluck/yet-another-tfg-tfm-handbook`.
