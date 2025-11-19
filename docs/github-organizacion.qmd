@@ -3,6 +3,9 @@ title: "GitHub y organización del proyecto"
 format:
   html:
     toc: true
+  pdf:
+    toc: true
+    number-sections: true
 ---
 
 # 1. Objetivo de este documento
