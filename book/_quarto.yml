@@ -34,6 +34,7 @@ format:
     toc: true
     toc-title: "Índice"
     number-sections: true
+    keep-tex: true          # <- importante
     include-in-header: header.tex
     include-before-body:
       text: |
