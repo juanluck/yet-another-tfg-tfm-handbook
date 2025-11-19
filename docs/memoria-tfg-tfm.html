@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.26">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Memoria de TFG/TFM: estructura y recomendaciones – Yet Another TFG/TFM Handbook · ETSIIT · UGR</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-8fd1faf6fd93e4e6d207ae0f9db51d78.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Yet Another TFG/TFM Handbook · ETSIIT · UGR</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Inicio</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../docs/metodologia-agil.html"> 
+<span class="menu-text">Metodología ágil</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../docs/github-organizacion.html"> 
+<span class="menu-text">GitHub &amp; organización</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../docs/memoria-tfg-tfm.html" aria-current="page"> 
+<span class="menu-text">Memoria</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-tfgtfm-dirigidos" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">TFG/TFM dirigidos</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-tfgtfm-dirigidos">    
+        <li>
+    <a class="dropdown-item" href="../tfgs/2024-2025/tempusugr/tempusugr-resumen.html">
+ <span class="dropdown-text">2024–2025 · TempusUGR</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../tfgs/2025-2026/pastillero-inteligente/pastillero-resumen.html">
+ <span class="dropdown-text">2025–2026 · Pastillero</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#objetivo-de-este-documento" id="toc-objetivo-de-este-documento" class="nav-link active" data-scroll-target="#objetivo-de-este-documento">1. Objetivo de este documento</a></li>
+  <li><a href="#estructura-recomendada-de-la-memoria" id="toc-estructura-recomendada-de-la-memoria" class="nav-link" data-scroll-target="#estructura-recomendada-de-la-memoria">2. Estructura recomendada de la memoria</a></li>
+  <li><a href="#introducción" id="toc-introducción" class="nav-link" data-scroll-target="#introducción">3. Introducción</a></li>
+  <li><a href="#contexto-y-estado-del-arte" id="toc-contexto-y-estado-del-arte" class="nav-link" data-scroll-target="#contexto-y-estado-del-arte">4. Contexto y estado del arte</a></li>
+  <li><a href="#objetivos-y-alcance" id="toc-objetivos-y-alcance" class="nav-link" data-scroll-target="#objetivos-y-alcance">5. Objetivos y alcance</a>
+  <ul class="collapse">
+  <li><a href="#objetivo-general" id="toc-objetivo-general" class="nav-link" data-scroll-target="#objetivo-general">5.1. Objetivo general</a></li>
+  <li><a href="#objetivos-específicos" id="toc-objetivos-específicos" class="nav-link" data-scroll-target="#objetivos-específicos">5.2. Objetivos específicos</a></li>
+  <li><a href="#alcance-y-limitaciones" id="toc-alcance-y-limitaciones" class="nav-link" data-scroll-target="#alcance-y-limitaciones">5.3. Alcance y limitaciones</a></li>
+  </ul></li>
+  <li><a href="#metodología" id="toc-metodología" class="nav-link" data-scroll-target="#metodología">6. Metodología</a></li>
+  <li><a href="#análisis-y-requisitos" id="toc-análisis-y-requisitos" class="nav-link" data-scroll-target="#análisis-y-requisitos">7. Análisis y requisitos</a></li>
+  <li><a href="#diseño-y-arquitectura" id="toc-diseño-y-arquitectura" class="nav-link" data-scroll-target="#diseño-y-arquitectura">8. Diseño y arquitectura</a></li>
+  <li><a href="#implementación" id="toc-implementación" class="nav-link" data-scroll-target="#implementación">9. Implementación</a></li>
+  <li><a href="#evaluación-experimentación" id="toc-evaluación-experimentación" class="nav-link" data-scroll-target="#evaluación-experimentación">10. Evaluación / experimentación</a></li>
+  <li><a href="#conclusiones-y-trabajo-futuro" id="toc-conclusiones-y-trabajo-futuro" class="nav-link" data-scroll-target="#conclusiones-y-trabajo-futuro">11. Conclusiones y trabajo futuro</a></li>
+  <li><a href="#referencias" id="toc-referencias" class="nav-link" data-scroll-target="#referencias">12. Referencias</a></li>
+  <li><a href="#anexos" id="toc-anexos" class="nav-link" data-scroll-target="#anexos">13. Anexos</a></li>
+  <li><a href="#recomendaciones-prácticas" id="toc-recomendaciones-prácticas" class="nav-link" data-scroll-target="#recomendaciones-prácticas">14. Recomendaciones prácticas</a></li>
+  <li><a href="#recursos-complementarios-recomendados" id="toc-recursos-complementarios-recomendados" class="nav-link" data-scroll-target="#recursos-complementarios-recomendados">15. Recursos complementarios recomendados</a>
+  <ul class="collapse">
+  <li><a href="#libro-sobre-tfgtfm-en-la-ugr" id="toc-libro-sobre-tfgtfm-en-la-ugr" class="nav-link" data-scroll-target="#libro-sobre-tfgtfm-en-la-ugr">15.1. Libro sobre TFG/TFM en la UGR</a></li>
+  <li><a href="#plantilla-de-tfg-de-jj-merelo-etsiit" id="toc-plantilla-de-tfg-de-jj-merelo-etsiit" class="nav-link" data-scroll-target="#plantilla-de-tfg-de-jj-merelo-etsiit">15.2. Plantilla de TFG de JJ Merelo (ETSIIT)</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Memoria de TFG/TFM: estructura y recomendaciones</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="objetivo-de-este-documento" class="level1">
+<h1>1. Objetivo de este documento</h1>
+<p>Este documento describe la <strong>estructura recomendada</strong> para la memoria de tu TFG/TFM y algunas pautas de calidad.</p>
+<p>No sustituye a la normativa oficial de la ETSIIT o de la UGR (que siempre tiene prioridad), pero:</p>
+<ul>
+<li>Te da una estructura base razonable para la mayoría de proyectos de Ingeniería Informática.</li>
+<li>Te ayuda a no dejar la memoria para el último momento: la idea es que se vaya <strong>escribiendo en paralelo</strong> al desarrollo.</li>
+</ul>
+<hr>
+</section>
+<section id="estructura-recomendada-de-la-memoria" class="level1">
+<h1>2. Estructura recomendada de la memoria</h1>
+<p>La estructura concreta puede variar según el proyecto, pero una plantilla razonable es:</p>
+<ol type="1">
+<li><strong>Introducción</strong></li>
+<li><strong>Contexto y estado del arte</strong></li>
+<li><strong>Objetivos y alcance del proyecto</strong></li>
+<li><strong>Metodología</strong></li>
+<li><strong>Análisis y requisitos</strong></li>
+<li><strong>Diseño (y arquitectura)</strong></li>
+<li><strong>Implementación</strong></li>
+<li><strong>Evaluación / Experimentación</strong></li>
+<li><strong>Conclusiones y trabajo futuro</strong></li>
+<li><strong>Referencias</strong></li>
+<li><strong>Anexos</strong></li>
+</ol>
+<p>En los apartados siguientes se detalla qué se espera en cada sección.</p>
+<hr>
+</section>
+<section id="introducción" class="level1">
+<h1>3. Introducción</h1>
+<p>La introducción debe responder, en pocas páginas, a:</p>
+<ul>
+<li>¿Cuál es el <strong>problema</strong> que aborda el proyecto?</li>
+<li>¿Por qué es <strong>relevante</strong>?</li>
+<li>¿Cuál es la <strong>situación previa</strong> (muy resumida)?</li>
+<li>¿Qué se pretende conseguir con este TFG/TFM?</li>
+</ul>
+<p>Elementos recomendados:</p>
+<ul>
+<li>Breve contexto (sin todavía entrar a fondo en el estado del arte).</li>
+<li>Objetivo general del trabajo (una frase clara).</li>
+<li>Estructura de la memoria (describir brevemente qué contiene cada capítulo).</li>
+</ul>
+<hr>
+</section>
+<section id="contexto-y-estado-del-arte" class="level1">
+<h1>4. Contexto y estado del arte</h1>
+<p>Aquí debes:</p>
+<ul>
+<li>Analizar el contexto técnico y/o social del problema.</li>
+<li>Revisar trabajos relacionados, herramientas, librerías, sistemas similares, etc.</li>
+</ul>
+<p>Recomendaciones:</p>
+<ul>
+<li>Agrupa los trabajos por temática (no hagas una lista sin hilo conductor).</li>
+<li>Compara y discute:
+<ul>
+<li>En qué se parecen a tu propuesta.</li>
+<li>En qué se diferencian.</li>
+<li>Qué hueco deja libre el estado del arte que tu TFG/TFM intenta cubrir.</li>
+</ul></li>
+</ul>
+<p>En proyectos basados en software:</p>
+<ul>
+<li>Puedes analizar soluciones comerciales, proyectos open source, frameworks, etc.</li>
+</ul>
+<p>En proyectos más “experimentales”:</p>
+<ul>
+<li>Puedes centrarse en técnicas, algoritmos, metodologías previas.</li>
+</ul>
+<hr>
+</section>
+<section id="objetivos-y-alcance" class="level1">
+<h1>5. Objetivos y alcance</h1>
+<p>Aunque hayas mencionado los objetivos en la introducción, aquí se formalizan:</p>
+<section id="objetivo-general" class="level2">
+<h2 class="anchored" data-anchor-id="objetivo-general">5.1. Objetivo general</h2>
+<ul>
+<li>Una frase que describa el propósito principal del TFG/TFM.</li>
+</ul>
+</section>
+<section id="objetivos-específicos" class="level2">
+<h2 class="anchored" data-anchor-id="objetivos-específicos">5.2. Objetivos específicos</h2>
+<ul>
+<li>Lista numerada de objetivos concretos (3–7 es un rango razonable).</li>
+</ul>
+<p>Ejemplo genérico:</p>
+<ul>
+<li>Diseñar e implementar una aplicación que…</li>
+<li>Evaluar el rendimiento / precisión / usabilidad de…</li>
+<li>Integrar X y Y para demostrar que…</li>
+</ul>
+</section>
+<section id="alcance-y-limitaciones" class="level2">
+<h2 class="anchored" data-anchor-id="alcance-y-limitaciones">5.3. Alcance y limitaciones</h2>
+<ul>
+<li>¿Qué <strong>sí</strong> se va a hacer?</li>
+<li>¿Qué <strong>no</strong> entra en el alcance (límites del TFG/TFM)?</li>
+<li>Justificar las decisiones (tiempo, complejidad, etc.).</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="metodología" class="level1">
+<h1>6. Metodología</h1>
+<p>En este capítulo se explica <strong>cómo</strong> se ha trabajado:</p>
+<ul>
+<li>Metodologías de desarrollo (por ejemplo, enfoque ágil).</li>
+<li>Metodologías de investigación o experimentación (si aplica).</li>
+<li>En proyectos con personas usuarias:
+<ul>
+<li>Cómo se han realizado entrevistas, tests de usabilidad, encuestas, etc.</li>
+</ul></li>
+</ul>
+<p>Recomendaciones:</p>
+<ul>
+<li>No basta con mencionar “Scrum” o “Kanban”: describe <strong>cómo lo has adaptado</strong> a tu TFG/TFM.</li>
+<li>Incluye:
+<ul>
+<li>Cómo has organizado los sprints.</li>
+<li>Qué artefactos has usado (backlog, Project, issues).</li>
+<li>Cómo se han planificado y revisado los hitos.</li>
+</ul></li>
+</ul>
+<p>Si tu proyecto utiliza técnicas específicas (p.ej. DCU, experimentos controlados, etc.), descríbelas aquí o en subapartados.</p>
+<hr>
+</section>
+<section id="análisis-y-requisitos" class="level1">
+<h1>7. Análisis y requisitos</h1>
+<p>En esta sección se pasa del problema general a requisitos concretos.</p>
+<p>Contenido típico:</p>
+<ul>
+<li>Perfiles de usuario y casos de uso (cuando tiene sentido).</li>
+<li>Historias de usuario (si se usa este enfoque).</li>
+<li>Requisitos funcionales y no funcionales:
+<ul>
+<li>Funcionales: qué debe hacer el sistema.</li>
+<li>No funcionales: rendimiento, seguridad, usabilidad, escalabilidad, etc.</li>
+</ul></li>
+</ul>
+<p>Recomendaciones:</p>
+<ul>
+<li>No te limites a una lista plana: organiza por áreas funcionales.</li>
+<li>Asegúrate de que los requisitos estén relacionados con los objetivos del proyecto.</li>
+</ul>
+<hr>
+</section>
+<section id="diseño-y-arquitectura" class="level1">
+<h1>8. Diseño y arquitectura</h1>
+<p>Aquí se describe <strong>cómo se ha diseñado la solución</strong>, sin entrar todavía en detalles de código.</p>
+<p>Secciones típicas:</p>
+<ol type="1">
+<li><strong>Arquitectura de alto nivel</strong>
+<ul>
+<li>Componentes principales.</li>
+<li>Cómo se comunican.</li>
+<li>Tecnologías elegidas (a alto nivel) y justificación.</li>
+</ul></li>
+<li><strong>Modelo de datos</strong>
+<ul>
+<li>Esquemas de base de datos.</li>
+<li>Diagramas de clases / entidades.</li>
+</ul></li>
+<li><strong>Diseño de la interacción y la interfaz (si aplica)</strong>
+<ul>
+<li>Flujos de usuario.</li>
+<li>Wireframes, prototipos.</li>
+<li>Decisiones de diseño importantes (por ejemplo, por accesibilidad).</li>
+</ul></li>
+<li><strong>Diseño de API o servicios (si aplica)</strong>
+<ul>
+<li>Endpoints principales.</li>
+<li>Formato de datos (JSON, etc.).</li>
+</ul></li>
+</ol>
+<p>Objetivo: que alguien con conocimientos técnicos pueda entender la forma general de tu solución sin mirar el código.</p>
+<hr>
+</section>
+<section id="implementación" class="level1">
+<h1>9. Implementación</h1>
+<p>En este capítulo cuentas <strong>cómo se ha materializado el diseño en código</strong>.</p>
+<p>Secciones típicas:</p>
+<ul>
+<li>Descripción de los módulos más importantes:
+<ul>
+<li>Qué hacen.</li>
+<li>Cómo se relacionan.</li>
+</ul></li>
+<li>Tecnologías concretas utilizadas:
+<ul>
+<li>Lenguajes, frameworks, librerías clave.</li>
+</ul></li>
+<li>Decisiones técnicas relevantes:
+<ul>
+<li>P.ej., por qué se eligió un framework frente a otro.</li>
+</ul></li>
+<li>Problemas encontrados y cómo se han resuelto.</li>
+</ul>
+<p>No es necesario mostrar todo el código, pero sí:</p>
+<ul>
+<li>Fragmentos representativos.</li>
+<li>Ejemplos de uso.</li>
+<li>Referencias al repositorio en GitHub cuando sea relevante.</li>
+</ul>
+<hr>
+</section>
+<section id="evaluación-experimentación" class="level1">
+<h1>10. Evaluación / experimentación</h1>
+<p>Este capítulo responde a:</p>
+<blockquote class="blockquote">
+<p>¿Qué tan bien funciona lo que has hecho?</p>
+</blockquote>
+<p>Según el tipo de proyecto:</p>
+<ul>
+<li><strong>Aplicación de usuario final</strong>:
+<ul>
+<li>Pruebas de usabilidad.</li>
+<li>Pruebas de rendimiento, tiempos de respuesta, etc.</li>
+</ul></li>
+<li><strong>Proyecto de ciencia de datos / IA</strong>:
+<ul>
+<li>Diseño de experimentos.</li>
+<li>Conjuntos de datos utilizados.</li>
+<li>Métricas y resultados (precisión, recall, F1, etc.).</li>
+</ul></li>
+<li><strong>Proyecto de infraestructura / sistemas</strong>:
+<ul>
+<li>Pruebas de carga, mediciones de latencia, disponibilidad, etc.</li>
+</ul></li>
+</ul>
+<p>Recomendaciones:</p>
+<ul>
+<li>Describe la metodología de evaluación:
+<ul>
+<li>Cómo se han diseñado los tests.</li>
+<li>Qué métricas se han elegido y por qué.</li>
+</ul></li>
+<li>Presenta resultados de forma clara:
+<ul>
+<li>Tablas y gráficos.</li>
+<li>Comentarios y análisis crítico (no solo “estos son los números”).</li>
+</ul></li>
+</ul>
+<hr>
+</section>
+<section id="conclusiones-y-trabajo-futuro" class="level1">
+<h1>11. Conclusiones y trabajo futuro</h1>
+<p>En este capítulo cierras el proyecto:</p>
+<ul>
+<li><strong>Resumen de lo conseguido</strong>:
+<ul>
+<li>Repasar objetivos y explicar en qué grado se han cumplido.</li>
+</ul></li>
+<li><strong>Principales aportaciones</strong>:
+<ul>
+<li>Técnicas, de diseño, de integración, etc.</li>
+</ul></li>
+<li><strong>Limitaciones</strong>:
+<ul>
+<li>Qué no se ha podido hacer y por qué.</li>
+</ul></li>
+<li><strong>Líneas de trabajo futuro</strong>:
+<ul>
+<li>Qué caminos razonables quedan abiertos:
+<ul>
+<li>Mejora de la solución.</li>
+<li>Ampliación a otros contextos.</li>
+<li>Integración con sistemas externos, etc.</li>
+</ul></li>
+</ul></li>
+</ul>
+<hr>
+</section>
+<section id="referencias" class="level1">
+<h1>12. Referencias</h1>
+<p>Se recomienda:</p>
+<ul>
+<li>Usar un gestor de referencias (BibTeX, Zotero, etc.).</li>
+<li>Mantener un estilo homogéneo (APA, IEEE, etc., según la normativa del centro).</li>
+</ul>
+<p>Asegúrate de:</p>
+<ul>
+<li>Citar correctamente todo trabajo previo que utilices.</li>
+<li>No abusar de enlaces sin contexto: mejor referencias formales cuando sea posible.</li>
+</ul>
+<hr>
+</section>
+<section id="anexos" class="level1">
+<h1>13. Anexos</h1>
+<p>En los anexos puedes incluir:</p>
+<ul>
+<li>Diagramas detallados.</li>
+<li>Especificaciones técnicas extensas.</li>
+<li>Cuestionarios, guiones de entrevistas.</li>
+<li>Listados largos de código (si son imprescindibles).</li>
+<li>Manuales de usuario, etc.</li>
+</ul>
+<p>La idea es que la memoria principal no quede saturada, pero la información necesaria para reproducir resultados o entender detalles esté disponible.</p>
+<hr>
+</section>
+<section id="recomendaciones-prácticas" class="level1">
+<h1>14. Recomendaciones prácticas</h1>
+<ul>
+<li><strong>No dejes la memoria para el final</strong>:
+<ul>
+<li>Ve escribiendo en paralelo.</li>
+<li>Puedes usar issues/tareas específicas del tipo “Escribir sección X”.</li>
+</ul></li>
+<li><strong>Escribe pensando en alguien que no estuvo contigo</strong> durante el TFG/TFM:
+<ul>
+<li>Que pueda entender qué has hecho, por qué y cómo.</li>
+</ul></li>
+<li><strong>Coherencia interna</strong>:
+<ul>
+<li>Asegúrate de que objetivos, metodología, resultados y conclusiones encajan entre sí.</li>
+</ul></li>
+</ul>
+<p>La memoria es parte esencial de la evaluación: no solo importa el producto final, sino también <strong>cómo cuentas el proceso y los resultados</strong>.</p>
+<hr>
+</section>
+<section id="recursos-complementarios-recomendados" class="level1">
+<h1>15. Recursos complementarios recomendados</h1>
+<p>Además de este handbook, es muy recomendable que consultes otros recursos ya existentes en la UGR y en la ETSIIT, especialmente para profundizar en la parte <strong>formal</strong> de la memoria:</p>
+<section id="libro-sobre-tfgtfm-en-la-ugr" class="level2">
+<h2 class="anchored" data-anchor-id="libro-sobre-tfgtfm-en-la-ugr">15.1. Libro sobre TFG/TFM en la UGR</h2>
+<ul>
+<li>Publicación disponible en la producción científica de la UGR:<br>
+<a href="https://produccioncientifica.ugr.es/documentos/67e6f8553f806d20a93a1b2a" class="uri">https://produccioncientifica.ugr.es/documentos/67e6f8553f806d20a93a1b2a</a></li>
+</ul>
+<p>Este libro ofrece:</p>
+<ul>
+<li>Una visión general de qué es un TFG/TFM en el contexto de la UGR.</li>
+<li>Recomendaciones sobre estructura, estilo y redacción académica.</li>
+<li>Pautas sobre evaluación y aspectos formales.</li>
+</ul>
+</section>
+<section id="plantilla-de-tfg-de-jj-merelo-etsiit" class="level2">
+<h2 class="anchored" data-anchor-id="plantilla-de-tfg-de-jj-merelo-etsiit">15.2. Plantilla de TFG de JJ Merelo (ETSIIT)</h2>
+<ul>
+<li>Repositorio: <a href="https://github.com/JJ/plantilla-TFG-ETSIIT" class="uri">https://github.com/JJ/plantilla-TFG-ETSIIT</a></li>
+</ul>
+<p>Es especialmente útil si:</p>
+<ul>
+<li>Quieres escribir la memoria en <strong>LaTeX</strong>.</li>
+<li>Prefieres partir de una plantilla ya adaptada a la ETSIIT.</li>
+<li>Te interesa ver un ejemplo de automatización del proceso de compilación.</li>
+</ul>
+<p>Puedes usar:</p>
+<ul>
+<li>Este documento como guía sobre <strong>qué</strong> debe contener la memoria y cómo organizarla.</li>
+<li>El libro de la UGR y la plantilla de JJ como referencia para el <strong>formato</strong>, el estilo y buenas prácticas de redacción académica.</li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/juanluck\.github\.io\/yet-another-tfg-tfm-handbook\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
