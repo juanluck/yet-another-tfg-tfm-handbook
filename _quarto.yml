@@ -25,6 +25,7 @@ format:
   html:
     toc: true
     theme: default
+    include-in-header: fa.html
   pdf:
     toc: true
     number-sections: true

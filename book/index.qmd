@@ -1,6 +1,9 @@
 ---
-title: "Introducción"
+title: ""
 ---
+
+# `\faBook{}`{=latex} `<i class="fa fa-info-circle" aria-hidden="true"></i>`{=html} Introducción <!-- {-} -->
+
 
 ::: {.callout-warning}
 ## Importante
