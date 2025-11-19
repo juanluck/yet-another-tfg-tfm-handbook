@@ -4,245 +4,175 @@
     "href": "docs/github-organizacion.html",
     "title": "GitHub y organización del proyecto",
     "section": "",
+    "text": "Este documento explica cómo organizaremos el proyecto en GitHub:\n\nCreación de una organización por proyecto (en lugar de usar tu cuenta personal).\nEstructura recomendada de repositorios.\nUso de Projects, Issues y Milestones para gestionar el trabajo.\nRecomendaciones generales sobre integración continua (CI).\n\n\nLa CI se propone como opción recomendada, no obligatoria: tú decides si la aplicas en tu TFG/TFM.\nEn este handbook sí se usa CI para generar la web, y puedes tomarlo como ejemplo.\n\n\n\n\n\nEn la mayoría de TFG/TFM que dirija seguiremos esta idea:\n\nCrear una organización específica en GitHub para el proyecto.\nEl nombre será un nombre en clave, no tu nombre personal.\n\nEjemplos de nombres de organización:\n\nTempusUGR\nPastilleroUGR\nHorarioUGR\nSenseUGR\n\nVentajas de usar organizaciones:\n\nPuedes agrupar varios repositorios (código, documentación, infraestructura…).\nEs más fácil colaborar con otras personas (añadir miembros con distintos permisos).\nEl resultado final queda más limpio y “profesional” que un repo suelto en una cuenta personal.\n\n\n\n\n\nDentro de la organización de tu proyecto, lo normal será tener al menos:\n\nRepositorio de código principal\nEjemplos:\n\npastillero-app\ntempus-frontend, tempus-backend\n\nEstructura típica:\nsrc/          # Código fuente\ntests/        # Tests automatizados (si aplica)\ndocs/         # Documentación específica de ese repo (si la hay)\n.github/\n  workflows/  # Workflows de CI (opcional)\nREADME.md\nRepositorio de documentación/memoria\nPor ejemplo:\n\npastillero-docs\ntempus-docs\n\nAquí puedes guardar:\n\nMemoria del TFG/TFM (en LaTeX, Quarto, etc.).\nAnexos.\nDiagramas, figuras, datos, etc.\n\n\nEn proyectos más grandes se pueden añadir más repositorios (microservicios, librerías comunes, etc.), pero para un TFG/TFM normal con estos dos suele ser suficiente.\n\n\n\n\n\n\nUsa milestones para agrupar issues según fases del TFG/TFM.\nEjemplo de milestones:\n\nM1 - Análisis y planificación\nM2 - Diseño / arquitectura\nM3 - Implementación MVP\nM4 - Evaluación\nM5 - Cierre y memoria\n\nCada milestone debe tener:\n\nUna fecha objetivo razonable.\nUn conjunto de issues asignados.\n\n\n\n\nCada tarea importante del proyecto debe ser un issue:\n\nUsa títulos claros, por ejemplo:\n\nDefinir historias de usuario iniciales\nDiseñar modelo de datos\nImplementar pantalla de toma de medicación\nEscribir sección 3. Metodología de la memoria\n\nAñade una descripción breve:\n\nQué se espera conseguir.\nCriterios de aceptación (cuando tenga sentido).\n\nEtiquetas recomendadas:\n\nbackend, frontend, documentation, research, ui-ux, bug, enhancement, etc.\n\nAsigna el issue a:\n\nUn milestone.\nOpcionalmente, a ti mismo (siempre serás el responsable principal).\n\n\n\n\n\nCrea un Project de GitHub (board) asociado a la organización o a un repo principal.\nConfiguración mínima:\n\nColumnas:\n\nBacklog\nEn curso\nEn revisión\nHecho\n\n\nCada issue se añade al Project y se mueve de columna según su estado.\nEsto permite ver de un vistazo:\n\nQué tareas hay pendientes.\nQué estás haciendo ahora.\nQué está ya terminado.\n\n\n\n\n\n\nNo vamos a imponer un flujo Git muy complejo, pero sí se recomiendan unas pautas mínimas:\n\nMantener una rama principal (main o master) siempre en estado estable.\nPara cambios medianos/grandes:\n\nCrear una rama de feature, por ejemplo:\n\nfeature/pantalla-tomas\nfeature/modelo-datos\n\nHacer commits en esa rama.\nCrear un pull request (PR) a main cuando esté listo.\n\nSi trabajas solo, puedes auto-mergear el PR, pero:\n\nEl PR sirve como “paquete” de cambios.\nPuedes usar la descripción del PR para documentar qué has hecho.\n\n\n\n\n\n\n\n\nTiene sentido plantearse CI cuando:\n\nTienes una batería de tests automatizados (unitarios, de integración, etc.).\nEl proyecto va a crecer o quieres mantener cierta disciplina técnica.\nQuieres automatizar tareas repetitivas:\n\nEjecutar tests en cada push.\nGenerar informes.\n(Opcional) Generar builds o documentación.\n\n\nNo es obligatorio para el TFG/TFM, pero:\n\nSi lo usas bien, suma puntos a nivel de calidad y profesionalidad.\nPuedes tomar como referencia el workflow que usamos en este handbook (quarto-handbook.yml).\n\n\n\n\nEste es solo un ejemplo genérico para proyectos en Python:\n# .github/workflows/tests.yml\nname: Run tests\n\non:\n  push:\n    branches: [ main ]\n  pull_request:\n\njobs:\n  test:\n    runs-on: ubuntu-latest\n\n    steps:\n      - name: Checkout\n        uses: actions/checkout@v4\n\n      - name: Set up Python\n        uses: actions/setup-python@v5\n        with:\n          python-version: \"3.11\"\n\n      - name: Install dependencies\n        run: |\n          pip install -r requirements.txt\n\n      - name: Run tests\n        run: |\n          pytest\nAdáptalo a:\n\nNode/TypeScript, Java, etc., según el stack de tu proyecto.\nSolo si realmente vas a usar tests.\n\n\n\n\n\n\nCuando empieces tu TFG/TFM, deberías:\n\nCrear la organización de GitHub con un nombre en clave del proyecto.\n\nCrear al menos:\n\nUn repositorio para el código.\nUn repositorio para la documentación/memoria.\n\nConfigurar un Project (tablero) y los primeros milestones.\nCrear los primeros issues de backlog (a partir del documento de trabajo y de las conversaciones con el director).\nDocumentar en el README del repositorio principal:\n\nObjetivo del proyecto.\nCómo ejecutar el código.\nTecnologías principales.\n\n\nLa integración continua (CI) es recomendable pero opcional:\n[ ] Si decides usarla, crea un workflow sencillo para lanzar tests o validaciones básicas en cada push."
+  },
+  {
+    "objectID": "docs/github-organizacion.html#objetivo-de-este-documento",
+    "href": "docs/github-organizacion.html#objetivo-de-este-documento",
+    "title": "GitHub y organización del proyecto",
+    "section": "",
     "text": "Este documento explica cómo organizaremos el proyecto en GitHub:\n\nCreación de una organización por proyecto (en lugar de usar tu cuenta personal).\nEstructura recomendada de repositorios.\nUso de Projects, Issues y Milestones para gestionar el trabajo.\nRecomendaciones generales sobre integración continua (CI).\n\n\nLa CI se propone como opción recomendada, no obligatoria: tú decides si la aplicas en tu TFG/TFM.\nEn este handbook sí se usa CI para generar la web, y puedes tomarlo como ejemplo."
   },
   {
-    "objectID": "docs/github-organizacion.html#milestones-hitos",
-    "href": "docs/github-organizacion.html#milestones-hitos",
+    "objectID": "docs/github-organizacion.html#organización-de-github-por-proyecto",
+    "href": "docs/github-organizacion.html#organización-de-github-por-proyecto",
     "title": "GitHub y organización del proyecto",
-    "section": "4.1. Milestones (hitos)",
-    "text": "4.1. Milestones (hitos)\nUsa milestones para agrupar issues según fases del TFG/TFM.\nEjemplo de milestones:\n\nM1 - Análisis y planificación\nM2 - Diseño / arquitectura\nM3 - Implementación MVP\nM4 - Evaluación\nM5 - Cierre y memoria\n\nCada milestone debe tener:\n\nUna fecha objetivo razonable.\nUn conjunto de issues asignados."
+    "section": "",
+    "text": "En la mayoría de TFG/TFM que dirija seguiremos esta idea:\n\nCrear una organización específica en GitHub para el proyecto.\nEl nombre será un nombre en clave, no tu nombre personal.\n\nEjemplos de nombres de organización:\n\nTempusUGR\nPastilleroUGR\nHorarioUGR\nSenseUGR\n\nVentajas de usar organizaciones:\n\nPuedes agrupar varios repositorios (código, documentación, infraestructura…).\nEs más fácil colaborar con otras personas (añadir miembros con distintos permisos).\nEl resultado final queda más limpio y “profesional” que un repo suelto en una cuenta personal."
   },
   {
-    "objectID": "docs/github-organizacion.html#issues-tareas",
-    "href": "docs/github-organizacion.html#issues-tareas",
+    "objectID": "docs/github-organizacion.html#repositorios-mínimos-recomendados",
+    "href": "docs/github-organizacion.html#repositorios-mínimos-recomendados",
     "title": "GitHub y organización del proyecto",
-    "section": "4.2. Issues (tareas)",
-    "text": "4.2. Issues (tareas)\nCada tarea importante del proyecto debe ser un issue:\n\nUsa títulos claros, por ejemplo:\n\nDefinir historias de usuario iniciales\nDiseñar modelo de datos\nImplementar pantalla de toma de medicación\nEscribir sección 3. Metodología de la memoria\n\nAñade una descripción breve:\n\nQué se espera conseguir.\nCriterios de aceptación (cuando tenga sentido).\n\nEtiquetas recomendadas:\n\nbackend, frontend, documentation, research, ui-ux, bug, enhancement, etc.\n\nAsigna el issue a:\n\nUn milestone.\nOpcionalmente, a ti mismo (siempre serás el responsable principal)."
+    "section": "",
+    "text": "Dentro de la organización de tu proyecto, lo normal será tener al menos:\n\nRepositorio de código principal\nEjemplos:\n\npastillero-app\ntempus-frontend, tempus-backend\n\nEstructura típica:\nsrc/          # Código fuente\ntests/        # Tests automatizados (si aplica)\ndocs/         # Documentación específica de ese repo (si la hay)\n.github/\n  workflows/  # Workflows de CI (opcional)\nREADME.md\nRepositorio de documentación/memoria\nPor ejemplo:\n\npastillero-docs\ntempus-docs\n\nAquí puedes guardar:\n\nMemoria del TFG/TFM (en LaTeX, Quarto, etc.).\nAnexos.\nDiagramas, figuras, datos, etc.\n\n\nEn proyectos más grandes se pueden añadir más repositorios (microservicios, librerías comunes, etc.), pero para un TFG/TFM normal con estos dos suele ser suficiente."
   },
   {
-    "objectID": "docs/github-organizacion.html#project-tablero-kanban",
-    "href": "docs/github-organizacion.html#project-tablero-kanban",
+    "objectID": "docs/github-organizacion.html#projects-milestones-e-issues",
+    "href": "docs/github-organizacion.html#projects-milestones-e-issues",
     "title": "GitHub y organización del proyecto",
-    "section": "4.3. Project (tablero Kanban)",
-    "text": "4.3. Project (tablero Kanban)\nCrea un Project de GitHub (board) asociado a la organización o a un repo principal.\nConfiguración mínima:\n\nColumnas:\n\nBacklog\nEn curso\nEn revisión\nHecho\n\n\nCada issue se añade al Project y se mueve de columna según su estado.\nEsto permite ver de un vistazo:\n\nQué tareas hay pendientes.\nQué estás haciendo ahora.\nQué está ya terminado."
+    "section": "",
+    "text": "Usa milestones para agrupar issues según fases del TFG/TFM.\nEjemplo de milestones:\n\nM1 - Análisis y planificación\nM2 - Diseño / arquitectura\nM3 - Implementación MVP\nM4 - Evaluación\nM5 - Cierre y memoria\n\nCada milestone debe tener:\n\nUna fecha objetivo razonable.\nUn conjunto de issues asignados.\n\n\n\n\nCada tarea importante del proyecto debe ser un issue:\n\nUsa títulos claros, por ejemplo:\n\nDefinir historias de usuario iniciales\nDiseñar modelo de datos\nImplementar pantalla de toma de medicación\nEscribir sección 3. Metodología de la memoria\n\nAñade una descripción breve:\n\nQué se espera conseguir.\nCriterios de aceptación (cuando tenga sentido).\n\nEtiquetas recomendadas:\n\nbackend, frontend, documentation, research, ui-ux, bug, enhancement, etc.\n\nAsigna el issue a:\n\nUn milestone.\nOpcionalmente, a ti mismo (siempre serás el responsable principal).\n\n\n\n\n\nCrea un Project de GitHub (board) asociado a la organización o a un repo principal.\nConfiguración mínima:\n\nColumnas:\n\nBacklog\nEn curso\nEn revisión\nHecho\n\n\nCada issue se añade al Project y se mueve de columna según su estado.\nEsto permite ver de un vistazo:\n\nQué tareas hay pendientes.\nQué estás haciendo ahora.\nQué está ya terminado."
   },
   {
-    "objectID": "docs/github-organizacion.html#cuándo-tiene-sentido-usar-ci",
-    "href": "docs/github-organizacion.html#cuándo-tiene-sentido-usar-ci",
+    "objectID": "docs/github-organizacion.html#ramificación-branches-y-flujo-de-trabajo-básico",
+    "href": "docs/github-organizacion.html#ramificación-branches-y-flujo-de-trabajo-básico",
     "title": "GitHub y organización del proyecto",
-    "section": "6.1. ¿Cuándo tiene sentido usar CI?",
-    "text": "6.1. ¿Cuándo tiene sentido usar CI?\nTiene sentido plantearse CI cuando:\n\nTienes una batería de tests automatizados (unitarios, de integración, etc.).\nEl proyecto va a crecer o quieres mantener cierta disciplina técnica.\nQuieres automatizar tareas repetitivas:\n\nEjecutar tests en cada push.\nGenerar informes.\n(Opcional) Generar builds o documentación.\n\n\nNo es obligatorio para el TFG/TFM, pero:\n\nSi lo usas bien, suma puntos a nivel de calidad y profesionalidad.\nPuedes tomar como referencia el workflow que usamos en este handbook (quarto-handbook.yml)."
+    "section": "",
+    "text": "No vamos a imponer un flujo Git muy complejo, pero sí se recomiendan unas pautas mínimas:\n\nMantener una rama principal (main o master) siempre en estado estable.\nPara cambios medianos/grandes:\n\nCrear una rama de feature, por ejemplo:\n\nfeature/pantalla-tomas\nfeature/modelo-datos\n\nHacer commits en esa rama.\nCrear un pull request (PR) a main cuando esté listo.\n\nSi trabajas solo, puedes auto-mergear el PR, pero:\n\nEl PR sirve como “paquete” de cambios.\nPuedes usar la descripción del PR para documentar qué has hecho."
   },
   {
-    "objectID": "docs/github-organizacion.html#ejemplo-de-workflow-mínimo-python",
-    "href": "docs/github-organizacion.html#ejemplo-de-workflow-mínimo-python",
+    "objectID": "docs/github-organizacion.html#integración-continua-ci-recomendada-no-obligatoria",
+    "href": "docs/github-organizacion.html#integración-continua-ci-recomendada-no-obligatoria",
     "title": "GitHub y organización del proyecto",
-    "section": "6.2. Ejemplo de workflow mínimo (Python)",
-    "text": "6.2. Ejemplo de workflow mínimo (Python)\nEste es solo un ejemplo genérico para proyectos en Python:\n# .github/workflows/tests.yml\nname: Run tests\n\non:\n  push:\n    branches: [ main ]\n  pull_request:\n\njobs:\n  test:\n    runs-on: ubuntu-latest\n\n    steps:\n      - name: Checkout\n        uses: actions/checkout@v4\n\n      - name: Set up Python\n        uses: actions/setup-python@v5\n        with:\n          python-version: \"3.11\"\n\n      - name: Install dependencies\n        run: |\n          pip install -r requirements.txt\n\n      - name: Run tests\n        run: |\n          pytest\nAdáptalo a:\n\nNode/TypeScript, Java, etc., según el stack de tu proyecto.\nSolo si realmente vas a usar tests."
+    "section": "",
+    "text": "Tiene sentido plantearse CI cuando:\n\nTienes una batería de tests automatizados (unitarios, de integración, etc.).\nEl proyecto va a crecer o quieres mantener cierta disciplina técnica.\nQuieres automatizar tareas repetitivas:\n\nEjecutar tests en cada push.\nGenerar informes.\n(Opcional) Generar builds o documentación.\n\n\nNo es obligatorio para el TFG/TFM, pero:\n\nSi lo usas bien, suma puntos a nivel de calidad y profesionalidad.\nPuedes tomar como referencia el workflow que usamos en este handbook (quarto-handbook.yml).\n\n\n\n\nEste es solo un ejemplo genérico para proyectos en Python:\n# .github/workflows/tests.yml\nname: Run tests\n\non:\n  push:\n    branches: [ main ]\n  pull_request:\n\njobs:\n  test:\n    runs-on: ubuntu-latest\n\n    steps:\n      - name: Checkout\n        uses: actions/checkout@v4\n\n      - name: Set up Python\n        uses: actions/setup-python@v5\n        with:\n          python-version: \"3.11\"\n\n      - name: Install dependencies\n        run: |\n          pip install -r requirements.txt\n\n      - name: Run tests\n        run: |\n          pytest\nAdáptalo a:\n\nNode/TypeScript, Java, etc., según el stack de tu proyecto.\nSolo si realmente vas a usar tests."
+  },
+  {
+    "objectID": "docs/github-organizacion.html#checklist-inicial-para-el-alumno",
+    "href": "docs/github-organizacion.html#checklist-inicial-para-el-alumno",
+    "title": "GitHub y organización del proyecto",
+    "section": "",
+    "text": "Cuando empieces tu TFG/TFM, deberías:\n\nCrear la organización de GitHub con un nombre en clave del proyecto.\n\nCrear al menos:\n\nUn repositorio para el código.\nUn repositorio para la documentación/memoria.\n\nConfigurar un Project (tablero) y los primeros milestones.\nCrear los primeros issues de backlog (a partir del documento de trabajo y de las conversaciones con el director).\nDocumentar en el README del repositorio principal:\n\nObjetivo del proyecto.\nCómo ejecutar el código.\nTecnologías principales.\n\n\nLa integración continua (CI) es recomendable pero opcional:\n[ ] Si decides usarla, crea un workflow sencillo para lanzar tests o validaciones básicas en cada push."
   },
   {
     "objectID": "docs/metodologia-agil.html",
     "href": "docs/metodologia-agil.html",
     "title": "Metodología ágil para TFG/TFM",
     "section": "",
+    "text": "Este documento explica cómo trabajaremos tu TFG/TFM usando metodologías ágiles (Scrum/Kanban ligeros) en el contexto de la ETSIIT (UGR).\nNo define la metodología concreta de tu proyecto (eso irá en tu documento de trabajo específico), sino el marco general:\n\nCómo organizamos el trabajo en iteraciones.\nQué artefactos esperamos (backlog, issues, milestones…).\nCómo usamos GitHub para gestionar el proyecto.\nQué se espera de ti antes, durante y después de cada sprint.\n\n\n\n\n\nEn un TFG/TFM no tenemos un equipo grande, sino:\n\nUna persona que desarrolla (tú, el alumno).\nUna o varias personas que dirigen/guían (director/a, co-directores).\n\nPor tanto, usamos una versión reducida y pragmática de metodologías ágiles:\n\nTrabajamos en sprints cortos (1–2 semanas).\nMantenemos un backlog de tareas (issues en GitHub).\nPlanificamos y revisamos el trabajo de forma iterativa.\nEl objetivo de cada sprint es tener algo enseñable (prototipo, módulo, experimento, capítulo de la memoria, etc.).\n\nNo buscamos cumplir Scrum “al pie de la letra”, sino quedarnos con lo que aporta valor en un TFG/TFM.\n\n\n\n\nEn este contexto, los roles se mapean así:\n\n\n\nEres responsable de:\n\nPlanificar tu trabajo por sprints.\nMantener el backlog y actualizar el estado de las tareas.\nDesarrollar código, realizar experimentos, escribir documentación.\nPreparar las demos/entregables de cada sprint.\n\n\n\n\n\n\nActúa como una especie de Product Owner:\n\nAyuda a definir y priorizar objetivos.\nDa feedback sobre lo entregado.\nValida el alcance del proyecto y si se cumplen los objetivos del TFG/TFM.\n\n\n\n\n\nSegún el proyecto, puede haber:\n\nUsuarios finales.\nOtros profesores o grupos de investigación.\nColaboradores externos (empresas, ayuntamientos, etc.).\n\nSu presencia e implicación se definirá en tu documento de trabajo específico.\n\n\n\n\n\nTrabajaremos principalmente con:\n\nOrganización de GitHub específica de tu proyecto.\nUno o varios repositorios (código, documentación…).\nUn Project de GitHub (tablero Kanban).\nIssues y milestones para gestionar tareas e hitos.\n\n\nLos detalles prácticos (cómo crear la organización, repos, Projects, etc.) están en\nGitHub & organización.\n\n\n\nEl backlog es la lista de todo lo que vamos a hacer:\n\nHistorias de usuario (si tu proyecto las usa).\nTareas técnicas (configurar CI, escribir tests, refactorizar código, etc.).\nTareas de documentación (escribir secciones de la memoria, preparar gráficos).\nTareas de evaluación (diseñar experimentos, preparar cuestionarios, etc.).\n\nEn la práctica:\n\nCada elemento del backlog es un issue de GitHub.\nDeberían tener etiquetas (backend, frontend, documentation, research, etc.).\nSe asignan a milestones (hitos) y se van moviendo en tu tablero Project.\n\n\n\n\nRecomendamos definir milestones asociados a fases del TFG/TFM. Ejemplo típico:\n\nM1 – Análisis y planificación inicial\nM2 – Diseño / arquitectura\nM3 – Implementación del MVP\nM4 – Evaluación / experimentación\nM5 – Cierre y memoria\n\nCada milestone tiene:\n\nUna fecha objetivo.\nUn conjunto de issues que deben completarse para considerarlo cumplido.\n\n\n\n\nUtilizaremos un Project (tablero Kanban) para visualizar el estado de las tareas.\n\nColumnas típicas:\n\nBacklog\nEn curso\nEn revisión\nHecho\n\n\nCada issue se mueve de columna según su estado.\nEsto ayuda a ver de un vistazo en qué estás trabajando y qué queda pendiente.\n\n\n\n\n\n\n\nEn general:\n\nSprints de 1 o 2 semanas funcionan bien para un TFG/TFM.\nLa duración exacta se acuerda al inicio del proyecto (y se puede ajustar).\n\n\n\n\nCada sprint debería incluir, como mínimo:\n\nPlanning (inicio de sprint)\n\nRevisar el backlog con el director (cuando sea posible).\nElegir qué issues se abordarán en el sprint.\nDefinir un objetivo claro para las próximas 1–2 semanas.\n\nEjecución\n\nDesarrollar código, experimentar, escribir memoria, etc.\nCrear issues si surgen nuevas tareas.\nMantener el Project actualizado.\n\nRevisión\n\nPreparar una demo o resumen de lo hecho (pantallazos, prototipo, resultados preliminares, sección de memoria redactada…).\nComentar con el director:\n\nQué se ha conseguido.\nQué ha bloqueado o retrasado trabajo.\n\n\nRetrospectiva informal\n\nReflexionar brevemente:\n\n¿Qué ha ido bien?\n¿Qué no?\n¿Qué cambiarás en el siguiente sprint?\n\n\n\nNo hace falta que esto sea pesado: puede ser un mensaje estructurado o una breve reunión.\n\n\n\n\nSprint (2 semanas)\nObjetivo: tener un prototipo funcional de las pantallas principales.\nTareas (issues):\n- Diseñar wireframes de la pantalla de inicio.\n- Implementar la navegación básica entre pantallas.\n- Crear la estructura básica del proyecto (repositorio, dependencias).\n- Documentar las decisiones de diseño en el repositorio de documentación.\nEntregable:\n- Repositorio con app que navega entre pantallas básicas.\n- Documento con capturas y explicación del flujo.\n\n\n\n\n\n\nAunque trabajemos con sprints, normalmente podemos distinguir varias fases:\n\n\n\nLectura del enunciado y asignación de TFG/TFM.\nRevisión de documentación inicial y trabajo relacionado.\nDefinición del alcance preliminar con el director.\nCreación de:\n\nOrganización de GitHub.\nRepositorios iniciales.\nProject y primeros milestones.\n\nRedacción y/o revisión del documento de trabajo específico del TFG/TFM.\n\n\n\n\n\nDiseño de arquitectura (software, hardware o ambos).\nDiseño de modelos de datos, APIs, flujos, etc.\nPlan de experimentación/evaluación si aplica.\nInicio de redacción de capítulos de la memoria (no esperes al final).\n\n\n\n\n\nDesarrollo de un MVP (mínimo producto viable) lo antes posible.\nIteraciones sobre funcionalidades, diseño, rendimiento, etc.\nTests básicos (unitarios, de integración, manuales).\n\n\n\n\n\nPruebas con usuarios, datasets, benchmarks… según el tipo de proyecto.\nAnálisis de resultados.\nRefinamiento de la solución (ajustes de rendimiento, usabilidad, etc.).\n\n\n\n\n\nConsolidación del código (limpieza, documentación interna).\nRedacción final de la memoria y anexos.\nPreparación de la defensa (presentación, demo, etc.).\n\nEstas fases no son lineales: se solapan y se revisan, pero sirven como guía para tus milestones.\n\n\n\n\n\n\n\nIndependientemente de que uses CI o no, se espera:\n\nCódigo razonablemente estructurado, legible y documentado.\nAlgún tipo de pruebas:\n\nUnitarias y/o de integración (según el tipo de proyecto).\nPruebas manuales reproducibles (pasos claros).\n\nUn repositorio con una mínima organización:\n\nsrc/, tests/, docs/, etc.\nUn README que explique cómo ejecutar el proyecto.\n\n\n\n\n\nLa integración continua no es obligatoria, pero se recomienda cuando:\n\nEl proyecto tiene cierto tamaño/ complejidad.\nSe pueden automatizar:\n\nEjecución de tests.\nAnálisis estático (linters).\nGeneración de documentación.\n\n\nSi decides usar CI:\n\nLo habitual es usar GitHub Actions.\nConfigurar al menos un workflow que:\n\nSe ejecute en cada push o pull request.\nLance tests y/o linters.\n\n\nEn el handbook (repositorio del propio handbook) sí se usa CI para generar la web, y puedes tomarlo como ejemplo, pero no es requisito que repliques exactamente esa configuración en tu proyecto.\n\n\n\n\n\nPara que la metodología ágil funcione mínimamente, es importante:\n\nAcotar una frecuencia de contacto razonable con el director (por ejemplo, cada 2–3 semanas).\nAntes de cada reunión, preparar:\n\nQué has hecho (issues cerrados, demos).\nQué problemas has encontrado.\nQué te propones hacer en el siguiente periodo.\n\n\nUna buena práctica es:\n\nAbrir un issue tipo “Informe de sprint N” donde:\n\nResumas los avances.\nEnlaces a commits, PRs, capturas de pantalla, etc.\nAnotes dudas para la reunión.\n\n\n\n\n\n\nTodo lo anterior es el marco general.\nPara tu proyecto concreto:\n\nRecibirás un documento de trabajo (en este mismo handbook), por ejemplo:\n\npastillero-doc-trabajo.qmd para el TFG del pastillero inteligente.\n\nEse documento:\n\nDetalla la metodología específica (por ejemplo, si se usa DCU, técnicas concretas de evaluación, etc.).\nAterriza los requisitos, la arquitectura y el planning de tu proyecto.\nSe irá actualizando si es necesario (versionado en Git).\n\n\nSiempre que tengas dudas entre lo genérico (este documento) y lo específico de tu TFG/TFM, prima lo que se indique en tu documento de trabajo concreto, o consulta al director."
+  },
+  {
+    "objectID": "docs/metodologia-agil.html#objetivo-de-este-documento",
+    "href": "docs/metodologia-agil.html#objetivo-de-este-documento",
+    "title": "Metodología ágil para TFG/TFM",
+    "section": "",
     "text": "Este documento explica cómo trabajaremos tu TFG/TFM usando metodologías ágiles (Scrum/Kanban ligeros) en el contexto de la ETSIIT (UGR).\nNo define la metodología concreta de tu proyecto (eso irá en tu documento de trabajo específico), sino el marco general:\n\nCómo organizamos el trabajo en iteraciones.\nQué artefactos esperamos (backlog, issues, milestones…).\nCómo usamos GitHub para gestionar el proyecto.\nQué se espera de ti antes, durante y después de cada sprint."
   },
   {
-    "objectID": "docs/metodologia-agil.html#alumnoa-equipo-de-desarrollo",
-    "href": "docs/metodologia-agil.html#alumnoa-equipo-de-desarrollo",
+    "objectID": "docs/metodologia-agil.html#enfoque-general-ágil-adaptado-a-tfgtfm",
+    "href": "docs/metodologia-agil.html#enfoque-general-ágil-adaptado-a-tfgtfm",
     "title": "Metodología ágil para TFG/TFM",
-    "section": "3.1. Alumno/a (equipo de desarrollo)",
-    "text": "3.1. Alumno/a (equipo de desarrollo)\n\nEres responsable de:\n\nPlanificar tu trabajo por sprints.\nMantener el backlog y actualizar el estado de las tareas.\nDesarrollar código, realizar experimentos, escribir documentación.\nPreparar las demos/entregables de cada sprint."
-  },
-  {
-    "objectID": "docs/metodologia-agil.html#directora-product-owner",
-    "href": "docs/metodologia-agil.html#directora-product-owner",
-    "title": "Metodología ágil para TFG/TFM",
-    "section": "3.2. Director/a (Product Owner)",
-    "text": "3.2. Director/a (Product Owner)\n\nActúa como una especie de Product Owner:\n\nAyuda a definir y priorizar objetivos.\nDa feedback sobre lo entregado.\nValida el alcance del proyecto y si se cumplen los objetivos del TFG/TFM."
-  },
-  {
-    "objectID": "docs/metodologia-agil.html#otros-actores-stakeholders",
-    "href": "docs/metodologia-agil.html#otros-actores-stakeholders",
-    "title": "Metodología ágil para TFG/TFM",
-    "section": "3.3. Otros actores (stakeholders)",
-    "text": "3.3. Otros actores (stakeholders)\nSegún el proyecto, puede haber:\n\nUsuarios finales.\nOtros profesores o grupos de investigación.\nColaboradores externos (empresas, ayuntamientos, etc.).\n\nSu presencia e implicación se definirá en tu documento de trabajo específico."
-  },
-  {
-    "objectID": "docs/metodologia-agil.html#backlog-de-producto",
-    "href": "docs/metodologia-agil.html#backlog-de-producto",
-    "title": "Metodología ágil para TFG/TFM",
-    "section": "4.1. Backlog de producto",
-    "text": "4.1. Backlog de producto\nEl backlog es la lista de todo lo que vamos a hacer:\n\nHistorias de usuario (si tu proyecto las usa).\nTareas técnicas (configurar CI, escribir tests, refactorizar código, etc.).\nTareas de documentación (escribir secciones de la memoria, preparar gráficos).\nTareas de evaluación (diseñar experimentos, preparar cuestionarios, etc.).\n\nEn la práctica:\n\nCada elemento del backlog es un issue de GitHub.\nDeberían tener etiquetas (backend, frontend, documentation, research, etc.).\nSe asignan a milestones (hitos) y se van moviendo en tu tablero Project."
-  },
-  {
-    "objectID": "docs/metodologia-agil.html#milestones-hitos",
-    "href": "docs/metodologia-agil.html#milestones-hitos",
-    "title": "Metodología ágil para TFG/TFM",
-    "section": "4.2. Milestones (hitos)",
-    "text": "4.2. Milestones (hitos)\nRecomendamos definir milestones asociados a fases del TFG/TFM. Ejemplo típico:\n\nM1 – Análisis y planificación inicial\nM2 – Diseño / arquitectura\nM3 – Implementación del MVP\nM4 – Evaluación / experimentación\nM5 – Cierre y memoria\n\nCada milestone tiene:\n\nUna fecha objetivo.\nUn conjunto de issues que deben completarse para considerarlo cumplido."
-  },
-  {
-    "objectID": "docs/metodologia-agil.html#tablero-project-en-github",
-    "href": "docs/metodologia-agil.html#tablero-project-en-github",
-    "title": "Metodología ágil para TFG/TFM",
-    "section": "4.3. Tablero (Project) en GitHub",
-    "text": "4.3. Tablero (Project) en GitHub\nUtilizaremos un Project (tablero Kanban) para visualizar el estado de las tareas.\n\nColumnas típicas:\n\nBacklog\nEn curso\nEn revisión\nHecho\n\n\nCada issue se mueve de columna según su estado.\nEsto ayuda a ver de un vistazo en qué estás trabajando y qué queda pendiente."
-  },
-  {
-    "objectID": "docs/metodologia-agil.html#duración",
-    "href": "docs/metodologia-agil.html#duración",
-    "title": "Metodología ágil para TFG/TFM",
-    "section": "5.1. Duración",
-    "text": "5.1. Duración\nEn general:\n\nSprints de 1 o 2 semanas funcionan bien para un TFG/TFM.\nLa duración exacta se acuerda al inicio del proyecto (y se puede ajustar)."
-  },
-  {
-    "objectID": "docs/metodologia-agil.html#estructura-de-un-sprint",
-    "href": "docs/metodologia-agil.html#estructura-de-un-sprint",
-    "title": "Metodología ágil para TFG/TFM",
-    "section": "5.2. Estructura de un sprint",
-    "text": "5.2. Estructura de un sprint\nCada sprint debería incluir, como mínimo:\n\nPlanning (inicio de sprint)\n\nRevisar el backlog con el director (cuando sea posible).\nElegir qué issues se abordarán en el sprint.\nDefinir un objetivo claro para las próximas 1–2 semanas.\n\nEjecución\n\nDesarrollar código, experimentar, escribir memoria, etc.\nCrear issues si surgen nuevas tareas.\nMantener el Project actualizado.\n\nRevisión\n\nPreparar una demo o resumen de lo hecho (pantallazos, prototipo, resultados preliminares, sección de memoria redactada…).\nComentar con el director:\n\nQué se ha conseguido.\nQué ha bloqueado o retrasado trabajo.\n\n\nRetrospectiva informal\n\nReflexionar brevemente:\n\n¿Qué ha ido bien?\n¿Qué no?\n¿Qué cambiarás en el siguiente sprint?\n\n\n\nNo hace falta que esto sea pesado: puede ser un mensaje estructurado o una breve reunión."
-  },
-  {
-    "objectID": "docs/metodologia-agil.html#ejemplo-de-sprint-típico",
-    "href": "docs/metodologia-agil.html#ejemplo-de-sprint-típico",
-    "title": "Metodología ágil para TFG/TFM",
-    "section": "5.3. Ejemplo de sprint típico",
-    "text": "5.3. Ejemplo de sprint típico\n\nSprint (2 semanas)\nObjetivo: tener un prototipo funcional de las pantallas principales.\nTareas (issues):\n- Diseñar wireframes de la pantalla de inicio.\n- Implementar la navegación básica entre pantallas.\n- Crear la estructura básica del proyecto (repositorio, dependencias).\n- Documentar las decisiones de diseño en el repositorio de documentación.\nEntregable:\n- Repositorio con app que navega entre pantallas básicas.\n- Documento con capturas y explicación del flujo."
-  },
-  {
-    "objectID": "docs/metodologia-agil.html#fase-1-arranque-y-planificación",
-    "href": "docs/metodologia-agil.html#fase-1-arranque-y-planificación",
-    "title": "Metodología ágil para TFG/TFM",
-    "section": "6.1. Fase 1: Arranque y planificación",
-    "text": "6.1. Fase 1: Arranque y planificación\n\nLectura del enunciado y asignación de TFG/TFM.\nRevisión de documentación inicial y trabajo relacionado.\nDefinición del alcance preliminar con el director.\nCreación de:\n\nOrganización de GitHub.\nRepositorios iniciales.\nProject y primeros milestones.\n\nRedacción y/o revisión del documento de trabajo específico del TFG/TFM."
-  },
-  {
-    "objectID": "docs/metodologia-agil.html#fase-2-diseño-preparación",
-    "href": "docs/metodologia-agil.html#fase-2-diseño-preparación",
-    "title": "Metodología ágil para TFG/TFM",
-    "section": "6.2. Fase 2: Diseño / preparación",
-    "text": "6.2. Fase 2: Diseño / preparación\n\nDiseño de arquitectura (software, hardware o ambos).\nDiseño de modelos de datos, APIs, flujos, etc.\nPlan de experimentación/evaluación si aplica.\nInicio de redacción de capítulos de la memoria (no esperes al final)."
-  },
-  {
-    "objectID": "docs/metodologia-agil.html#fase-3-implementación-iterativa",
-    "href": "docs/metodologia-agil.html#fase-3-implementación-iterativa",
-    "title": "Metodología ágil para TFG/TFM",
-    "section": "6.3. Fase 3: Implementación iterativa",
-    "text": "6.3. Fase 3: Implementación iterativa\n\nDesarrollo de un MVP (mínimo producto viable) lo antes posible.\nIteraciones sobre funcionalidades, diseño, rendimiento, etc.\nTests básicos (unitarios, de integración, manuales)."
-  },
-  {
-    "objectID": "docs/metodologia-agil.html#fase-4-evaluación-y-refinamiento",
-    "href": "docs/metodologia-agil.html#fase-4-evaluación-y-refinamiento",
-    "title": "Metodología ágil para TFG/TFM",
-    "section": "6.4. Fase 4: Evaluación y refinamiento",
-    "text": "6.4. Fase 4: Evaluación y refinamiento\n\nPruebas con usuarios, datasets, benchmarks… según el tipo de proyecto.\nAnálisis de resultados.\nRefinamiento de la solución (ajustes de rendimiento, usabilidad, etc.)."
-  },
-  {
-    "objectID": "docs/metodologia-agil.html#fase-5-cierre-y-documentación",
-    "href": "docs/metodologia-agil.html#fase-5-cierre-y-documentación",
-    "title": "Metodología ágil para TFG/TFM",
-    "section": "6.5. Fase 5: Cierre y documentación",
-    "text": "6.5. Fase 5: Cierre y documentación\n\nConsolidación del código (limpieza, documentación interna).\nRedacción final de la memoria y anexos.\nPreparación de la defensa (presentación, demo, etc.).\n\nEstas fases no son lineales: se solapan y se revisan, pero sirven como guía para tus milestones."
-  },
-  {
-    "objectID": "docs/metodologia-agil.html#calidad-mínima-esperada",
-    "href": "docs/metodologia-agil.html#calidad-mínima-esperada",
-    "title": "Metodología ágil para TFG/TFM",
-    "section": "7.1. Calidad mínima esperada",
-    "text": "7.1. Calidad mínima esperada\nIndependientemente de que uses CI o no, se espera:\n\nCódigo razonablemente estructurado, legible y documentado.\nAlgún tipo de pruebas:\n\nUnitarias y/o de integración (según el tipo de proyecto).\nPruebas manuales reproducibles (pasos claros).\n\nUn repositorio con una mínima organización:\n\nsrc/, tests/, docs/, etc.\nUn README que explique cómo ejecutar el proyecto."
-  },
-  {
-    "objectID": "docs/metodologia-agil.html#integración-continua-ci-como-opción",
-    "href": "docs/metodologia-agil.html#integración-continua-ci-como-opción",
-    "title": "Metodología ágil para TFG/TFM",
-    "section": "7.2. Integración continua (CI) como opción",
-    "text": "7.2. Integración continua (CI) como opción\nLa integración continua no es obligatoria, pero se recomienda cuando:\n\nEl proyecto tiene cierto tamaño/ complejidad.\nSe pueden automatizar:\n\nEjecución de tests.\nAnálisis estático (linters).\nGeneración de documentación.\n\n\nSi decides usar CI:\n\nLo habitual es usar GitHub Actions.\nConfigurar al menos un workflow que:\n\nSe ejecute en cada push o pull request.\nLance tests y/o linters.\n\n\nEn el handbook (repositorio del propio handbook) sí se usa CI para generar la web, y puedes tomarlo como ejemplo, pero no es requisito que repliques exactamente esa configuración en tu proyecto."
-  },
-  {
-    "objectID": "tfgs/2025-2026/pastillero-inteligente/pastillero-resumen.html",
-    "href": "tfgs/2025-2026/pastillero-inteligente/pastillero-resumen.html",
-    "title": "TFG 2025–2026 · Pastillero digital inteligente",
     "section": "",
-    "text": "Curso académico: 2025–2026\n\nCentro: ETSIIT · Universidad de Granada\n\nTipo de trabajo: TFG · Grado en Ingeniería Informática\n\nDirector/a: [Nombre del director/a]\n\nAlumno/a: [Nombre del alumno/a]\n\nOrganización GitHub: (por definir, p.ej. PastilleroUGR)\n\n\n\n\nMuchas personas mayores toman medicación diaria y, a menudo, múltiples pastillas distintas a lo largo del día. Esto introduce problemas de:\n\nAdherencia terapéutica: olvidos, duplicidades, errores de dosis.\nCarga cognitiva: recordar qué pastilla corresponde a cada momento, con instrucciones a veces complejas.\nBrecha digital: soluciones basadas en smartphones o apps genéricas de alarmas resultan poco accesibles para algunos perfiles de personas mayores.\n\nAdemás, familiares, cuidadores y personal de servicios sociales necesitan herramientas sencillas para saber si la persona está tomando la medicación según lo prescrito.\n\n\n\n\nDiseñar y desarrollar un pastillero digital inteligente orientado a personas mayores que toman medicación diaria, con estos objetivos:\n\nMejorar la adherencia terapéutica mediante:\n\nRecordatorios claros y comprensibles.\nConfirmación explícita de tomas.\n\nReducir la carga cognitiva, usando:\n\nUna interfaz extremadamente sencilla.\nBotones grandes y alto contraste.\nMuy pocos elementos en pantalla.\n\nFacilitar el seguimiento por parte de familiares/cuidadores mediante alertas opcionales cuando no se registra una toma.\n\n\n\n\n\nLa propuesta se basa en:\n\nUna tablet en modo kiosko, integrada en una caja tipo cajón de mesita de noche donde la persona guarda sus medicamentos.\nLa tablet ejecuta una única aplicación en primer plano que:\n\nMuestra las tomas pendientes.\nPermite confirmar cada toma con un solo toque.\nRegistra los eventos en una base de datos local.\nOpcionalmente, envía alertas a contactos de confianza si no se confirma una toma.\n\n\nComportamiento físico esperado:\n\nTapa de la caja cerrada:\n\nLa tablet queda en posición horizontal.\nLa pantalla permanece apagada o en negro.\n\nTapa de la caja abierta:\n\nLa pantalla se activa y muestra la aplicación en una pantalla principal muy simple.\n\n\n\n\n\n\nLa interfaz estará especialmente adaptada a personas mayores:\n\nPantalla de tomas pendientes:\n\nSe muestran las pastillas a tomar en la franja actual mediante un scroll sencillo.\nUna pastilla por pantalla: foto grande + texto de posología en letra grande.\nBotón grande para confirmar “He tomado esta pastilla”.\n\nUna vez no queden tomas pendientes:\n\nMensaje claro del tipo: “No queda medicación pendiente por ahora”.\n\nPantalla de configuración:\n\nPensada para familiares/cuidadores.\nProtegida por un PIN sencillo.\nPermite gestionar medicación, horarios y contactos de confianza.\n\n\n\n\n\n\nEl TFG debe entregar al menos:\n\nUna aplicación funcional en la tablet que:\n\nPermita configurar medicación y horarios.\nMuestre tomas pendientes en una interfaz simple.\nRegistre tomas realizadas.\n\nUn prototipo físico o maqueta de la caja:\n\nIntegración de la tablet en un formato tipo cajón.\nSimulación del comportamiento de tapa abierta/cerrada.\n\nUn conjunto de pruebas básicas de usabilidad:\n\nCon personas mayores reales o perfiles representativos.\nCon métricas sencillas (tiempo de interacción, errores, dificultad percibida).\n\nUna memoria del TFG que documente:\n\nContexto y motivación.\nMetodología (incluyendo, en este caso, Diseño Centrado en el Usuario + enfoque ágil).\nAnálisis, diseño, implementación y evaluación.\nConclusiones y líneas futuras (por ejemplo, reconocimiento automático de posología por visión por computador o integración con servicios sanitarios).\n\n\n\n\n\n\nLa especificación detallada del proyecto (metodología concreta, requisitos, arquitectura, planificación y evaluación) se recoge en:\n\npastillero-doc-trabajo.qmd\n\nEste documento sirve como guía de trabajo entre el director y el alumno y se considera parte oficial de la documentación del TFG."
+    "text": "En un TFG/TFM no tenemos un equipo grande, sino:\n\nUna persona que desarrolla (tú, el alumno).\nUna o varias personas que dirigen/guían (director/a, co-directores).\n\nPor tanto, usamos una versión reducida y pragmática de metodologías ágiles:\n\nTrabajamos en sprints cortos (1–2 semanas).\nMantenemos un backlog de tareas (issues en GitHub).\nPlanificamos y revisamos el trabajo de forma iterativa.\nEl objetivo de cada sprint es tener algo enseñable (prototipo, módulo, experimento, capítulo de la memoria, etc.).\n\nNo buscamos cumplir Scrum “al pie de la letra”, sino quedarnos con lo que aporta valor en un TFG/TFM."
   },
   {
-    "objectID": "tfgs/2025-2026/pastillero-inteligente/pastillero-resumen.html#motivación",
-    "href": "tfgs/2025-2026/pastillero-inteligente/pastillero-resumen.html#motivación",
-    "title": "TFG 2025–2026 · Pastillero digital inteligente",
+    "objectID": "docs/metodologia-agil.html#roles-en-el-proyecto",
+    "href": "docs/metodologia-agil.html#roles-en-el-proyecto",
+    "title": "Metodología ágil para TFG/TFM",
     "section": "",
-    "text": "Muchas personas mayores toman medicación diaria y, a menudo, múltiples pastillas distintas a lo largo del día. Esto introduce problemas de:\n\nAdherencia terapéutica: olvidos, duplicidades, errores de dosis.\nCarga cognitiva: recordar qué pastilla corresponde a cada momento, con instrucciones a veces complejas.\nBrecha digital: soluciones basadas en smartphones o apps genéricas de alarmas resultan poco accesibles para algunos perfiles de personas mayores.\n\nAdemás, familiares, cuidadores y personal de servicios sociales necesitan herramientas sencillas para saber si la persona está tomando la medicación según lo prescrito."
+    "text": "En este contexto, los roles se mapean así:\n\n\n\nEres responsable de:\n\nPlanificar tu trabajo por sprints.\nMantener el backlog y actualizar el estado de las tareas.\nDesarrollar código, realizar experimentos, escribir documentación.\nPreparar las demos/entregables de cada sprint.\n\n\n\n\n\n\nActúa como una especie de Product Owner:\n\nAyuda a definir y priorizar objetivos.\nDa feedback sobre lo entregado.\nValida el alcance del proyecto y si se cumplen los objetivos del TFG/TFM.\n\n\n\n\n\nSegún el proyecto, puede haber:\n\nUsuarios finales.\nOtros profesores o grupos de investigación.\nColaboradores externos (empresas, ayuntamientos, etc.).\n\nSu presencia e implicación se definirá en tu documento de trabajo específico."
   },
   {
-    "objectID": "tfgs/2025-2026/pastillero-inteligente/pastillero-resumen.html#objetivo-del-proyecto",
-    "href": "tfgs/2025-2026/pastillero-inteligente/pastillero-resumen.html#objetivo-del-proyecto",
-    "title": "TFG 2025–2026 · Pastillero digital inteligente",
+    "objectID": "docs/metodologia-agil.html#artefactos-y-herramientas",
+    "href": "docs/metodologia-agil.html#artefactos-y-herramientas",
+    "title": "Metodología ágil para TFG/TFM",
     "section": "",
-    "text": "Diseñar y desarrollar un pastillero digital inteligente orientado a personas mayores que toman medicación diaria, con estos objetivos:\n\nMejorar la adherencia terapéutica mediante:\n\nRecordatorios claros y comprensibles.\nConfirmación explícita de tomas.\n\nReducir la carga cognitiva, usando:\n\nUna interfaz extremadamente sencilla.\nBotones grandes y alto contraste.\nMuy pocos elementos en pantalla.\n\nFacilitar el seguimiento por parte de familiares/cuidadores mediante alertas opcionales cuando no se registra una toma."
+    "text": "Trabajaremos principalmente con:\n\nOrganización de GitHub específica de tu proyecto.\nUno o varios repositorios (código, documentación…).\nUn Project de GitHub (tablero Kanban).\nIssues y milestones para gestionar tareas e hitos.\n\n\nLos detalles prácticos (cómo crear la organización, repos, Projects, etc.) están en\nGitHub & organización.\n\n\n\nEl backlog es la lista de todo lo que vamos a hacer:\n\nHistorias de usuario (si tu proyecto las usa).\nTareas técnicas (configurar CI, escribir tests, refactorizar código, etc.).\nTareas de documentación (escribir secciones de la memoria, preparar gráficos).\nTareas de evaluación (diseñar experimentos, preparar cuestionarios, etc.).\n\nEn la práctica:\n\nCada elemento del backlog es un issue de GitHub.\nDeberían tener etiquetas (backend, frontend, documentation, research, etc.).\nSe asignan a milestones (hitos) y se van moviendo en tu tablero Project.\n\n\n\n\nRecomendamos definir milestones asociados a fases del TFG/TFM. Ejemplo típico:\n\nM1 – Análisis y planificación inicial\nM2 – Diseño / arquitectura\nM3 – Implementación del MVP\nM4 – Evaluación / experimentación\nM5 – Cierre y memoria\n\nCada milestone tiene:\n\nUna fecha objetivo.\nUn conjunto de issues que deben completarse para considerarlo cumplido.\n\n\n\n\nUtilizaremos un Project (tablero Kanban) para visualizar el estado de las tareas.\n\nColumnas típicas:\n\nBacklog\nEn curso\nEn revisión\nHecho\n\n\nCada issue se mueve de columna según su estado.\nEsto ayuda a ver de un vistazo en qué estás trabajando y qué queda pendiente."
   },
   {
-    "objectID": "tfgs/2025-2026/pastillero-inteligente/pastillero-resumen.html#idea-general-de-la-solución",
-    "href": "tfgs/2025-2026/pastillero-inteligente/pastillero-resumen.html#idea-general-de-la-solución",
-    "title": "TFG 2025–2026 · Pastillero digital inteligente",
+    "objectID": "docs/metodologia-agil.html#sprints-cómo-iterar-el-trabajo",
+    "href": "docs/metodologia-agil.html#sprints-cómo-iterar-el-trabajo",
+    "title": "Metodología ágil para TFG/TFM",
     "section": "",
-    "text": "La propuesta se basa en:\n\nUna tablet en modo kiosko, integrada en una caja tipo cajón de mesita de noche donde la persona guarda sus medicamentos.\nLa tablet ejecuta una única aplicación en primer plano que:\n\nMuestra las tomas pendientes.\nPermite confirmar cada toma con un solo toque.\nRegistra los eventos en una base de datos local.\nOpcionalmente, envía alertas a contactos de confianza si no se confirma una toma.\n\n\nComportamiento físico esperado:\n\nTapa de la caja cerrada:\n\nLa tablet queda en posición horizontal.\nLa pantalla permanece apagada o en negro.\n\nTapa de la caja abierta:\n\nLa pantalla se activa y muestra la aplicación en una pantalla principal muy simple."
+    "text": "En general:\n\nSprints de 1 o 2 semanas funcionan bien para un TFG/TFM.\nLa duración exacta se acuerda al inicio del proyecto (y se puede ajustar).\n\n\n\n\nCada sprint debería incluir, como mínimo:\n\nPlanning (inicio de sprint)\n\nRevisar el backlog con el director (cuando sea posible).\nElegir qué issues se abordarán en el sprint.\nDefinir un objetivo claro para las próximas 1–2 semanas.\n\nEjecución\n\nDesarrollar código, experimentar, escribir memoria, etc.\nCrear issues si surgen nuevas tareas.\nMantener el Project actualizado.\n\nRevisión\n\nPreparar una demo o resumen de lo hecho (pantallazos, prototipo, resultados preliminares, sección de memoria redactada…).\nComentar con el director:\n\nQué se ha conseguido.\nQué ha bloqueado o retrasado trabajo.\n\n\nRetrospectiva informal\n\nReflexionar brevemente:\n\n¿Qué ha ido bien?\n¿Qué no?\n¿Qué cambiarás en el siguiente sprint?\n\n\n\nNo hace falta que esto sea pesado: puede ser un mensaje estructurado o una breve reunión.\n\n\n\n\nSprint (2 semanas)\nObjetivo: tener un prototipo funcional de las pantallas principales.\nTareas (issues):\n- Diseñar wireframes de la pantalla de inicio.\n- Implementar la navegación básica entre pantallas.\n- Crear la estructura básica del proyecto (repositorio, dependencias).\n- Documentar las decisiones de diseño en el repositorio de documentación.\nEntregable:\n- Repositorio con app que navega entre pantallas básicas.\n- Documento con capturas y explicación del flujo."
   },
   {
-    "objectID": "tfgs/2025-2026/pastillero-inteligente/pastillero-resumen.html#interfaz-de-usuario-visión-de-alto-nivel",
-    "href": "tfgs/2025-2026/pastillero-inteligente/pastillero-resumen.html#interfaz-de-usuario-visión-de-alto-nivel",
-    "title": "TFG 2025–2026 · Pastillero digital inteligente",
+    "objectID": "docs/metodologia-agil.html#fases-típicas-de-un-tfgtfm-vista-ágil",
+    "href": "docs/metodologia-agil.html#fases-típicas-de-un-tfgtfm-vista-ágil",
+    "title": "Metodología ágil para TFG/TFM",
     "section": "",
-    "text": "La interfaz estará especialmente adaptada a personas mayores:\n\nPantalla de tomas pendientes:\n\nSe muestran las pastillas a tomar en la franja actual mediante un scroll sencillo.\nUna pastilla por pantalla: foto grande + texto de posología en letra grande.\nBotón grande para confirmar “He tomado esta pastilla”.\n\nUna vez no queden tomas pendientes:\n\nMensaje claro del tipo: “No queda medicación pendiente por ahora”.\n\nPantalla de configuración:\n\nPensada para familiares/cuidadores.\nProtegida por un PIN sencillo.\nPermite gestionar medicación, horarios y contactos de confianza."
+    "text": "Aunque trabajemos con sprints, normalmente podemos distinguir varias fases:\n\n\n\nLectura del enunciado y asignación de TFG/TFM.\nRevisión de documentación inicial y trabajo relacionado.\nDefinición del alcance preliminar con el director.\nCreación de:\n\nOrganización de GitHub.\nRepositorios iniciales.\nProject y primeros milestones.\n\nRedacción y/o revisión del documento de trabajo específico del TFG/TFM.\n\n\n\n\n\nDiseño de arquitectura (software, hardware o ambos).\nDiseño de modelos de datos, APIs, flujos, etc.\nPlan de experimentación/evaluación si aplica.\nInicio de redacción de capítulos de la memoria (no esperes al final).\n\n\n\n\n\nDesarrollo de un MVP (mínimo producto viable) lo antes posible.\nIteraciones sobre funcionalidades, diseño, rendimiento, etc.\nTests básicos (unitarios, de integración, manuales).\n\n\n\n\n\nPruebas con usuarios, datasets, benchmarks… según el tipo de proyecto.\nAnálisis de resultados.\nRefinamiento de la solución (ajustes de rendimiento, usabilidad, etc.).\n\n\n\n\n\nConsolidación del código (limpieza, documentación interna).\nRedacción final de la memoria y anexos.\nPreparación de la defensa (presentación, demo, etc.).\n\nEstas fases no son lineales: se solapan y se revisan, pero sirven como guía para tus milestones."
   },
   {
-    "objectID": "tfgs/2025-2026/pastillero-inteligente/pastillero-resumen.html#alcance-mínimo-del-tfg",
-    "href": "tfgs/2025-2026/pastillero-inteligente/pastillero-resumen.html#alcance-mínimo-del-tfg",
-    "title": "TFG 2025–2026 · Pastillero digital inteligente",
+    "objectID": "docs/metodologia-agil.html#calidad-pruebas-y-ci-opcional-para-el-alumno",
+    "href": "docs/metodologia-agil.html#calidad-pruebas-y-ci-opcional-para-el-alumno",
+    "title": "Metodología ágil para TFG/TFM",
     "section": "",
-    "text": "El TFG debe entregar al menos:\n\nUna aplicación funcional en la tablet que:\n\nPermita configurar medicación y horarios.\nMuestre tomas pendientes en una interfaz simple.\nRegistre tomas realizadas.\n\nUn prototipo físico o maqueta de la caja:\n\nIntegración de la tablet en un formato tipo cajón.\nSimulación del comportamiento de tapa abierta/cerrada.\n\nUn conjunto de pruebas básicas de usabilidad:\n\nCon personas mayores reales o perfiles representativos.\nCon métricas sencillas (tiempo de interacción, errores, dificultad percibida).\n\nUna memoria del TFG que documente:\n\nContexto y motivación.\nMetodología (incluyendo, en este caso, Diseño Centrado en el Usuario + enfoque ágil).\nAnálisis, diseño, implementación y evaluación.\nConclusiones y líneas futuras (por ejemplo, reconocimiento automático de posología por visión por computador o integración con servicios sanitarios)."
+    "text": "Independientemente de que uses CI o no, se espera:\n\nCódigo razonablemente estructurado, legible y documentado.\nAlgún tipo de pruebas:\n\nUnitarias y/o de integración (según el tipo de proyecto).\nPruebas manuales reproducibles (pasos claros).\n\nUn repositorio con una mínima organización:\n\nsrc/, tests/, docs/, etc.\nUn README que explique cómo ejecutar el proyecto.\n\n\n\n\n\nLa integración continua no es obligatoria, pero se recomienda cuando:\n\nEl proyecto tiene cierto tamaño/ complejidad.\nSe pueden automatizar:\n\nEjecución de tests.\nAnálisis estático (linters).\nGeneración de documentación.\n\n\nSi decides usar CI:\n\nLo habitual es usar GitHub Actions.\nConfigurar al menos un workflow que:\n\nSe ejecute en cada push o pull request.\nLance tests y/o linters.\n\n\nEn el handbook (repositorio del propio handbook) sí se usa CI para generar la web, y puedes tomarlo como ejemplo, pero no es requisito que repliques exactamente esa configuración en tu proyecto."
   },
   {
-    "objectID": "tfgs/2025-2026/pastillero-inteligente/pastillero-resumen.html#documento-de-trabajo-específico",
-    "href": "tfgs/2025-2026/pastillero-inteligente/pastillero-resumen.html#documento-de-trabajo-específico",
-    "title": "TFG 2025–2026 · Pastillero digital inteligente",
+    "objectID": "docs/metodologia-agil.html#expectativas-de-comunicación",
+    "href": "docs/metodologia-agil.html#expectativas-de-comunicación",
+    "title": "Metodología ágil para TFG/TFM",
     "section": "",
-    "text": "La especificación detallada del proyecto (metodología concreta, requisitos, arquitectura, planificación y evaluación) se recoge en:\n\npastillero-doc-trabajo.qmd\n\nEste documento sirve como guía de trabajo entre el director y el alumno y se considera parte oficial de la documentación del TFG."
+    "text": "Para que la metodología ágil funcione mínimamente, es importante:\n\nAcotar una frecuencia de contacto razonable con el director (por ejemplo, cada 2–3 semanas).\nAntes de cada reunión, preparar:\n\nQué has hecho (issues cerrados, demos).\nQué problemas has encontrado.\nQué te propones hacer en el siguiente periodo.\n\n\nUna buena práctica es:\n\nAbrir un issue tipo “Informe de sprint N” donde:\n\nResumas los avances.\nEnlaces a commits, PRs, capturas de pantalla, etc.\nAnotes dudas para la reunión."
   },
   {
-    "objectID": "tfgs/2024-2025/tempusugr/tempusugr-resumen.html",
-    "href": "tfgs/2024-2025/tempusugr/tempusugr-resumen.html",
-    "title": "TFG 2024–2025 · TempusUGR",
+    "objectID": "docs/metodologia-agil.html#cómo-se-concreta-esto-en-tu-tfgtfm",
+    "href": "docs/metodologia-agil.html#cómo-se-concreta-esto-en-tu-tfgtfm",
+    "title": "Metodología ágil para TFG/TFM",
     "section": "",
-    "text": "Curso académico: 2024–2025\n\nCentro: ETSIIT · Universidad de Granada\n\nTipo de trabajo: TFG · Grado en Ingeniería Informática\n\nDirector/a: [Nombre del director/a]\n\nAlumno/a: [Nombre del alumno/a]\n\nOrganización GitHub: https://github.com/TempusUGR\n\n\n\n\n(Aquí puede incluirse un resumen del problema y de la solución: gestión de horarios universitarios, generación de calendarios personalizados, integración con servicios externos, etc.)\n\n\n\n(Lista breve de objetivos del proyecto, por ejemplo: facilitar la planificación de horarios, evitar solapes, ofrecer vistas personalizadas, etc.)\n\n\n\n(Lista resumida de tecnologías: frameworks frontend, backend, bases de datos, servicios externos, etc.)\n\n\n\n(Breve resumen de lo conseguido: estado final del proyecto, despliegues realizados, validación con usuarios, etc.)"
+    "text": "Todo lo anterior es el marco general.\nPara tu proyecto concreto:\n\nRecibirás un documento de trabajo (en este mismo handbook), por ejemplo:\n\npastillero-doc-trabajo.qmd para el TFG del pastillero inteligente.\n\nEse documento:\n\nDetalla la metodología específica (por ejemplo, si se usa DCU, técnicas concretas de evaluación, etc.).\nAterriza los requisitos, la arquitectura y el planning de tu proyecto.\nSe irá actualizando si es necesario (versionado en Git).\n\n\nSiempre que tengas dudas entre lo genérico (este documento) y lo específico de tu TFG/TFM, prima lo que se indique en tu documento de trabajo concreto, o consulta al director."
   },
   {
-    "objectID": "tfgs/2024-2025/tempusugr/tempusugr-resumen.html#descripción-general",
-    "href": "tfgs/2024-2025/tempusugr/tempusugr-resumen.html#descripción-general",
-    "title": "TFG 2024–2025 · TempusUGR",
+    "objectID": "book/index.html",
+    "href": "book/index.html",
+    "title": "Yet Another TFG/TFM Handbook · ETSIIT · UGR",
     "section": "",
-    "text": "(Aquí puede incluirse un resumen del problema y de la solución: gestión de horarios universitarios, generación de calendarios personalizados, integración con servicios externos, etc.)"
+    "text": "Este libro recoge las reglas del juego para los TFG/TFM que dirijo en la ETSIIT de la Universidad de Granada.\nNo pretende ser la guía definitiva, sino “otro handbook más” (yet another handbook) que:\n\nExplicita cómo suelo trabajar con mis alumnos.\nComplementa otros recursos existentes en la UGR y en la ETSIIT.\nSirve como referencia viva y versionada para los proyectos que dirijo.\n\nAquí encontrarás:\n\nCómo organizaremos tu TFG/TFM usando metodologías ágiles (sprints, backlog, issues…).\nCómo usaremos GitHub:\n\nCreación de una organización por proyecto (con un nombre en clave, p.ej. TempusUGR, PastilleroUGR, etc.).\nRepositorios de código y documentación.\nProjects, Issues y Milestones para gestionar el trabajo.\n\nQué se espera de la memoria del TFG/TFM (estructura, contenido mínimo, calidad).\n\nAdemás, se incluye un listado de TFG/TFM dirigidos, con:\n\nUn resumen de cada proyecto.\nEnlaces a sus organizaciones de GitHub.\nEn algunos casos, el documento de trabajo específico que se entrega al alumno.\n\n\n\n\nSi vas a hacer un TFG/TFM conmigo, el flujo recomendado es:\n\nLeer la sección Metodología ágil para entender cómo organizaremos el trabajo en sprints.\nRevisar GitHub & organización para crear la organización de tu proyecto y los repositorios mínimos.\nVer Memoria TFG/TFM para saber qué estructura se espera en la memoria.\nConsultar, cuando esté disponible, el documento de trabajo específico de tu proyecto\n(por ejemplo, el del TFG Pastillero digital inteligente).\n\n\n\n\n\nPuedes descargar una versión en formato libro (PDF) de este handbook desde:\n\nDescargar libro en PDF\n\n\n\n\n\nEste handbook no sustituye a otros materiales ya existentes en la UGR y en la ETSIIT, sino que los complementa.\nEs muy recomendable que, además de leer estas páginas, revises:\n\n\n\nDisponible en la producción científica de la UGR:\nhttps://produccioncientifica.ugr.es/documentos/67e6f8553f806d20a93a1b2a\n\nEste libro ofrece una visión más amplia sobre:\n\nQué es un TFG/TFM en el contexto de la UGR.\nRecomendaciones generales sobre redacción académica.\nAspectos formales, evaluación, etc.\n\n\n\n\n\nRepositorio: https://github.com/JJ/plantilla-TFG-ETSIIT\n\nEsta plantilla es especialmente útil si:\n\nQuieres escribir la memoria en LaTeX.\nPrefieres partir de una estructura ya muy pulida y probada para TFG de la ETSIIT.\nTe interesa ver un ejemplo de cómo automatizar parte del proceso de compilación.\n\n\nIdea práctica:\nPuedes usar este handbook para la forma de trabajar (metodología, GitHub, planning)\ny, al mismo tiempo, usar la plantilla de JJ o el libro de la UGR como referencia para\nel estilo y formato de tu memoria.\n\n\n\n\n\n\n\nTransparencia\nTodo el trabajo relevante (código, documentación, tareas) vive en GitHub.\nIteración\nTrabajamos con sprints cortos y entregas incrementales, evitando dejarlo todo para el final.\nCalidad y reflexión\nEl objetivo no es solo “que funcione”, sino también:\n\nQue la solución tenga sentido en su contexto.\nQue el código sea razonablemente limpio y mantenible.\nQue la memoria cuente una historia coherente del proyecto.\n\nAdaptación al tipo de proyecto\nNo todos los proyectos son iguales:\n\nEn algunos habrá más peso de desarrollo de software.\nEn otros, más de experimentación, análisis de datos o investigación. Las pautas de este handbook se adaptan a esa diversidad.\n\n\n\n\n\n\nEn la sección TFG/TFM dirigidos del menú encontrarás proyectos concretos, por ejemplo:\n\n2024–2025 · TempusUGR\n2025–2026 · Pastillero digital inteligente\n\nCada uno incluye un resumen, enlaces a su organización de GitHub y, cuando procede, su documento de trabajo.\n\nSi algo de lo que lees aquí no encaja con tu proyecto concreto, consúltalo: este handbook es un marco general, y el documento de trabajo específico de cada TFG/TFM siempre tiene prioridad.\n\n\n\nEste repositorio contiene principalmente documentación y algo de código de ejemplo.\n\nEl contenido textual y la documentación (ficheros .qmd, .md, descripciones, etc.) se publican bajo la licencia Creative Commons Atribución 4.0 Internacional (CC BY 4.0).\nEl código y las configuraciones (por ejemplo, workflows de GitHub Actions y scripts) se publican bajo la licencia MIT.\n\nEn la práctica, esto significa que puedes reutilizar, adaptar y compartir tanto la documentación como el código, incluso en contextos diferentes a la ETSIIT, siempre que:\n\nDes el crédito adecuado al autor y a este repositorio.\nMantengas el aviso de licencia correspondiente (CC BY para el contenido, MIT para el código).\nIndiques si has realizado modificaciones cuando corresponda.\n\nPara más detalles, consulta el archivo LICENSE en la raíz de este repositorio."
   },
   {
-    "objectID": "tfgs/2024-2025/tempusugr/tempusugr-resumen.html#objetivos",
-    "href": "tfgs/2024-2025/tempusugr/tempusugr-resumen.html#objetivos",
-    "title": "TFG 2024–2025 · TempusUGR",
+    "objectID": "book/index.html#cómo-usar-este-handbook",
+    "href": "book/index.html#cómo-usar-este-handbook",
+    "title": "Yet Another TFG/TFM Handbook · ETSIIT · UGR",
     "section": "",
-    "text": "(Lista breve de objetivos del proyecto, por ejemplo: facilitar la planificación de horarios, evitar solapes, ofrecer vistas personalizadas, etc.)"
+    "text": "Si vas a hacer un TFG/TFM conmigo, el flujo recomendado es:\n\nLeer la sección Metodología ágil para entender cómo organizaremos el trabajo en sprints.\nRevisar GitHub & organización para crear la organización de tu proyecto y los repositorios mínimos.\nVer Memoria TFG/TFM para saber qué estructura se espera en la memoria.\nConsultar, cuando esté disponible, el documento de trabajo específico de tu proyecto\n(por ejemplo, el del TFG Pastillero digital inteligente)."
   },
   {
-    "objectID": "tfgs/2024-2025/tempusugr/tempusugr-resumen.html#tecnologías-utilizadas",
-    "href": "tfgs/2024-2025/tempusugr/tempusugr-resumen.html#tecnologías-utilizadas",
-    "title": "TFG 2024–2025 · TempusUGR",
+    "objectID": "book/index.html#libro-en-pdf",
+    "href": "book/index.html#libro-en-pdf",
+    "title": "Yet Another TFG/TFM Handbook · ETSIIT · UGR",
     "section": "",
-    "text": "(Lista resumida de tecnologías: frameworks frontend, backend, bases de datos, servicios externos, etc.)"
+    "text": "Puedes descargar una versión en formato libro (PDF) de este handbook desde:\n\nDescargar libro en PDF"
   },
   {
-    "objectID": "tfgs/2024-2025/tempusugr/tempusugr-resumen.html#resultados",
-    "href": "tfgs/2024-2025/tempusugr/tempusugr-resumen.html#resultados",
-    "title": "TFG 2024–2025 · TempusUGR",
+    "objectID": "book/index.html#referencias-y-recursos-complementarios",
+    "href": "book/index.html#referencias-y-recursos-complementarios",
+    "title": "Yet Another TFG/TFM Handbook · ETSIIT · UGR",
     "section": "",
-    "text": "(Breve resumen de lo conseguido: estado final del proyecto, despliegues realizados, validación con usuarios, etc.)"
+    "text": "Este handbook no sustituye a otros materiales ya existentes en la UGR y en la ETSIIT, sino que los complementa.\nEs muy recomendable que, además de leer estas páginas, revises:\n\n\n\nDisponible en la producción científica de la UGR:\nhttps://produccioncientifica.ugr.es/documentos/67e6f8553f806d20a93a1b2a\n\nEste libro ofrece una visión más amplia sobre:\n\nQué es un TFG/TFM en el contexto de la UGR.\nRecomendaciones generales sobre redacción académica.\nAspectos formales, evaluación, etc.\n\n\n\n\n\nRepositorio: https://github.com/JJ/plantilla-TFG-ETSIIT\n\nEsta plantilla es especialmente útil si:\n\nQuieres escribir la memoria en LaTeX.\nPrefieres partir de una estructura ya muy pulida y probada para TFG de la ETSIIT.\nTe interesa ver un ejemplo de cómo automatizar parte del proceso de compilación.\n\n\nIdea práctica:\nPuedes usar este handbook para la forma de trabajar (metodología, GitHub, planning)\ny, al mismo tiempo, usar la plantilla de JJ o el libro de la UGR como referencia para\nel estilo y formato de tu memoria."
+  },
+  {
+    "objectID": "book/index.html#filosofía-de-trabajo",
+    "href": "book/index.html#filosofía-de-trabajo",
+    "title": "Yet Another TFG/TFM Handbook · ETSIIT · UGR",
+    "section": "",
+    "text": "Transparencia\nTodo el trabajo relevante (código, documentación, tareas) vive en GitHub.\nIteración\nTrabajamos con sprints cortos y entregas incrementales, evitando dejarlo todo para el final.\nCalidad y reflexión\nEl objetivo no es solo “que funcione”, sino también:\n\nQue la solución tenga sentido en su contexto.\nQue el código sea razonablemente limpio y mantenible.\nQue la memoria cuente una historia coherente del proyecto.\n\nAdaptación al tipo de proyecto\nNo todos los proyectos son iguales:\n\nEn algunos habrá más peso de desarrollo de software.\nEn otros, más de experimentación, análisis de datos o investigación. Las pautas de este handbook se adaptan a esa diversidad."
+  },
+  {
+    "objectID": "book/index.html#tfgtfm-dirigidos-ejemplos",
+    "href": "book/index.html#tfgtfm-dirigidos-ejemplos",
+    "title": "Yet Another TFG/TFM Handbook · ETSIIT · UGR",
+    "section": "",
+    "text": "En la sección TFG/TFM dirigidos del menú encontrarás proyectos concretos, por ejemplo:\n\n2024–2025 · TempusUGR\n2025–2026 · Pastillero digital inteligente\n\nCada uno incluye un resumen, enlaces a su organización de GitHub y, cuando procede, su documento de trabajo.\n\nSi algo de lo que lees aquí no encaja con tu proyecto concreto, consúltalo: este handbook es un marco general, y el documento de trabajo específico de cada TFG/TFM siempre tiene prioridad."
+  },
+  {
+    "objectID": "book/index.html#licencia",
+    "href": "book/index.html#licencia",
+    "title": "Yet Another TFG/TFM Handbook · ETSIIT · UGR",
+    "section": "",
+    "text": "Este repositorio contiene principalmente documentación y algo de código de ejemplo.\n\nEl contenido textual y la documentación (ficheros .qmd, .md, descripciones, etc.) se publican bajo la licencia Creative Commons Atribución 4.0 Internacional (CC BY 4.0).\nEl código y las configuraciones (por ejemplo, workflows de GitHub Actions y scripts) se publican bajo la licencia MIT.\n\nEn la práctica, esto significa que puedes reutilizar, adaptar y compartir tanto la documentación como el código, incluso en contextos diferentes a la ETSIIT, siempre que:\n\nDes el crédito adecuado al autor y a este repositorio.\nMantengas el aviso de licencia correspondiente (CC BY para el contenido, MIT para el código).\nIndiques si has realizado modificaciones cuando corresponda.\n\nPara más detalles, consulta el archivo LICENSE en la raíz de este repositorio."
   },
   {
     "objectID": "tfgs/2025-2026/pastillero-inteligente/pastillero-doc-trabajo.html",
@@ -413,11 +343,95 @@
     "text": "7.3 6.3. Pruebas técnicas\n\nPersistencia de datos:\n\nComprobar que las tomas no se pierden tras apagar/encender la tablet.\n\nRobustez:\n\nComportamiento ante cierres inesperados.\n\n(Opcional) Pruebas del módulo de avisos, si se implementa."
   },
   {
+    "objectID": "tfgs/2024-2025/tempusugr/tempusugr-resumen.html",
+    "href": "tfgs/2024-2025/tempusugr/tempusugr-resumen.html",
+    "title": "TFG 2024–2025 · TempusUGR",
+    "section": "",
+    "text": "Curso académico: 2024–2025\n\nCentro: ETSIIT · Universidad de Granada\n\nTipo de trabajo: TFG · Grado en Ingeniería Informática\n\nDirector/a: [Nombre del director/a]\n\nAlumno/a: [Nombre del alumno/a]\n\nOrganización GitHub: https://github.com/TempusUGR\n\n\n\n\n(Aquí puede incluirse un resumen del problema y de la solución: gestión de horarios universitarios, generación de calendarios personalizados, integración con servicios externos, etc.)\n\n\n\n(Lista breve de objetivos del proyecto, por ejemplo: facilitar la planificación de horarios, evitar solapes, ofrecer vistas personalizadas, etc.)\n\n\n\n(Lista resumida de tecnologías: frameworks frontend, backend, bases de datos, servicios externos, etc.)\n\n\n\n(Breve resumen de lo conseguido: estado final del proyecto, despliegues realizados, validación con usuarios, etc.)"
+  },
+  {
+    "objectID": "tfgs/2024-2025/tempusugr/tempusugr-resumen.html#descripción-general",
+    "href": "tfgs/2024-2025/tempusugr/tempusugr-resumen.html#descripción-general",
+    "title": "TFG 2024–2025 · TempusUGR",
+    "section": "",
+    "text": "(Aquí puede incluirse un resumen del problema y de la solución: gestión de horarios universitarios, generación de calendarios personalizados, integración con servicios externos, etc.)"
+  },
+  {
+    "objectID": "tfgs/2024-2025/tempusugr/tempusugr-resumen.html#objetivos",
+    "href": "tfgs/2024-2025/tempusugr/tempusugr-resumen.html#objetivos",
+    "title": "TFG 2024–2025 · TempusUGR",
+    "section": "",
+    "text": "(Lista breve de objetivos del proyecto, por ejemplo: facilitar la planificación de horarios, evitar solapes, ofrecer vistas personalizadas, etc.)"
+  },
+  {
+    "objectID": "tfgs/2024-2025/tempusugr/tempusugr-resumen.html#tecnologías-utilizadas",
+    "href": "tfgs/2024-2025/tempusugr/tempusugr-resumen.html#tecnologías-utilizadas",
+    "title": "TFG 2024–2025 · TempusUGR",
+    "section": "",
+    "text": "(Lista resumida de tecnologías: frameworks frontend, backend, bases de datos, servicios externos, etc.)"
+  },
+  {
+    "objectID": "tfgs/2024-2025/tempusugr/tempusugr-resumen.html#resultados",
+    "href": "tfgs/2024-2025/tempusugr/tempusugr-resumen.html#resultados",
+    "title": "TFG 2024–2025 · TempusUGR",
+    "section": "",
+    "text": "(Breve resumen de lo conseguido: estado final del proyecto, despliegues realizados, validación con usuarios, etc.)"
+  },
+  {
+    "objectID": "tfgs/2025-2026/pastillero-inteligente/pastillero-resumen.html",
+    "href": "tfgs/2025-2026/pastillero-inteligente/pastillero-resumen.html",
+    "title": "TFG 2025–2026 · Pastillero digital inteligente",
+    "section": "",
+    "text": "Curso académico: 2025–2026\n\nCentro: ETSIIT · Universidad de Granada\n\nTipo de trabajo: TFG · Grado en Ingeniería Informática\n\nDirector/a: [Nombre del director/a]\n\nAlumno/a: [Nombre del alumno/a]\n\nOrganización GitHub: (por definir, p.ej. PastilleroUGR)\n\n\n\n\nMuchas personas mayores toman medicación diaria y, a menudo, múltiples pastillas distintas a lo largo del día. Esto introduce problemas de:\n\nAdherencia terapéutica: olvidos, duplicidades, errores de dosis.\nCarga cognitiva: recordar qué pastilla corresponde a cada momento, con instrucciones a veces complejas.\nBrecha digital: soluciones basadas en smartphones o apps genéricas de alarmas resultan poco accesibles para algunos perfiles de personas mayores.\n\nAdemás, familiares, cuidadores y personal de servicios sociales necesitan herramientas sencillas para saber si la persona está tomando la medicación según lo prescrito.\n\n\n\n\nDiseñar y desarrollar un pastillero digital inteligente orientado a personas mayores que toman medicación diaria, con estos objetivos:\n\nMejorar la adherencia terapéutica mediante:\n\nRecordatorios claros y comprensibles.\nConfirmación explícita de tomas.\n\nReducir la carga cognitiva, usando:\n\nUna interfaz extremadamente sencilla.\nBotones grandes y alto contraste.\nMuy pocos elementos en pantalla.\n\nFacilitar el seguimiento por parte de familiares/cuidadores mediante alertas opcionales cuando no se registra una toma.\n\n\n\n\n\nLa propuesta se basa en:\n\nUna tablet en modo kiosko, integrada en una caja tipo cajón de mesita de noche donde la persona guarda sus medicamentos.\nLa tablet ejecuta una única aplicación en primer plano que:\n\nMuestra las tomas pendientes.\nPermite confirmar cada toma con un solo toque.\nRegistra los eventos en una base de datos local.\nOpcionalmente, envía alertas a contactos de confianza si no se confirma una toma.\n\n\nComportamiento físico esperado:\n\nTapa de la caja cerrada:\n\nLa tablet queda en posición horizontal.\nLa pantalla permanece apagada o en negro.\n\nTapa de la caja abierta:\n\nLa pantalla se activa y muestra la aplicación en una pantalla principal muy simple.\n\n\n\n\n\n\nLa interfaz estará especialmente adaptada a personas mayores:\n\nPantalla de tomas pendientes:\n\nSe muestran las pastillas a tomar en la franja actual mediante un scroll sencillo.\nUna pastilla por pantalla: foto grande + texto de posología en letra grande.\nBotón grande para confirmar “He tomado esta pastilla”.\n\nUna vez no queden tomas pendientes:\n\nMensaje claro del tipo: “No queda medicación pendiente por ahora”.\n\nPantalla de configuración:\n\nPensada para familiares/cuidadores.\nProtegida por un PIN sencillo.\nPermite gestionar medicación, horarios y contactos de confianza.\n\n\n\n\n\n\nEl TFG debe entregar al menos:\n\nUna aplicación funcional en la tablet que:\n\nPermita configurar medicación y horarios.\nMuestre tomas pendientes en una interfaz simple.\nRegistre tomas realizadas.\n\nUn prototipo físico o maqueta de la caja:\n\nIntegración de la tablet en un formato tipo cajón.\nSimulación del comportamiento de tapa abierta/cerrada.\n\nUn conjunto de pruebas básicas de usabilidad:\n\nCon personas mayores reales o perfiles representativos.\nCon métricas sencillas (tiempo de interacción, errores, dificultad percibida).\n\nUna memoria del TFG que documente:\n\nContexto y motivación.\nMetodología (incluyendo, en este caso, Diseño Centrado en el Usuario + enfoque ágil).\nAnálisis, diseño, implementación y evaluación.\nConclusiones y líneas futuras (por ejemplo, reconocimiento automático de posología por visión por computador o integración con servicios sanitarios).\n\n\n\n\n\n\nLa especificación detallada del proyecto (metodología concreta, requisitos, arquitectura, planificación y evaluación) se recoge en:\n\npastillero-doc-trabajo.qmd\n\nEste documento sirve como guía de trabajo entre el director y el alumno y se considera parte oficial de la documentación del TFG."
+  },
+  {
+    "objectID": "tfgs/2025-2026/pastillero-inteligente/pastillero-resumen.html#motivación",
+    "href": "tfgs/2025-2026/pastillero-inteligente/pastillero-resumen.html#motivación",
+    "title": "TFG 2025–2026 · Pastillero digital inteligente",
+    "section": "",
+    "text": "Muchas personas mayores toman medicación diaria y, a menudo, múltiples pastillas distintas a lo largo del día. Esto introduce problemas de:\n\nAdherencia terapéutica: olvidos, duplicidades, errores de dosis.\nCarga cognitiva: recordar qué pastilla corresponde a cada momento, con instrucciones a veces complejas.\nBrecha digital: soluciones basadas en smartphones o apps genéricas de alarmas resultan poco accesibles para algunos perfiles de personas mayores.\n\nAdemás, familiares, cuidadores y personal de servicios sociales necesitan herramientas sencillas para saber si la persona está tomando la medicación según lo prescrito."
+  },
+  {
+    "objectID": "tfgs/2025-2026/pastillero-inteligente/pastillero-resumen.html#objetivo-del-proyecto",
+    "href": "tfgs/2025-2026/pastillero-inteligente/pastillero-resumen.html#objetivo-del-proyecto",
+    "title": "TFG 2025–2026 · Pastillero digital inteligente",
+    "section": "",
+    "text": "Diseñar y desarrollar un pastillero digital inteligente orientado a personas mayores que toman medicación diaria, con estos objetivos:\n\nMejorar la adherencia terapéutica mediante:\n\nRecordatorios claros y comprensibles.\nConfirmación explícita de tomas.\n\nReducir la carga cognitiva, usando:\n\nUna interfaz extremadamente sencilla.\nBotones grandes y alto contraste.\nMuy pocos elementos en pantalla.\n\nFacilitar el seguimiento por parte de familiares/cuidadores mediante alertas opcionales cuando no se registra una toma."
+  },
+  {
+    "objectID": "tfgs/2025-2026/pastillero-inteligente/pastillero-resumen.html#idea-general-de-la-solución",
+    "href": "tfgs/2025-2026/pastillero-inteligente/pastillero-resumen.html#idea-general-de-la-solución",
+    "title": "TFG 2025–2026 · Pastillero digital inteligente",
+    "section": "",
+    "text": "La propuesta se basa en:\n\nUna tablet en modo kiosko, integrada en una caja tipo cajón de mesita de noche donde la persona guarda sus medicamentos.\nLa tablet ejecuta una única aplicación en primer plano que:\n\nMuestra las tomas pendientes.\nPermite confirmar cada toma con un solo toque.\nRegistra los eventos en una base de datos local.\nOpcionalmente, envía alertas a contactos de confianza si no se confirma una toma.\n\n\nComportamiento físico esperado:\n\nTapa de la caja cerrada:\n\nLa tablet queda en posición horizontal.\nLa pantalla permanece apagada o en negro.\n\nTapa de la caja abierta:\n\nLa pantalla se activa y muestra la aplicación en una pantalla principal muy simple."
+  },
+  {
+    "objectID": "tfgs/2025-2026/pastillero-inteligente/pastillero-resumen.html#interfaz-de-usuario-visión-de-alto-nivel",
+    "href": "tfgs/2025-2026/pastillero-inteligente/pastillero-resumen.html#interfaz-de-usuario-visión-de-alto-nivel",
+    "title": "TFG 2025–2026 · Pastillero digital inteligente",
+    "section": "",
+    "text": "La interfaz estará especialmente adaptada a personas mayores:\n\nPantalla de tomas pendientes:\n\nSe muestran las pastillas a tomar en la franja actual mediante un scroll sencillo.\nUna pastilla por pantalla: foto grande + texto de posología en letra grande.\nBotón grande para confirmar “He tomado esta pastilla”.\n\nUna vez no queden tomas pendientes:\n\nMensaje claro del tipo: “No queda medicación pendiente por ahora”.\n\nPantalla de configuración:\n\nPensada para familiares/cuidadores.\nProtegida por un PIN sencillo.\nPermite gestionar medicación, horarios y contactos de confianza."
+  },
+  {
+    "objectID": "tfgs/2025-2026/pastillero-inteligente/pastillero-resumen.html#alcance-mínimo-del-tfg",
+    "href": "tfgs/2025-2026/pastillero-inteligente/pastillero-resumen.html#alcance-mínimo-del-tfg",
+    "title": "TFG 2025–2026 · Pastillero digital inteligente",
+    "section": "",
+    "text": "El TFG debe entregar al menos:\n\nUna aplicación funcional en la tablet que:\n\nPermita configurar medicación y horarios.\nMuestre tomas pendientes en una interfaz simple.\nRegistre tomas realizadas.\n\nUn prototipo físico o maqueta de la caja:\n\nIntegración de la tablet en un formato tipo cajón.\nSimulación del comportamiento de tapa abierta/cerrada.\n\nUn conjunto de pruebas básicas de usabilidad:\n\nCon personas mayores reales o perfiles representativos.\nCon métricas sencillas (tiempo de interacción, errores, dificultad percibida).\n\nUna memoria del TFG que documente:\n\nContexto y motivación.\nMetodología (incluyendo, en este caso, Diseño Centrado en el Usuario + enfoque ágil).\nAnálisis, diseño, implementación y evaluación.\nConclusiones y líneas futuras (por ejemplo, reconocimiento automático de posología por visión por computador o integración con servicios sanitarios)."
+  },
+  {
+    "objectID": "tfgs/2025-2026/pastillero-inteligente/pastillero-resumen.html#documento-de-trabajo-específico",
+    "href": "tfgs/2025-2026/pastillero-inteligente/pastillero-resumen.html#documento-de-trabajo-específico",
+    "title": "TFG 2025–2026 · Pastillero digital inteligente",
+    "section": "",
+    "text": "La especificación detallada del proyecto (metodología concreta, requisitos, arquitectura, planificación y evaluación) se recoge en:\n\npastillero-doc-trabajo.qmd\n\nEste documento sirve como guía de trabajo entre el director y el alumno y se considera parte oficial de la documentación del TFG."
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Yet Another TFG/TFM Handbook · ETSIIT · UGR",
     "section": "",
-    "text": "Este sitio recoge las reglas del juego para los TFG/TFM que dirijo en la ETSIIT de la Universidad de Granada.\nNo pretende ser la guía definitiva, sino “otro handbook más” (yet another handbook) que:\n\nExplicita cómo suelo trabajar con mis alumnos.\nComplementa otros recursos existentes en la UGR y en la ETSIIT.\nSirve como referencia viva y versionada para los proyectos que dirijo.\n\nAquí encontrarás:\n\nCómo organizaremos tu TFG/TFM usando metodologías ágiles (sprints, backlog, issues…).\nCómo usaremos GitHub:\n\nCreación de una organización por proyecto (con un nombre en clave, p.ej. TempusUGR, PastilleroUGR, etc.).\nRepositorios de código y documentación.\nProjects, Issues y Milestones para gestionar el trabajo.\n\nQué se espera de la memoria del TFG/TFM (estructura, contenido mínimo, calidad).\n\nAdemás, se incluye un listado de TFG/TFM dirigidos, con:\n\nUn resumen de cada proyecto.\nEnlaces a sus organizaciones de GitHub.\nEn algunos casos, el documento de trabajo específico que se entrega al alumno.\n\n\n\n\nSi vas a hacer un TFG/TFM conmigo, el flujo recomendado es:\n\nLeer la sección Metodología ágil para entender cómo organizaremos el trabajo en sprints.\nRevisar GitHub & organización para crear la organización de tu proyecto y los repositorios mínimos.\nVer Memoria TFG/TFM para saber qué estructura se espera en la memoria.\nConsultar, cuando esté disponible, el documento de trabajo específico de tu proyecto\n(por ejemplo, el del TFG Pastillero digital inteligente).\n\n\n\n\n\nEste handbook no sustituye a otros materiales ya existentes en la UGR y en la ETSIIT, sino que los complementa.\nEs muy recomendable que, además de leer estas páginas, revises:\n\n\n\nDisponible en la producción científica de la UGR:\nhttps://produccioncientifica.ugr.es/documentos/67e6f8553f806d20a93a1b2a\n\nEste libro ofrece una visión más amplia sobre:\n\nQué es un TFG/TFM en el contexto de la UGR.\nRecomendaciones generales sobre redacción académica.\nAspectos formales, evaluación, etc.\n\n\n\n\n\nRepositorio: https://github.com/JJ/plantilla-TFG-ETSIIT\n\nEsta plantilla es especialmente útil si:\n\nQuieres escribir la memoria en LaTeX.\nPrefieres partir de una estructura ya muy pulida y probada para TFG de la ETSIIT.\nTe interesa ver un ejemplo de cómo automatizar parte del proceso de compilación.\n\n\nIdea práctica:\nPuedes usar este handbook para la forma de trabajar (metodología, GitHub, planning)\ny, al mismo tiempo, usar la plantilla de JJ o el libro de la UGR como referencia para\nel estilo y formato de tu memoria.\n\n\n\n\n\n\n\nTransparencia\nTodo el trabajo relevante (código, documentación, tareas) vive en GitHub.\nIteración\nTrabajamos con sprints cortos y entregas incrementales, evitando dejarlo todo para el final.\nCalidad y reflexión\nEl objetivo no es solo “que funcione”, sino también:\n\nQue la solución tenga sentido en su contexto.\nQue el código sea razonablemente limpio y mantenible.\nQue la memoria cuente una historia coherente del proyecto.\n\nAdaptación al tipo de proyecto\nNo todos los proyectos son iguales:\n\nEn algunos habrá más peso de desarrollo de software.\nEn otros, más de experimentación, análisis de datos o investigación. Las pautas de este handbook se adaptan a esa diversidad.\n\n\n\n\n\n\nEn la sección TFG/TFM dirigidos del menú encontrarás proyectos concretos, por ejemplo:\n\n2024–2025 · TempusUGR\n2025–2026 · Pastillero digital inteligente\n\nCada uno incluye un resumen, enlaces a su organización de GitHub y, cuando procede, su documento de trabajo.\n\nSi algo de lo que lees aquí no encaja con tu proyecto concreto, consúltalo: este handbook es un marco general, y el documento de trabajo específico de cada TFG/TFM siempre tiene prioridad.\n\n\n\nEste repositorio contiene principalmente documentación y algo de código de ejemplo.\n\nEl contenido textual y la documentación (ficheros .qmd, .md, descripciones, etc.) se publican bajo la licencia Creative Commons Atribución 4.0 Internacional (CC BY 4.0).\nEl código y las configuraciones (por ejemplo, workflows de GitHub Actions y scripts) se publican bajo la licencia MIT.\n\nEn la práctica, esto significa que puedes reutilizar, adaptar y compartir tanto la documentación como el código, incluso en contextos diferentes a la ETSIIT, siempre que:\n\nDes el crédito adecuado al autor y a este repositorio.\nMantengas el aviso de licencia correspondiente (CC BY para el contenido, MIT para el código).\nIndiques si has realizado modificaciones cuando corresponda.\n\nPara más detalles, consulta el archivo LICENSE en la raíz de este repositorio."
+    "text": "Este sitio recoge las reglas del juego para los TFG/TFM que dirijo en la ETSIIT de la Universidad de Granada.\nNo pretende ser la guía definitiva, sino “otro handbook más” (yet another handbook) que:\n\nExplicita cómo suelo trabajar con mis alumnos.\nComplementa otros recursos existentes en la UGR y en la ETSIIT.\nSirve como referencia viva y versionada para los proyectos que dirijo.\n\nAquí encontrarás:\n\nCómo organizaremos tu TFG/TFM usando metodologías ágiles (sprints, backlog, issues…).\nCómo usaremos GitHub:\n\nCreación de una organización por proyecto (con un nombre en clave, p.ej. TempusUGR, PastilleroUGR, etc.).\nRepositorios de código y documentación.\nProjects, Issues y Milestones para gestionar el trabajo.\n\nQué se espera de la memoria del TFG/TFM (estructura, contenido mínimo, calidad).\n\nAdemás, se incluye un listado de TFG/TFM dirigidos, con:\n\nUn resumen de cada proyecto.\nEnlaces a sus organizaciones de GitHub.\nEn algunos casos, el documento de trabajo específico que se entrega al alumno.\n\n\n\n\nSi vas a hacer un TFG/TFM conmigo, el flujo recomendado es:\n\nLeer la sección Metodología ágil para entender cómo organizaremos el trabajo en sprints.\nRevisar GitHub & organización para crear la organización de tu proyecto y los repositorios mínimos.\nVer Memoria TFG/TFM para saber qué estructura se espera en la memoria.\nConsultar, cuando esté disponible, el documento de trabajo específico de tu proyecto\n(por ejemplo, el del TFG Pastillero digital inteligente).\n\n\n\n\n\nPuedes descargar una versión en formato libro (PDF) de este handbook desde:\n\nDescargar libro en PDF\n\n\n\n\n\nEste handbook no sustituye a otros materiales ya existentes en la UGR y en la ETSIIT, sino que los complementa.\nEs muy recomendable que, además de leer estas páginas, revises:\n\n\n\nDisponible en la producción científica de la UGR:\nhttps://produccioncientifica.ugr.es/documentos/67e6f8553f806d20a93a1b2a\n\nEste libro ofrece una visión más amplia sobre:\n\nQué es un TFG/TFM en el contexto de la UGR.\nRecomendaciones generales sobre redacción académica.\nAspectos formales, evaluación, etc.\n\n\n\n\n\nRepositorio: https://github.com/JJ/plantilla-TFG-ETSIIT\n\nEsta plantilla es especialmente útil si:\n\nQuieres escribir la memoria en LaTeX.\nPrefieres partir de una estructura ya muy pulida y probada para TFG de la ETSIIT.\nTe interesa ver un ejemplo de cómo automatizar parte del proceso de compilación.\n\n\nIdea práctica:\nPuedes usar este handbook para la forma de trabajar (metodología, GitHub, planning)\ny, al mismo tiempo, usar la plantilla de JJ o el libro de la UGR como referencia para\nel estilo y formato de tu memoria.\n\n\n\n\n\n\n\nTransparencia\nTodo el trabajo relevante (código, documentación, tareas) vive en GitHub.\nIteración\nTrabajamos con sprints cortos y entregas incrementales, evitando dejarlo todo para el final.\nCalidad y reflexión\nEl objetivo no es solo “que funcione”, sino también:\n\nQue la solución tenga sentido en su contexto.\nQue el código sea razonablemente limpio y mantenible.\nQue la memoria cuente una historia coherente del proyecto.\n\nAdaptación al tipo de proyecto\nNo todos los proyectos son iguales:\n\nEn algunos habrá más peso de desarrollo de software.\nEn otros, más de experimentación, análisis de datos o investigación. Las pautas de este handbook se adaptan a esa diversidad.\n\n\n\n\n\n\nEn la sección TFG/TFM dirigidos del menú encontrarás proyectos concretos, por ejemplo:\n\n2024–2025 · TempusUGR\n2025–2026 · Pastillero digital inteligente\n\nCada uno incluye un resumen, enlaces a su organización de GitHub y, cuando procede, su documento de trabajo.\n\nSi algo de lo que lees aquí no encaja con tu proyecto concreto, consúltalo: este handbook es un marco general, y el documento de trabajo específico de cada TFG/TFM siempre tiene prioridad.\n\n\n\nEste repositorio contiene principalmente documentación y algo de código de ejemplo.\n\nEl contenido textual y la documentación (ficheros .qmd, .md, descripciones, etc.) se publican bajo la licencia Creative Commons Atribución 4.0 Internacional (CC BY 4.0).\nEl código y las configuraciones (por ejemplo, workflows de GitHub Actions y scripts) se publican bajo la licencia MIT.\n\nEn la práctica, esto significa que puedes reutilizar, adaptar y compartir tanto la documentación como el código, incluso en contextos diferentes a la ETSIIT, siempre que:\n\nDes el crédito adecuado al autor y a este repositorio.\nMantengas el aviso de licencia correspondiente (CC BY para el contenido, MIT para el código).\nIndiques si has realizado modificaciones cuando corresponda.\n\nPara más detalles, consulta el archivo LICENSE en la raíz de este repositorio."
   },
   {
     "objectID": "index.html#cómo-usar-este-handbook",
@@ -425,6 +439,13 @@
     "title": "Yet Another TFG/TFM Handbook · ETSIIT · UGR",
     "section": "",
     "text": "Si vas a hacer un TFG/TFM conmigo, el flujo recomendado es:\n\nLeer la sección Metodología ágil para entender cómo organizaremos el trabajo en sprints.\nRevisar GitHub & organización para crear la organización de tu proyecto y los repositorios mínimos.\nVer Memoria TFG/TFM para saber qué estructura se espera en la memoria.\nConsultar, cuando esté disponible, el documento de trabajo específico de tu proyecto\n(por ejemplo, el del TFG Pastillero digital inteligente)."
+  },
+  {
+    "objectID": "index.html#libro-en-pdf",
+    "href": "index.html#libro-en-pdf",
+    "title": "Yet Another TFG/TFM Handbook · ETSIIT · UGR",
+    "section": "",
+    "text": "Puedes descargar una versión en formato libro (PDF) de este handbook desde:\n\nDescargar libro en PDF"
   },
   {
     "objectID": "index.html#referencias-y-recursos-complementarios",
@@ -459,41 +480,111 @@
     "href": "docs/memoria-tfg-tfm.html",
     "title": "Memoria de TFG/TFM: estructura y recomendaciones",
     "section": "",
+    "text": "Este documento describe la estructura recomendada para la memoria de tu TFG/TFM y algunas pautas de calidad.\nNo sustituye a la normativa oficial de la ETSIIT o de la UGR (que siempre tiene prioridad), pero:\n\nTe da una estructura base razonable para la mayoría de proyectos de Ingeniería Informática.\nTe ayuda a no dejar la memoria para el último momento: la idea es que se vaya escribiendo en paralelo al desarrollo.\n\n\n\n\n\nLa estructura concreta puede variar según el proyecto, pero una plantilla razonable es:\n\nIntroducción\nContexto y estado del arte\nObjetivos y alcance del proyecto\nMetodología\nAnálisis y requisitos\nDiseño (y arquitectura)\nImplementación\nEvaluación / Experimentación\nConclusiones y trabajo futuro\nReferencias\nAnexos\n\nEn los apartados siguientes se detalla qué se espera en cada sección.\n\n\n\n\nLa introducción debe responder, en pocas páginas, a:\n\n¿Cuál es el problema que aborda el proyecto?\n¿Por qué es relevante?\n¿Cuál es la situación previa (muy resumida)?\n¿Qué se pretende conseguir con este TFG/TFM?\n\nElementos recomendados:\n\nBreve contexto (sin todavía entrar a fondo en el estado del arte).\nObjetivo general del trabajo (una frase clara).\nEstructura de la memoria (describir brevemente qué contiene cada capítulo).\n\n\n\n\n\nAquí debes:\n\nAnalizar el contexto técnico y/o social del problema.\nRevisar trabajos relacionados, herramientas, librerías, sistemas similares, etc.\n\nRecomendaciones:\n\nAgrupa los trabajos por temática (no hagas una lista sin hilo conductor).\nCompara y discute:\n\nEn qué se parecen a tu propuesta.\nEn qué se diferencian.\nQué hueco deja libre el estado del arte que tu TFG/TFM intenta cubrir.\n\n\nEn proyectos basados en software:\n\nPuedes analizar soluciones comerciales, proyectos open source, frameworks, etc.\n\nEn proyectos más “experimentales”:\n\nPuedes centrarse en técnicas, algoritmos, metodologías previas.\n\n\n\n\n\nAunque hayas mencionado los objetivos en la introducción, aquí se formalizan:\n\n\n\nUna frase que describa el propósito principal del TFG/TFM.\n\n\n\n\n\nLista numerada de objetivos concretos (3–7 es un rango razonable).\n\nEjemplo genérico:\n\nDiseñar e implementar una aplicación que…\nEvaluar el rendimiento / precisión / usabilidad de…\nIntegrar X y Y para demostrar que…\n\n\n\n\n\n¿Qué sí se va a hacer?\n¿Qué no entra en el alcance (límites del TFG/TFM)?\nJustificar las decisiones (tiempo, complejidad, etc.).\n\n\n\n\n\n\nEn este capítulo se explica cómo se ha trabajado:\n\nMetodologías de desarrollo (por ejemplo, enfoque ágil).\nMetodologías de investigación o experimentación (si aplica).\nEn proyectos con personas usuarias:\n\nCómo se han realizado entrevistas, tests de usabilidad, encuestas, etc.\n\n\nRecomendaciones:\n\nNo basta con mencionar “Scrum” o “Kanban”: describe cómo lo has adaptado a tu TFG/TFM.\nIncluye:\n\nCómo has organizado los sprints.\nQué artefactos has usado (backlog, Project, issues).\nCómo se han planificado y revisado los hitos.\n\n\nSi tu proyecto utiliza técnicas específicas (p.ej. DCU, experimentos controlados, etc.), descríbelas aquí o en subapartados.\n\n\n\n\nEn esta sección se pasa del problema general a requisitos concretos.\nContenido típico:\n\nPerfiles de usuario y casos de uso (cuando tiene sentido).\nHistorias de usuario (si se usa este enfoque).\nRequisitos funcionales y no funcionales:\n\nFuncionales: qué debe hacer el sistema.\nNo funcionales: rendimiento, seguridad, usabilidad, escalabilidad, etc.\n\n\nRecomendaciones:\n\nNo te limites a una lista plana: organiza por áreas funcionales.\nAsegúrate de que los requisitos estén relacionados con los objetivos del proyecto.\n\n\n\n\n\nAquí se describe cómo se ha diseñado la solución, sin entrar todavía en detalles de código.\nSecciones típicas:\n\nArquitectura de alto nivel\n\nComponentes principales.\nCómo se comunican.\nTecnologías elegidas (a alto nivel) y justificación.\n\nModelo de datos\n\nEsquemas de base de datos.\nDiagramas de clases / entidades.\n\nDiseño de la interacción y la interfaz (si aplica)\n\nFlujos de usuario.\nWireframes, prototipos.\nDecisiones de diseño importantes (por ejemplo, por accesibilidad).\n\nDiseño de API o servicios (si aplica)\n\nEndpoints principales.\nFormato de datos (JSON, etc.).\n\n\nObjetivo: que alguien con conocimientos técnicos pueda entender la forma general de tu solución sin mirar el código.\n\n\n\n\nEn este capítulo cuentas cómo se ha materializado el diseño en código.\nSecciones típicas:\n\nDescripción de los módulos más importantes:\n\nQué hacen.\nCómo se relacionan.\n\nTecnologías concretas utilizadas:\n\nLenguajes, frameworks, librerías clave.\n\nDecisiones técnicas relevantes:\n\nP.ej., por qué se eligió un framework frente a otro.\n\nProblemas encontrados y cómo se han resuelto.\n\nNo es necesario mostrar todo el código, pero sí:\n\nFragmentos representativos.\nEjemplos de uso.\nReferencias al repositorio en GitHub cuando sea relevante.\n\n\n\n\n\nEste capítulo responde a:\n\n¿Qué tan bien funciona lo que has hecho?\n\nSegún el tipo de proyecto:\n\nAplicación de usuario final:\n\nPruebas de usabilidad.\nPruebas de rendimiento, tiempos de respuesta, etc.\n\nProyecto de ciencia de datos / IA:\n\nDiseño de experimentos.\nConjuntos de datos utilizados.\nMétricas y resultados (precisión, recall, F1, etc.).\n\nProyecto de infraestructura / sistemas:\n\nPruebas de carga, mediciones de latencia, disponibilidad, etc.\n\n\nRecomendaciones:\n\nDescribe la metodología de evaluación:\n\nCómo se han diseñado los tests.\nQué métricas se han elegido y por qué.\n\nPresenta resultados de forma clara:\n\nTablas y gráficos.\nComentarios y análisis crítico (no solo “estos son los números”).\n\n\n\n\n\n\nEn este capítulo cierras el proyecto:\n\nResumen de lo conseguido:\n\nRepasar objetivos y explicar en qué grado se han cumplido.\n\nPrincipales aportaciones:\n\nTécnicas, de diseño, de integración, etc.\n\nLimitaciones:\n\nQué no se ha podido hacer y por qué.\n\nLíneas de trabajo futuro:\n\nQué caminos razonables quedan abiertos:\n\nMejora de la solución.\nAmpliación a otros contextos.\nIntegración con sistemas externos, etc.\n\n\n\n\n\n\n\nSe recomienda:\n\nUsar un gestor de referencias (BibTeX, Zotero, etc.).\nMantener un estilo homogéneo (APA, IEEE, etc., según la normativa del centro).\n\nAsegúrate de:\n\nCitar correctamente todo trabajo previo que utilices.\nNo abusar de enlaces sin contexto: mejor referencias formales cuando sea posible.\n\n\n\n\n\nEn los anexos puedes incluir:\n\nDiagramas detallados.\nEspecificaciones técnicas extensas.\nCuestionarios, guiones de entrevistas.\nListados largos de código (si son imprescindibles).\nManuales de usuario, etc.\n\nLa idea es que la memoria principal no quede saturada, pero la información necesaria para reproducir resultados o entender detalles esté disponible.\n\n\n\n\n\nNo dejes la memoria para el final:\n\nVe escribiendo en paralelo.\nPuedes usar issues/tareas específicas del tipo “Escribir sección X”.\n\nEscribe pensando en alguien que no estuvo contigo durante el TFG/TFM:\n\nQue pueda entender qué has hecho, por qué y cómo.\n\nCoherencia interna:\n\nAsegúrate de que objetivos, metodología, resultados y conclusiones encajan entre sí.\n\n\nLa memoria es parte esencial de la evaluación: no solo importa el producto final, sino también cómo cuentas el proceso y los resultados.\n\n\n\n\nAdemás de este handbook, es muy recomendable que consultes otros recursos ya existentes en la UGR y en la ETSIIT, especialmente para profundizar en la parte formal de la memoria:\n\n\n\nPublicación disponible en la producción científica de la UGR:\nhttps://produccioncientifica.ugr.es/documentos/67e6f8553f806d20a93a1b2a\n\nEste libro ofrece:\n\nUna visión general de qué es un TFG/TFM en el contexto de la UGR.\nRecomendaciones sobre estructura, estilo y redacción académica.\nPautas sobre evaluación y aspectos formales.\n\n\n\n\n\nRepositorio: https://github.com/JJ/plantilla-TFG-ETSIIT\n\nEs especialmente útil si:\n\nQuieres escribir la memoria en LaTeX.\nPrefieres partir de una plantilla ya adaptada a la ETSIIT.\nTe interesa ver un ejemplo de automatización del proceso de compilación.\n\nPuedes usar:\n\nEste documento como guía sobre qué debe contener la memoria y cómo organizarla.\nEl libro de la UGR y la plantilla de JJ como referencia para el formato, el estilo y buenas prácticas de redacción académica."
+  },
+  {
+    "objectID": "docs/memoria-tfg-tfm.html#objetivo-de-este-documento",
+    "href": "docs/memoria-tfg-tfm.html#objetivo-de-este-documento",
+    "title": "Memoria de TFG/TFM: estructura y recomendaciones",
+    "section": "",
     "text": "Este documento describe la estructura recomendada para la memoria de tu TFG/TFM y algunas pautas de calidad.\nNo sustituye a la normativa oficial de la ETSIIT o de la UGR (que siempre tiene prioridad), pero:\n\nTe da una estructura base razonable para la mayoría de proyectos de Ingeniería Informática.\nTe ayuda a no dejar la memoria para el último momento: la idea es que se vaya escribiendo en paralelo al desarrollo."
   },
   {
-    "objectID": "docs/memoria-tfg-tfm.html#objetivo-general",
-    "href": "docs/memoria-tfg-tfm.html#objetivo-general",
+    "objectID": "docs/memoria-tfg-tfm.html#estructura-recomendada-de-la-memoria",
+    "href": "docs/memoria-tfg-tfm.html#estructura-recomendada-de-la-memoria",
     "title": "Memoria de TFG/TFM: estructura y recomendaciones",
-    "section": "5.1. Objetivo general",
-    "text": "5.1. Objetivo general\n\nUna frase que describa el propósito principal del TFG/TFM."
+    "section": "",
+    "text": "La estructura concreta puede variar según el proyecto, pero una plantilla razonable es:\n\nIntroducción\nContexto y estado del arte\nObjetivos y alcance del proyecto\nMetodología\nAnálisis y requisitos\nDiseño (y arquitectura)\nImplementación\nEvaluación / Experimentación\nConclusiones y trabajo futuro\nReferencias\nAnexos\n\nEn los apartados siguientes se detalla qué se espera en cada sección."
   },
   {
-    "objectID": "docs/memoria-tfg-tfm.html#objetivos-específicos",
-    "href": "docs/memoria-tfg-tfm.html#objetivos-específicos",
+    "objectID": "docs/memoria-tfg-tfm.html#introducción",
+    "href": "docs/memoria-tfg-tfm.html#introducción",
     "title": "Memoria de TFG/TFM: estructura y recomendaciones",
-    "section": "5.2. Objetivos específicos",
-    "text": "5.2. Objetivos específicos\n\nLista numerada de objetivos concretos (3–7 es un rango razonable).\n\nEjemplo genérico:\n\nDiseñar e implementar una aplicación que…\nEvaluar el rendimiento / precisión / usabilidad de…\nIntegrar X y Y para demostrar que…"
+    "section": "",
+    "text": "La introducción debe responder, en pocas páginas, a:\n\n¿Cuál es el problema que aborda el proyecto?\n¿Por qué es relevante?\n¿Cuál es la situación previa (muy resumida)?\n¿Qué se pretende conseguir con este TFG/TFM?\n\nElementos recomendados:\n\nBreve contexto (sin todavía entrar a fondo en el estado del arte).\nObjetivo general del trabajo (una frase clara).\nEstructura de la memoria (describir brevemente qué contiene cada capítulo)."
   },
   {
-    "objectID": "docs/memoria-tfg-tfm.html#alcance-y-limitaciones",
-    "href": "docs/memoria-tfg-tfm.html#alcance-y-limitaciones",
+    "objectID": "docs/memoria-tfg-tfm.html#contexto-y-estado-del-arte",
+    "href": "docs/memoria-tfg-tfm.html#contexto-y-estado-del-arte",
     "title": "Memoria de TFG/TFM: estructura y recomendaciones",
-    "section": "5.3. Alcance y limitaciones",
-    "text": "5.3. Alcance y limitaciones\n\n¿Qué sí se va a hacer?\n¿Qué no entra en el alcance (límites del TFG/TFM)?\nJustificar las decisiones (tiempo, complejidad, etc.)."
+    "section": "",
+    "text": "Aquí debes:\n\nAnalizar el contexto técnico y/o social del problema.\nRevisar trabajos relacionados, herramientas, librerías, sistemas similares, etc.\n\nRecomendaciones:\n\nAgrupa los trabajos por temática (no hagas una lista sin hilo conductor).\nCompara y discute:\n\nEn qué se parecen a tu propuesta.\nEn qué se diferencian.\nQué hueco deja libre el estado del arte que tu TFG/TFM intenta cubrir.\n\n\nEn proyectos basados en software:\n\nPuedes analizar soluciones comerciales, proyectos open source, frameworks, etc.\n\nEn proyectos más “experimentales”:\n\nPuedes centrarse en técnicas, algoritmos, metodologías previas."
   },
   {
-    "objectID": "docs/memoria-tfg-tfm.html#libro-sobre-tfgtfm-en-la-ugr",
-    "href": "docs/memoria-tfg-tfm.html#libro-sobre-tfgtfm-en-la-ugr",
+    "objectID": "docs/memoria-tfg-tfm.html#objetivos-y-alcance",
+    "href": "docs/memoria-tfg-tfm.html#objetivos-y-alcance",
     "title": "Memoria de TFG/TFM: estructura y recomendaciones",
-    "section": "15.1. Libro sobre TFG/TFM en la UGR",
-    "text": "15.1. Libro sobre TFG/TFM en la UGR\n\nPublicación disponible en la producción científica de la UGR:\nhttps://produccioncientifica.ugr.es/documentos/67e6f8553f806d20a93a1b2a\n\nEste libro ofrece:\n\nUna visión general de qué es un TFG/TFM en el contexto de la UGR.\nRecomendaciones sobre estructura, estilo y redacción académica.\nPautas sobre evaluación y aspectos formales."
+    "section": "",
+    "text": "Aunque hayas mencionado los objetivos en la introducción, aquí se formalizan:\n\n\n\nUna frase que describa el propósito principal del TFG/TFM.\n\n\n\n\n\nLista numerada de objetivos concretos (3–7 es un rango razonable).\n\nEjemplo genérico:\n\nDiseñar e implementar una aplicación que…\nEvaluar el rendimiento / precisión / usabilidad de…\nIntegrar X y Y para demostrar que…\n\n\n\n\n\n¿Qué sí se va a hacer?\n¿Qué no entra en el alcance (límites del TFG/TFM)?\nJustificar las decisiones (tiempo, complejidad, etc.)."
   },
   {
-    "objectID": "docs/memoria-tfg-tfm.html#plantilla-de-tfg-de-jj-merelo-etsiit",
-    "href": "docs/memoria-tfg-tfm.html#plantilla-de-tfg-de-jj-merelo-etsiit",
+    "objectID": "docs/memoria-tfg-tfm.html#metodología",
+    "href": "docs/memoria-tfg-tfm.html#metodología",
     "title": "Memoria de TFG/TFM: estructura y recomendaciones",
-    "section": "15.2. Plantilla de TFG de JJ Merelo (ETSIIT)",
-    "text": "15.2. Plantilla de TFG de JJ Merelo (ETSIIT)\n\nRepositorio: https://github.com/JJ/plantilla-TFG-ETSIIT\n\nEs especialmente útil si:\n\nQuieres escribir la memoria en LaTeX.\nPrefieres partir de una plantilla ya adaptada a la ETSIIT.\nTe interesa ver un ejemplo de automatización del proceso de compilación.\n\nPuedes usar:\n\nEste documento como guía sobre qué debe contener la memoria y cómo organizarla.\nEl libro de la UGR y la plantilla de JJ como referencia para el formato, el estilo y buenas prácticas de redacción académica."
+    "section": "",
+    "text": "En este capítulo se explica cómo se ha trabajado:\n\nMetodologías de desarrollo (por ejemplo, enfoque ágil).\nMetodologías de investigación o experimentación (si aplica).\nEn proyectos con personas usuarias:\n\nCómo se han realizado entrevistas, tests de usabilidad, encuestas, etc.\n\n\nRecomendaciones:\n\nNo basta con mencionar “Scrum” o “Kanban”: describe cómo lo has adaptado a tu TFG/TFM.\nIncluye:\n\nCómo has organizado los sprints.\nQué artefactos has usado (backlog, Project, issues).\nCómo se han planificado y revisado los hitos.\n\n\nSi tu proyecto utiliza técnicas específicas (p.ej. DCU, experimentos controlados, etc.), descríbelas aquí o en subapartados."
+  },
+  {
+    "objectID": "docs/memoria-tfg-tfm.html#análisis-y-requisitos",
+    "href": "docs/memoria-tfg-tfm.html#análisis-y-requisitos",
+    "title": "Memoria de TFG/TFM: estructura y recomendaciones",
+    "section": "",
+    "text": "En esta sección se pasa del problema general a requisitos concretos.\nContenido típico:\n\nPerfiles de usuario y casos de uso (cuando tiene sentido).\nHistorias de usuario (si se usa este enfoque).\nRequisitos funcionales y no funcionales:\n\nFuncionales: qué debe hacer el sistema.\nNo funcionales: rendimiento, seguridad, usabilidad, escalabilidad, etc.\n\n\nRecomendaciones:\n\nNo te limites a una lista plana: organiza por áreas funcionales.\nAsegúrate de que los requisitos estén relacionados con los objetivos del proyecto."
+  },
+  {
+    "objectID": "docs/memoria-tfg-tfm.html#diseño-y-arquitectura",
+    "href": "docs/memoria-tfg-tfm.html#diseño-y-arquitectura",
+    "title": "Memoria de TFG/TFM: estructura y recomendaciones",
+    "section": "",
+    "text": "Aquí se describe cómo se ha diseñado la solución, sin entrar todavía en detalles de código.\nSecciones típicas:\n\nArquitectura de alto nivel\n\nComponentes principales.\nCómo se comunican.\nTecnologías elegidas (a alto nivel) y justificación.\n\nModelo de datos\n\nEsquemas de base de datos.\nDiagramas de clases / entidades.\n\nDiseño de la interacción y la interfaz (si aplica)\n\nFlujos de usuario.\nWireframes, prototipos.\nDecisiones de diseño importantes (por ejemplo, por accesibilidad).\n\nDiseño de API o servicios (si aplica)\n\nEndpoints principales.\nFormato de datos (JSON, etc.).\n\n\nObjetivo: que alguien con conocimientos técnicos pueda entender la forma general de tu solución sin mirar el código."
+  },
+  {
+    "objectID": "docs/memoria-tfg-tfm.html#implementación",
+    "href": "docs/memoria-tfg-tfm.html#implementación",
+    "title": "Memoria de TFG/TFM: estructura y recomendaciones",
+    "section": "",
+    "text": "En este capítulo cuentas cómo se ha materializado el diseño en código.\nSecciones típicas:\n\nDescripción de los módulos más importantes:\n\nQué hacen.\nCómo se relacionan.\n\nTecnologías concretas utilizadas:\n\nLenguajes, frameworks, librerías clave.\n\nDecisiones técnicas relevantes:\n\nP.ej., por qué se eligió un framework frente a otro.\n\nProblemas encontrados y cómo se han resuelto.\n\nNo es necesario mostrar todo el código, pero sí:\n\nFragmentos representativos.\nEjemplos de uso.\nReferencias al repositorio en GitHub cuando sea relevante."
+  },
+  {
+    "objectID": "docs/memoria-tfg-tfm.html#evaluación-experimentación",
+    "href": "docs/memoria-tfg-tfm.html#evaluación-experimentación",
+    "title": "Memoria de TFG/TFM: estructura y recomendaciones",
+    "section": "",
+    "text": "Este capítulo responde a:\n\n¿Qué tan bien funciona lo que has hecho?\n\nSegún el tipo de proyecto:\n\nAplicación de usuario final:\n\nPruebas de usabilidad.\nPruebas de rendimiento, tiempos de respuesta, etc.\n\nProyecto de ciencia de datos / IA:\n\nDiseño de experimentos.\nConjuntos de datos utilizados.\nMétricas y resultados (precisión, recall, F1, etc.).\n\nProyecto de infraestructura / sistemas:\n\nPruebas de carga, mediciones de latencia, disponibilidad, etc.\n\n\nRecomendaciones:\n\nDescribe la metodología de evaluación:\n\nCómo se han diseñado los tests.\nQué métricas se han elegido y por qué.\n\nPresenta resultados de forma clara:\n\nTablas y gráficos.\nComentarios y análisis crítico (no solo “estos son los números”)."
+  },
+  {
+    "objectID": "docs/memoria-tfg-tfm.html#conclusiones-y-trabajo-futuro",
+    "href": "docs/memoria-tfg-tfm.html#conclusiones-y-trabajo-futuro",
+    "title": "Memoria de TFG/TFM: estructura y recomendaciones",
+    "section": "",
+    "text": "En este capítulo cierras el proyecto:\n\nResumen de lo conseguido:\n\nRepasar objetivos y explicar en qué grado se han cumplido.\n\nPrincipales aportaciones:\n\nTécnicas, de diseño, de integración, etc.\n\nLimitaciones:\n\nQué no se ha podido hacer y por qué.\n\nLíneas de trabajo futuro:\n\nQué caminos razonables quedan abiertos:\n\nMejora de la solución.\nAmpliación a otros contextos.\nIntegración con sistemas externos, etc."
+  },
+  {
+    "objectID": "docs/memoria-tfg-tfm.html#referencias",
+    "href": "docs/memoria-tfg-tfm.html#referencias",
+    "title": "Memoria de TFG/TFM: estructura y recomendaciones",
+    "section": "",
+    "text": "Se recomienda:\n\nUsar un gestor de referencias (BibTeX, Zotero, etc.).\nMantener un estilo homogéneo (APA, IEEE, etc., según la normativa del centro).\n\nAsegúrate de:\n\nCitar correctamente todo trabajo previo que utilices.\nNo abusar de enlaces sin contexto: mejor referencias formales cuando sea posible."
+  },
+  {
+    "objectID": "docs/memoria-tfg-tfm.html#anexos",
+    "href": "docs/memoria-tfg-tfm.html#anexos",
+    "title": "Memoria de TFG/TFM: estructura y recomendaciones",
+    "section": "",
+    "text": "En los anexos puedes incluir:\n\nDiagramas detallados.\nEspecificaciones técnicas extensas.\nCuestionarios, guiones de entrevistas.\nListados largos de código (si son imprescindibles).\nManuales de usuario, etc.\n\nLa idea es que la memoria principal no quede saturada, pero la información necesaria para reproducir resultados o entender detalles esté disponible."
+  },
+  {
+    "objectID": "docs/memoria-tfg-tfm.html#recomendaciones-prácticas",
+    "href": "docs/memoria-tfg-tfm.html#recomendaciones-prácticas",
+    "title": "Memoria de TFG/TFM: estructura y recomendaciones",
+    "section": "",
+    "text": "No dejes la memoria para el final:\n\nVe escribiendo en paralelo.\nPuedes usar issues/tareas específicas del tipo “Escribir sección X”.\n\nEscribe pensando en alguien que no estuvo contigo durante el TFG/TFM:\n\nQue pueda entender qué has hecho, por qué y cómo.\n\nCoherencia interna:\n\nAsegúrate de que objetivos, metodología, resultados y conclusiones encajan entre sí.\n\n\nLa memoria es parte esencial de la evaluación: no solo importa el producto final, sino también cómo cuentas el proceso y los resultados."
+  },
+  {
+    "objectID": "docs/memoria-tfg-tfm.html#recursos-complementarios-recomendados",
+    "href": "docs/memoria-tfg-tfm.html#recursos-complementarios-recomendados",
+    "title": "Memoria de TFG/TFM: estructura y recomendaciones",
+    "section": "",
+    "text": "Además de este handbook, es muy recomendable que consultes otros recursos ya existentes en la UGR y en la ETSIIT, especialmente para profundizar en la parte formal de la memoria:\n\n\n\nPublicación disponible en la producción científica de la UGR:\nhttps://produccioncientifica.ugr.es/documentos/67e6f8553f806d20a93a1b2a\n\nEste libro ofrece:\n\nUna visión general de qué es un TFG/TFM en el contexto de la UGR.\nRecomendaciones sobre estructura, estilo y redacción académica.\nPautas sobre evaluación y aspectos formales.\n\n\n\n\n\nRepositorio: https://github.com/JJ/plantilla-TFG-ETSIIT\n\nEs especialmente útil si:\n\nQuieres escribir la memoria en LaTeX.\nPrefieres partir de una plantilla ya adaptada a la ETSIIT.\nTe interesa ver un ejemplo de automatización del proceso de compilación.\n\nPuedes usar:\n\nEste documento como guía sobre qué debe contener la memoria y cómo organizarla.\nEl libro de la UGR y la plantilla de JJ como referencia para el formato, el estilo y buenas prácticas de redacción académica."
   }
 ]
