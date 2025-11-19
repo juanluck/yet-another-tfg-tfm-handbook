@@ -21,12 +21,10 @@ jobs:
         with:
           tinytex: true
 
-      - name: Render website
+      - name: Render website and book in pdf
         run: |
           quarto render                 # web (usa el _quarto.yml de la raíz)
           quarto render book/ --to pdf  # libro PDF (usa book/_quarto.yml)
-          mkdir -p _site/book
-          cp book/_book/*.pdf _site/book/
 
       - name: Publish to gh-pages
         uses: quarto-dev/quarto-actions/publish@v2
