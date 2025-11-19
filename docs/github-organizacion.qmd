@@ -5,7 +5,6 @@ format:
     toc: true
 ---
 
-# GitHub y organización del proyecto
 
 ## Objetivo de este documento
 

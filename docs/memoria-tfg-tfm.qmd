@@ -5,8 +5,6 @@ format:
     toc: true
 ---
 
-# Memoria de TFG/TFM: estructura y recomendaciones
-
 ## Objetivo de este documento
 
 Este documento describe la **estructura recomendada** para la memoria de tu TFG/TFM y algunas pautas de calidad.

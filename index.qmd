@@ -5,8 +5,6 @@ format:
     toc: false
 ---
 
-# Yet Another TFG/TFM Handbook · ETSIIT · UGR
-
 Este sitio recoge las **reglas del juego** para los TFG/TFM que dirijo en la ETSIIT de la Universidad de Granada.
 
 No pretende ser **la** guía definitiva, sino **“otro handbook más”** (*yet another handbook*) que:

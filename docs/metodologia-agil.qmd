@@ -5,8 +5,6 @@ format:
     toc: true
 ---
 
-# Metodología ágil para TFG/TFM
-
 ## Objetivo de este documento
 
 Este documento explica **cómo trabajaremos tu TFG/TFM usando metodologías ágiles** (Scrum/Kanban ligeros) en el contexto de la ETSIIT (UGR).
