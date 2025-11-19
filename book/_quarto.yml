@@ -34,23 +34,39 @@ format:
     toc: true
     toc-title: "Índice"
     number-sections: true
-    keep-tex: true          # <- importante
+    # keep-tex: true          # <- importante
     include-in-header: header.tex
     include-before-body:
       text: |
         %%% Override de colores de callout para que el fondo sea blanco
         % Note
-        \definecolor{quarto-callout-note-color}{HTML}{FFFFFF}
-        \definecolor{quarto-callout-note-color-frame}{HTML}{000000}
+        \definecolor{quarto-callout-note-color}{HTML}{D32F2F}
+        \definecolor{quarto-callout-note-color-frame}{HTML}{D32F2F}
         % Warning
-        \definecolor{quarto-callout-warning-color}{HTML}{FFFFFF}
-        \definecolor{quarto-callout-warning-color-frame}{HTML}{000000}
+        \definecolor{quarto-callout-warning-color}{HTML}{F2994A}
+        \definecolor{quarto-callout-warning-color-frame}{HTML}{F2994A}
         % Important
-        \definecolor{quarto-callout-important-color}{HTML}{FFFFFF}
-        \definecolor{quarto-callout-important-color-frame}{HTML}{000000}
+        \definecolor{quarto-callout-important-color}{HTML}{D32F2F}
+        \definecolor{quarto-callout-important-color-frame}{HTML}{D32F2F}
         % Tip
-        \definecolor{quarto-callout-tip-color}{HTML}{FFFFFF}
-        \definecolor{quarto-callout-tip-color-frame}{HTML}{000000}
+        \definecolor{quarto-callout-tip-color}{HTML}{F2994A}
+        \definecolor{quarto-callout-tip-color-frame}{HTML}{F2994A}
         % Caution
-        \definecolor{quarto-callout-caution-color}{HTML}{FFFFFF}
-        \definecolor{quarto-callout-caution-color-frame}{HTML}{000000}
+        \definecolor{quarto-callout-caution-color}{HTML}{D98A1A}
+        \definecolor{quarto-callout-caution-color-frame}{HTML}{D98A1A}
+        % Forzar que todas las tcolorbox tengan fondo opaco
+        % Guardar las definiciones originales del entorno tcolorbox
+        \let\OriginalTcolorbox\tcolorbox
+        \let\OriginalEndTcolorbox\endtcolorbox
+
+        % Redefinir el entorno tcolorbox para añadir SIEMPRE nuestras opciones al final
+        \renewenvironment{tcolorbox}[1][]%
+        {%
+        % Llamamos al entorno original con:
+        % - las opciones que venían (#1)
+        % - y AL FINAL opacityback=1,colback=white, que sobreescriben las anteriores
+        \OriginalTcolorbox[#1,opacityback=1,colback=white]%
+        }%
+        {%
+        \OriginalEndTcolorbox
+        }
