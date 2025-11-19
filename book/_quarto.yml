@@ -7,11 +7,11 @@ project:
 lang: es
 
 book:
-  title: "Yet Another TFG/TFM Handbook · ETSIIT · UGR"
+  title: "Yet Another TFG/TFM Handbook"
   author: "Juan Luis Jiménez Laredo"      # cámbialo por tu nombre
   date: "2025"
   # Opcional: subtítulo, portada, etc.
-  subtitle: "Guía de trabajo para proyectos TFG/TFM"
+  subtitle: "Guía de trabajo para proyectos TFG/TFM en la ETSIIT - UGR"
   # cover-image: cover.png       # si algún día quieres una imagen de portada
   output-file: "handbook-tfg-tfm-etsiit-ugr"
 
@@ -35,3 +35,21 @@ format:
     toc-title: "Índice"
     number-sections: true
     include-in-header: header.tex
+    include-before-body:
+      text: |
+        %%% Override de colores de callout para que el fondo sea blanco
+        % Note
+        \definecolor{quarto-callout-note-color}{HTML}{FFFFFF}
+        \definecolor{quarto-callout-note-color-frame}{HTML}{000000}
+        % Warning
+        \definecolor{quarto-callout-warning-color}{HTML}{FFFFFF}
+        \definecolor{quarto-callout-warning-color-frame}{HTML}{000000}
+        % Important
+        \definecolor{quarto-callout-important-color}{HTML}{FFFFFF}
+        \definecolor{quarto-callout-important-color-frame}{HTML}{000000}
+        % Tip
+        \definecolor{quarto-callout-tip-color}{HTML}{FFFFFF}
+        \definecolor{quarto-callout-tip-color-frame}{HTML}{000000}
+        % Caution
+        \definecolor{quarto-callout-caution-color}{HTML}{FFFFFF}
+        \definecolor{quarto-callout-caution-color-frame}{HTML}{000000}
