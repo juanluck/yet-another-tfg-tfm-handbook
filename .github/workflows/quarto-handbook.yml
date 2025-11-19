@@ -21,11 +21,8 @@ jobs:
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
-
-      - name: Install TinyTeX
-        run: |
-          quarto install tinytex --no-prompt
-          quarto check tinytex
+        with:
+          tinytex: true
 
       - name: Render website
         run: |
@@ -41,3 +38,6 @@ jobs:
           target: gh-pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+
+          # .github/workflows/quarto-handbook.yml
