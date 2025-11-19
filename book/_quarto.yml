@@ -4,6 +4,7 @@ project:
   # Hacemos que el libro se genere dentro de la web existente
   output-dir: ../_site/book
 
+
 book:
   title: "Yet Another TFG/TFM Handbook · ETSIIT · UGR"
   author: "Juan Luis Jiménez Laredo"      # cámbialo por tu nombre
@@ -20,6 +21,7 @@ book:
 
 format:
   pdf:
+    output-file: "handbook-tfg-tfm-etsiit-ugr.pdf"
     documentclass: scrbook   # aspecto de libro
     toc: true
     number-sections: true

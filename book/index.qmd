@@ -45,7 +45,7 @@ Si vas a hacer un TFG/TFM conmigo, el flujo recomendado es:
 
 Puedes descargar una versión en formato libro (PDF) de este handbook desde:
 
-- [Descargar libro en PDF](book/book.pdf)
+- [Descargar libro en PDF](book/handbook-tfg-tfm-etsiit-ugr.pdf)
 
 ---
 
