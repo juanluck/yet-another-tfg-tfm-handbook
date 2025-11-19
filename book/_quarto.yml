@@ -12,6 +12,8 @@ book:
   # Opcional: subtítulo, portada, etc.
   subtitle: "Guía de trabajo para proyectos TFG/TFM"
   # cover-image: cover.png       # si algún día quieres una imagen de portada
+  output-file: "handbook-tfg-tfm-etsiit-ugr"
+
 
   chapters:
     - index.qmd
@@ -21,7 +23,6 @@ book:
 
 format:
   pdf:
-    output-file: "handbook-tfg-tfm-etsiit-ugr"
     documentclass: scrbook   # aspecto de libro
     toc: true
     number-sections: true
