@@ -21,7 +21,7 @@ book:
 
 format:
   pdf:
-    output-file: "handbook-tfg-tfm-etsiit-ugr.pdf"
+    output-file: "handbook-tfg-tfm-etsiit-ugr"
     documentclass: scrbook   # aspecto de libro
     toc: true
     number-sections: true
