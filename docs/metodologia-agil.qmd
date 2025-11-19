@@ -3,9 +3,6 @@ title: "Metodología ágil para TFG/TFM"
 format:
   html:
     toc: true
-  pdf:
-    toc: true
-    number-sections: true
 ---
 
 # 1. Objetivo de este documento
