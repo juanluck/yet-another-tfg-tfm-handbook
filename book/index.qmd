@@ -2,7 +2,7 @@
 title: "Yet Another TFG/TFM Handbook · ETSIIT · UGR"
 ---
 
-# Yet Another TFG/TFM Handbook · ETSIIT · UGR
+<!-- # Yet Another TFG/TFM Handbook · ETSIIT · UGR -->
 
 Este libro recoge las **reglas del juego** para los TFG/TFM que dirijo en la ETSIIT de la Universidad de Granada.
 
