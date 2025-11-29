@@ -2,10 +2,9 @@
 title: "Yet Another TFG/TFM Handbook"
 format:
   html:
-    toc: false
+    toc: true
 ---
 
-[Descargar una versión del libro en PDF](book/handbook-tfg-tfm-etsiit-ugr.pdf)
 
 ::: {.callout-note}
 ## Versión web

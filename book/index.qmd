@@ -8,7 +8,7 @@ title: ""
 
 ::: {.callout-note}
 ## Versión web
-Este texto forma parte de la versión en formato **libro / PDF** del handbook. Existe también [una versión web](https://juanluck.github.io/yet-another-tfg-tfm-handbook/) que presenta el mismo contenido de forma navegable.
+Este texto forma parte de la versión en formato **libro / PDF** del handbook. Existe también [_**una versión web**_](https://juanluck.github.io/yet-another-tfg-tfm-handbook/) que presenta el mismo contenido de forma navegable.
 :::
 
 Este libro recoge las **reglas del juego** para los TFG/TFM que dirijo en la ETSIIT de la Universidad de Granada.
