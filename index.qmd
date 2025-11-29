@@ -1,13 +1,21 @@
 ---
-title: "Yet Another TFG/TFM Handbook · ETSIIT · UGR"
+title: "Yet Another TFG/TFM Handbook"
 format:
   html:
     toc: false
 ---
 
+[Descargar una versión del libro en PDF](book/handbook-tfg-tfm-etsiit-ugr.pdf)
+
+::: {.callout-note}
+## Versión web
+Este texto forma parte de la versión en **formato web** del manual (*handbook*). Existe también [una versión para descargar](book/handbook-tfg-tfm-etsiit-ugr.pdf) que presenta el mismo contenido de **formato pdf**.
+:::
+
+
 Este sitio recoge las **reglas del juego** para los TFG/TFM que dirijo en la ETSIIT de la Universidad de Granada.
 
-No pretende ser **la** guía definitiva, sino **“otro handbook más”** (*yet another handbook*) que:
+No pretende ser **la** guía definitiva, sino **“otro manual más”** (*yet another handbook*) que:
 
 - Explicita cómo suelo trabajar con mis alumnos.
 - Complementa otros recursos existentes en la UGR y en la ETSIIT.
@@ -39,14 +47,6 @@ Si vas a hacer un TFG/TFM conmigo, el flujo recomendado es:
 3. Ver [Memoria TFG/TFM](docs/memoria-tfg-tfm.qmd) para saber qué estructura se espera en la memoria.
 4. Consultar, cuando esté disponible, el **documento de trabajo específico** de tu proyecto  
    (por ejemplo, el del TFG *Pastillero digital inteligente*).
-
----
-
-## Libro en PDF
-
-Puedes descargar una versión en formato libro (PDF) de este handbook desde:
-
-- [Descargar libro en PDF](book/handbook-tfg-tfm-etsiit-ugr.pdf)
 
 ---
 

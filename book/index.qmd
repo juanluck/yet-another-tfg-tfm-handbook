@@ -5,16 +5,15 @@ title: ""
 # `\faBook{}`{=latex} `<i class="fa fa-info-circle" aria-hidden="true"></i>`{=html} Introducción <!-- {-} -->
 
 
-::: {.callout-warning}
-## Importante
 
-Este handbook **no es la guía oficial** de TFG/TFM de la ETSIIT ni de la UGR, ni sustituye a la normativa vigente del centro.  
-Es simplemente *“otro handbook más”* que documenta **cómo suelo trabajar con mis alumnos** y ofrece un marco práctico de referencia.
+::: {.callout-note}
+## Versión web
+Este texto forma parte de la versión en formato **libro / PDF** del handbook. Existe también [una versión web](https://juanluck.github.io/yet-another-tfg-tfm-handbook/) que presenta el mismo contenido de forma navegable.
 :::
 
 Este libro recoge las **reglas del juego** para los TFG/TFM que dirijo en la ETSIIT de la Universidad de Granada.
 
-No pretende ser **la** guía definitiva, sino **“otro handbook más”** (*yet another handbook*) que:
+No pretende ser **la** guía definitiva, sino **“otro manual más”** (*yet another handbook*) que:
 
 - Explicita cómo suelo trabajar con mis alumnos.
 - Complementa otros recursos existentes en la UGR y en la ETSIIT.
@@ -24,12 +23,20 @@ Aquí encontrarás:
 
 - Cómo organizaremos tu TFG/TFM usando **metodologías ágiles** (sprints, backlog, issues…).
 - Cómo usaremos **GitHub**:
-  - Creación de una **organización por proyecto** (con un nombre en clave, p.ej. `TempusUGR`, `PastilleroUGR`, etc.).
+  - Creación de una **organización por proyecto** (con un nombre en clave, p.ej. `TempusUGR`).
   - Repositorios de código y documentación.
   - Projects, Issues y Milestones para gestionar el trabajo.
 - Qué se espera de la **memoria del TFG/TFM** (estructura, contenido mínimo, calidad).
 
-Este texto forma parte de la versión en formato **libro / PDF** del handbook. Existe también una versión web generada con Quarto que presenta el mismo contenido de forma navegable.
+
+
+::: {.callout-warning}
+## Importante
+
+Este handbook **no es la guía oficial** de TFG/TFM de la ETSIIT ni de la UGR, ni sustituye a la normativa vigente del centro.  
+Es simplemente *“otro handbook más”* que documenta **cómo suelo trabajar con mis alumnos** y ofrece un marco práctico de referencia.
+:::
+
 
 ---
 
@@ -131,10 +138,9 @@ el estilo y formato de tu memoria.
 
 ## TFG/TFM dirigidos (ejemplos)
 
-En la versión web de este handbook se incluye una sección de **TFG/TFM dirigidos**, donde se enlazan proyectos concretos, por ejemplo:
+En la versión web de este handbook se incluye una sección de **TFG/TFM dirigidos**, donde se irán enlazando los proyectos concretos que superviso, por ejemplo:
 
 - 2024–2025 · TempusUGR
-- 2025–2026 · Pastillero digital inteligente
 
 Cada uno incluye un resumen, enlaces a su organización de GitHub y, cuando procede, su documento de trabajo específico.
 
