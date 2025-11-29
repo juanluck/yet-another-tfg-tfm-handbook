@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>TFG 2024–2025 · TempusUGR – Yet Another TFG/TFM Handbook · ETSIIT · UGR</title>
+<title>TFG 2024–2025 · TempusUGR – Yet Another TFG/TFM Handbook</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -82,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../../index.html">
-    <span class="navbar-title">Yet Another TFG/TFM Handbook · ETSIIT · UGR</span>
+    <span class="navbar-title">Yet Another TFG/TFM Handbook</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -141,9 +141,11 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#tempusugr-gestión-de-horarios-universitarios" id="toc-tempusugr-gestión-de-horarios-universitarios" class="nav-link active" data-scroll-target="#tempusugr-gestión-de-horarios-universitarios">TempusUGR: Gestión de horarios universitarios</a>
   <ul class="collapse">
   <li><a href="#descripción-general" id="toc-descripción-general" class="nav-link" data-scroll-target="#descripción-general">1. Descripción general</a></li>
-  <li><a href="#objetivos" id="toc-objetivos" class="nav-link" data-scroll-target="#objetivos">2. Objetivos</a></li>
-  <li><a href="#tecnologías-utilizadas" id="toc-tecnologías-utilizadas" class="nav-link" data-scroll-target="#tecnologías-utilizadas">3. Tecnologías utilizadas</a></li>
-  <li><a href="#resultados" id="toc-resultados" class="nav-link" data-scroll-target="#resultados">4. Resultados</a></li>
+  <li><a href="#tecnologías-utilizadas" id="toc-tecnologías-utilizadas" class="nav-link" data-scroll-target="#tecnologías-utilizadas">2. Tecnologías utilizadas</a>
+  <ul class="collapse">
+  <li><a href="#backend" id="toc-backend" class="nav-link" data-scroll-target="#backend"><strong>Backend</strong></a></li>
+  <li><a href="#frontend" id="toc-frontend" class="nav-link" data-scroll-target="#frontend"><strong>Frontend</strong></a></li>
+  </ul></li>
   </ul></li>
   </ul>
 </nav>
@@ -179,30 +181,49 @@ ul.task-list li input[type="checkbox"] {
 </li>
 <li><strong>Tipo de trabajo</strong>: TFG · Grado en Ingeniería Informática<br>
 </li>
-<li><strong>Director/a</strong>: <em>[Nombre del director/a]</em><br>
-</li>
-<li><strong>Alumno/a</strong>: <em>[Nombre del alumno/a]</em><br>
+<li><strong>Director/a</strong>: Juan Luis Jiménez Laredo</li>
+<li><strong>Alumno/a</strong>: Juan Miguel Acosta Ortega<br>
 </li>
 <li><strong>Organización GitHub</strong>: <a href="https://github.com/TempusUGR" class="uri">https://github.com/TempusUGR</a></li>
 </ul>
 <hr>
 <section id="descripción-general" class="level2">
 <h2 class="anchored" data-anchor-id="descripción-general">1. Descripción general</h2>
-<p>(Aquí puede incluirse un resumen del problema y de la solución: gestión de horarios universitarios, generación de calendarios personalizados, integración con servicios externos, etc.)</p>
-</section>
-<section id="objetivos" class="level2">
-<h2 class="anchored" data-anchor-id="objetivos">2. Objetivos</h2>
-<p>(Lista breve de objetivos del proyecto, por ejemplo: facilitar la planificación de horarios, evitar solapes, ofrecer vistas personalizadas, etc.)</p>
+<p><strong>TempusUGR</strong> es una aplicación de gestión de horarios universitarios diseñada para la <strong>Universidad de Granada (UGR)</strong>. El proyecto nace de la necesidad de modernizar el acceso a la información académica, superando los desafíos de la dispersión de datos y la falta de integración con las herramientas digitales actuales.</p>
+<p>El objetivo principal es ofrecer un <strong>servicio de calendario automático y personalizado</strong> para la comunidad universitaria. Permite a estudiantes y profesores, previa autenticación, generar calendarios personalizados seleccionando los grupos de teoría y prácticas correspondientes a su matrícula o docencia.</p>
+<p>Una de las características fundamentales es la <strong>interoperabilidad con servicios de calendario externos</strong> como Google Calendar, permitiendo a los usuarios exportar y sincronizar sus horarios para tener acceso a la información en tiempo real y desde cualquier dispositivo. En definitiva, TempusUGR busca optimizar la gestión del tiempo y mejorar la experiencia de la comunidad universitaria, promoviendo una gestión académica más eficiente y centralizada.</p>
 </section>
 <section id="tecnologías-utilizadas" class="level2">
-<h2 class="anchored" data-anchor-id="tecnologías-utilizadas">3. Tecnologías utilizadas</h2>
-<p>(Lista resumida de tecnologías: frameworks frontend, backend, bases de datos, servicios externos, etc.)</p>
+<h2 class="anchored" data-anchor-id="tecnologías-utilizadas">2. Tecnologías utilizadas</h2>
+<p>El sistema se ha desarrollado con un stack tecnológico moderno y robusto, separando claramente el backend del frontend.</p>
+<section id="backend" class="level3">
+<h3 class="anchored" data-anchor-id="backend"><strong>Backend</strong></h3>
+<ul>
+<li><strong>Lenguaje:</strong> Java (Versión 21)</li>
+<li><strong>Framework:</strong> Spring Boot (Versión 3.4.4) y Spring Cloud para una arquitectura de microservicios.</li>
+<li><strong>Bases de Datos:</strong>
+<ul>
+<li><strong>MySQL:</strong> Para el servicio de usuarios y el de horarios.</li>
+<li><strong>MongoDB:</strong> Para el servicio de suscripciones académicas, aprovechando su flexibilidad.</li>
+</ul></li>
+<li><strong>Comunicación Asíncrona:</strong> RabbitMQ para el intercambio de mensajes entre servicios.</li>
+<li><strong>Seguridad:</strong> Spring Security con autenticación basada en JWT.</li>
+<li><strong>Descubrimiento de servicios:</strong> Eureka para permitir que los servicios se registren y descubran entre sí.</li>
+<li><strong>Web Scraping:</strong> Jsoup para la extracción de datos de horarios desde el portal de la UGR.</li>
+<li><strong>Contenerización:</strong> Docker para empaquetar los servicios.</li>
+</ul>
 </section>
-<section id="resultados" class="level2">
-<h2 class="anchored" data-anchor-id="resultados">4. Resultados</h2>
-<p>(Breve resumen de lo conseguido: estado final del proyecto, despliegues realizados, validación con usuarios, etc.)</p>
+<section id="frontend" class="level3">
+<h3 class="anchored" data-anchor-id="frontend"><strong>Frontend</strong></h3>
+<ul>
+<li><strong>Framework:</strong> Angular (Versión 19.0.2)</li>
+<li><strong>Lenguaje:</strong> TypeScript, HTML y CSS.</li>
+<li><strong>Estilos:</strong> Tailwind CSS.</li>
+<li><strong>Comunicación con Backend:</strong> Se realizan peticiones HTTP a la API REST del backend utilizando <code>HttpClient</code> de Angular.</li>
+</ul>
 
 
+</section>
 </section>
 </section>
 
