@@ -35,17 +35,51 @@ Además, se incluye un listado de **TFG/TFM dirigidos**, con:
 - Enlaces a sus organizaciones de GitHub.
 - En algunos casos, el **documento de trabajo específico** que se entrega al alumno.
 
+::: {.callout-warning}
+## Importante
+
+Este handbook **no es la guía oficial** de TFG/TFM de la ETSIIT ni de la UGR, ni sustituye a la normativa vigente del centro.  
+Es simplemente *“otro handbook más”* que documenta **cómo suelo trabajar con mis alumnos** y ofrece un marco práctico de referencia.
+:::
+
+
+---
+
+## A quién va dirigido este handbook
+
+Este material está pensado principalmente para:
+
+- Estudiantes de la ETSIIT que van a realizar un **TFG o TFM** conmigo como director (o co-director).
+- Estudiantes que quieran ver **un ejemplo concreto** de cómo estructurar un proyecto de fin de estudios en Ingeniería Informática usando GitHub y metodologías ágiles.
+- Cualquier persona interesada en:
+  - Aplicar enfoques ágiles en proyectos individuales.
+  - Organizar proyectos en GitHub de forma ordenada.
+  - Entender qué se espera de la **memoria** de un TFG/TFM de ingeniería.
+
+En caso de duda o conflicto, la **normativa oficial** de la UGR y de la ETSIIT siempre tiene prioridad sobre lo que se describe aquí.
+
 ---
 
 ## Cómo usar este handbook
 
 Si vas a hacer un TFG/TFM conmigo, el flujo recomendado es:
 
-1. Leer la sección [Metodología ágil](docs/metodologia-agil.qmd) para entender cómo organizaremos el trabajo en sprints.
-2. Revisar [GitHub & organización](docs/github-organizacion.qmd) para crear la organización de tu proyecto y los repositorios mínimos.
-3. Ver [Memoria TFG/TFM](docs/memoria-tfg-tfm.qmd) para saber qué estructura se espera en la memoria.
+1. Leer la sección [Metodología ágil](../docs/metodologia-agil.qmd) para entender cómo organizaremos el trabajo en sprints.
+2. Revisar [GitHub & organización](../docs/github-organizacion.qmd) para crear la organización de tu proyecto y los repositorios mínimos.
+3. Ver [Memoria TFG/TFM](../docs/memoria-tfg-tfm.qmd) para saber qué estructura se espera en la memoria.
 4. Consultar, cuando esté disponible, el **documento de trabajo específico** de tu proyecto  
    (por ejemplo, el del TFG *Pastillero digital inteligente*).
+
+::: {.callout-tip}
+## Primeros pasos recomendados
+
+1. [ ] Crea la **organización de GitHub** de tu proyecto con un nombre en clave (por ejemplo, `PastilleroUGR`).
+2. [ ] Crea al menos:
+   - Un repositorio para el **código**.
+   - Un repositorio para la **documentación/memoria**.
+3. [ ] Configura un **Project** con columnas tipo `Backlog`, `En curso`, `Hecho` y crea los primeros *issues* de tareas.
+4. [ ] Abre y revisa regularmente tu **documento de trabajo específico** para mantener alineadas las expectativas con el director.
+:::
 
 ---
 
@@ -54,7 +88,7 @@ Si vas a hacer un TFG/TFM conmigo, el flujo recomendado es:
 Este handbook **no sustituye** a otros materiales ya existentes en la UGR y en la ETSIIT, sino que los **complementa**.  
 Es muy recomendable que, además de leer estas páginas, revises:
 
-### Libro sobre TFG/TFM en la UGR
+### Libro sobre TFG/TFM en la ETSIIT
 
 - Disponible en la producción científica de la UGR:  
   <https://produccioncientifica.ugr.es/documentos/67e6f8553f806d20a93a1b2a>
@@ -75,10 +109,6 @@ Esta plantilla es especialmente útil si:
 - Prefieres partir de una estructura ya muy pulida y probada para TFG de la ETSIIT.
 - Te interesa ver un ejemplo de cómo automatizar parte del proceso de compilación.
 
-> **Idea práctica**:  
-> Puedes usar este handbook para la **forma de trabajar** (metodología, GitHub, planning)  
-> y, al mismo tiempo, usar la **plantilla de JJ** o el libro de la UGR como referencia para  
-> el estilo y formato de tu memoria.
 
 ---
 
@@ -106,12 +136,14 @@ Esta plantilla es especialmente útil si:
 
 ## TFG/TFM dirigidos (ejemplos)
 
-En la sección **TFG/TFM dirigidos** del menú encontrarás proyectos concretos, por ejemplo:
+En la versión web de este handbook se incluye una sección de **TFG/TFM dirigidos**, donde se irán enlazando los proyectos concretos que superviso, por ejemplo:
 
 - 2024–2025 · TempusUGR
-- 2025–2026 · Pastillero digital inteligente
 
-Cada uno incluye un resumen, enlaces a su organización de GitHub y, cuando procede, su documento de trabajo.
+Cada uno incluye un resumen, enlaces a su organización de GitHub y, cuando procede, su documento de trabajo específico.
+
+En el contexto del libro en PDF puedes usar esa sección como referencia cruzada para consultar ejemplos reales en la versión web.
+
 
 ---
 
