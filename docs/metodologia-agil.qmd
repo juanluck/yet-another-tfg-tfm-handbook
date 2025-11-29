@@ -7,9 +7,9 @@ format:
 
 # `\faTasks{}`{=latex} `<i class="fa fa-tasks" aria-hidden="true"></i>`{=html} Metodología ágil para TFG/TFM
 
-## Objetivo de este documento
+## Objetivo de este capítulo
 
-Este documento explica **cómo trabajaremos tu TFG/TFM usando metodologías ágiles** (Scrum/Kanban ligeros) en el contexto de la ETSIIT (UGR).
+Este capítulo explica **cómo trabajaremos tu TFG/TFM usando metodologías ágiles** (Scrum/Kanban ligeros) en el contexto de la ETSIIT (UGR).
 
 No define la metodología concreta de tu proyecto (eso irá en tu **documento de trabajo específico**), sino el **marco general**:
 
@@ -49,6 +49,7 @@ En este contexto, los roles se mapean así:
   - Mantener el **backlog** y actualizar el estado de las tareas.
   - Desarrollar código, realizar experimentos, escribir documentación.
   - Preparar las demos/entregables de cada sprint.
+  - También asume parte del rol de **Product Owner**
 
 ### Director/a y/o alumno (Product Owner)
 
@@ -285,7 +286,7 @@ Todo lo anterior es el **marco general**.
 Para tu proyecto concreto:
 
 - Recibirás un **documento de trabajo** (en este mismo handbook), por ejemplo:
-  - `pastillero-doc-trabajo.qmd` para el TFG del pastillero inteligente.
+  - `cuentagotas-doc-trabajo.qmd` para un TFG que desarrolla un cuenta gotas.
 - Ese documento:
   - Detalla la metodología específica (por ejemplo, si se usa DCU, técnicas concretas de evaluación, etc.).
   - Aterriza los requisitos, la arquitectura y el planning de tu proyecto.

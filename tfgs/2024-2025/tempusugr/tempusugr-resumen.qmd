@@ -10,24 +10,38 @@ format:
 - **Curso académico**: 2024–2025  
 - **Centro**: ETSIIT · Universidad de Granada  
 - **Tipo de trabajo**: TFG · Grado en Ingeniería Informática  
-- **Director/a**: *[Nombre del director/a]*  
-- **Alumno/a**: *[Nombre del alumno/a]*  
+- **Director/a**: Juan Luis Jiménez Laredo
+- **Alumno/a**: Juan Miguel Acosta Ortega  
 - **Organización GitHub**: <https://github.com/TempusUGR>
 
 ---
 
 ## 1. Descripción general
 
-(Aquí puede incluirse un resumen del problema y de la solución: gestión de horarios universitarios, generación de calendarios personalizados, integración con servicios externos, etc.)
+**TempusUGR** es una aplicación de gestión de horarios universitarios diseñada para la **Universidad de Granada (UGR)**. El proyecto nace de la necesidad de modernizar el acceso a la información académica, superando los desafíos de la dispersión de datos y la falta de integración con las herramientas digitales actuales.
 
-## 2. Objetivos
+El objetivo principal es ofrecer un **servicio de calendario automático y personalizado** para la comunidad universitaria. Permite a estudiantes y profesores, previa autenticación, generar calendarios personalizados seleccionando los grupos de teoría y prácticas correspondientes a su matrícula o docencia.
 
-(Lista breve de objetivos del proyecto, por ejemplo: facilitar la planificación de horarios, evitar solapes, ofrecer vistas personalizadas, etc.)
+Una de las características fundamentales es la **interoperabilidad con servicios de calendario externos** como Google Calendar, permitiendo a los usuarios exportar y sincronizar sus horarios para tener acceso a la información en tiempo real y desde cualquier dispositivo. En definitiva, TempusUGR busca optimizar la gestión del tiempo y mejorar la experiencia de la comunidad universitaria, promoviendo una gestión académica más eficiente y centralizada.
 
-## 3. Tecnologías utilizadas
+## 2. Tecnologías utilizadas
 
-(Lista resumida de tecnologías: frameworks frontend, backend, bases de datos, servicios externos, etc.)
+El sistema se ha desarrollado con un stack tecnológico moderno y robusto, separando claramente el backend del frontend.
 
-## 4. Resultados
+### **Backend**
+* **Lenguaje:** Java (Versión 21) 
+* **Framework:** Spring Boot (Versión 3.4.4) y Spring Cloud para una arquitectura de microservicios.
+* **Bases de Datos:**
+    * **MySQL:** Para el servicio de usuarios y el de horarios.
+    * **MongoDB:** Para el servicio de suscripciones académicas, aprovechando su flexibilidad.
+* **Comunicación Asíncrona:** RabbitMQ para el intercambio de mensajes entre servicios.
+* **Seguridad:** Spring Security con autenticación basada en JWT.
+* **Descubrimiento de servicios:** Eureka para permitir que los servicios se registren y descubran entre sí.
+* **Web Scraping:** Jsoup para la extracción de datos de horarios desde el portal de la UGR.
+* **Contenerización:** Docker para empaquetar los servicios.
 
-(Breve resumen de lo conseguido: estado final del proyecto, despliegues realizados, validación con usuarios, etc.)
+### **Frontend**
+* **Framework:** Angular (Versión 19.0.2) 
+* **Lenguaje:** TypeScript, HTML y CSS.
+* **Estilos:** Tailwind CSS.
+* **Comunicación con Backend:** Se realizan peticiones HTTP a la API REST del backend utilizando `HttpClient` de Angular.

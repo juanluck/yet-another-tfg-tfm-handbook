@@ -5,14 +5,23 @@ format:
     toc: true
 ---
 
-## Objetivo de este documento
+## Objetivo de este capítulo
 
-Este documento describe la **estructura recomendada** para la memoria de tu TFG/TFM y algunas pautas de calidad.
+Este capítulo describe la **estructura recomendada** para la memoria de tu TFG/TFM y algunas pautas de calidad.
 
 No sustituye a la normativa oficial de la ETSIIT o de la UGR (que siempre tiene prioridad), pero:
 
 - Te da una estructura base razonable para la mayoría de proyectos de Ingeniería Informática.
 - Te ayuda a no dejar la memoria para el último momento: la idea es que se vaya **escribiendo en paralelo** al desarrollo.
+
+::: {.callout-tip }
+## Documentos oficiales
+
+Puedes encontrar las plantillas oficiales de la ETSIIT en distintos formatos [en esta URL](https://grados.ugr.es/informatica/informacion/).
+
+Como ejemplo de una buena memoria de TFG, puedes acceder [la repositorio de documentación](https://github.com/TempusUGR/documentation-repo) del [TFG TempusUGR](../tfgs/2024-2025/tempusugr/tempusugr-resumen.qmd)
+
+:::
 
 ---
 
@@ -75,6 +84,16 @@ En proyectos basados en software:
 En proyectos más “experimentales”:
 
 - Puedes centrarse en técnicas, algoritmos, metodologías previas.
+
+::: {.callout-note}
+## Más allá del estado del arte
+
+El último párrafo (o últimos párrafos) de un estado del arte deben responder a la cuestión: **¿en que mejoramos el estado del arte con este proyecto?** 
+
+La lógica es algo así como: *Muy bien, hasta ahora te he estado contando en esta sección todo los proyectos, referencias, frameworks, etc. que son relevantes para nuestro proyecto, pero ninguno de ellos aborda exactamente la problématica que estamos abordando (y, en caso de que si la aborde, tiene los defectos A, B o C). Por lo tanto, este TFG proporciona en este marco una solución **más allá ded estado del arte** que cumple con los objetivos previstos y soluciona A, B o C.*
+
+:::
+
 
 ---
 
@@ -290,14 +309,13 @@ La memoria es parte esencial de la evaluación: no solo importa el producto fina
 
 Además de este handbook, es muy recomendable que consultes otros recursos ya existentes en la UGR y en la ETSIIT, especialmente para profundizar en la parte **formal** de la memoria:
 
-### Libro sobre TFG/TFM en la UGR
+### Libro sobre TFG/TFM en la ETSIIT
 
-- Publicación disponible en la producción científica de la UGR:  
-  <https://produccioncientifica.ugr.es/documentos/67e6f8553f806d20a93a1b2a>
+- Tal vez ya conozcas el libro [Cómo escribir la memoria de tu TFG del Grado en Ingeniería Informática y presentarlo sin morir en el intento](https://produccioncientifica.ugr.es/documentos/67e6f8553f806d20a93a1b2a) publicado en abierto por profesores compañeros de la ETSIIT.
 
 Este libro ofrece:
 
-- Una visión general de qué es un TFG/TFM en el contexto de la UGR.
+- Una visión general de qué es un TFG/TFM en el contexto de la ETSIIT.
 - Recomendaciones sobre estructura, estilo y redacción académica.
 - Pautas sobre evaluación y aspectos formales.
 
@@ -305,7 +323,7 @@ Este libro ofrece:
 
 - Repositorio: <https://github.com/JJ/plantilla-TFG-ETSIIT>
 
-Es especialmente útil si:
+Aunque hace bastante tiempo que no se actualiza, es especialmente útil si:
 
 - Quieres escribir la memoria en **LaTeX**.
 - Prefieres partir de una plantilla ya adaptada a la ETSIIT.

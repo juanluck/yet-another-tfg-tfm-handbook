@@ -4,10 +4,7 @@ project:
 
 website:
   title: "Yet Another TFG/TFM Handbook"
-  author: "Juan Luis Jiménez Laredo"      
-  date: "2025"
   # Opcional: subtítulo, portada, etc.
-  subtitle: "Guía de trabajo para proyectos TFG/TFM en la ETSIIT - UGR"
 
   navbar:
     left:

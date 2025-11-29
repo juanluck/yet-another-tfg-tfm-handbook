@@ -6,9 +6,9 @@ format:
 ---
 
 
-## Objetivo de este documento
+## Objetivo de este capítulo
 
-Este documento explica **cómo organizaremos el proyecto en GitHub**:
+Este capítulo explica **cómo organizaremos el proyecto en GitHub**:
 
 - Creación de una **organización por proyecto** (en lugar de usar tu cuenta personal).
 - Estructura recomendada de **repositorios**.
@@ -16,7 +16,7 @@ Este documento explica **cómo organizaremos el proyecto en GitHub**:
 - Recomendaciones generales sobre **integración continua (CI)**.
 
 > La CI se propone como opción recomendada, no obligatoria: tú decides si la aplicas en tu TFG/TFM.  
-> En este handbook sí se usa CI para generar la web, y puedes tomarlo como ejemplo.
+> En este handbook sí se usa CI para generar la web, y puedes tomarlo como ejemplo. Puedes echar un vistazo a su [repositorio de github](https://github.com/juanluck/yet-another-tfg-tfm-handbook).
 
 ---
 
@@ -27,9 +27,12 @@ En la mayoría de TFG/TFM que dirija seguiremos esta idea:
 - Crear una **organización específica en GitHub** para el proyecto.
 - El nombre será un **nombre en clave**, no tu nombre personal.
 
+Ejemplo de organización de TFG ya creada:
+
+- [TempusUGR](https://github.com/TempusUGR/)
+
 Ejemplos de nombres de organización:
 
-- `TempusUGR`
 - `PastilleroUGR`
 - `HorarioUGR`
 - `SenseUGR`
@@ -232,4 +235,4 @@ Cuando empieces tu TFG/TFM, deberías:
    - Tecnologías principales.
 
 La integración continua (CI) es recomendable pero opcional:  
-[ ] Si decides usarla, crea un workflow sencillo para lanzar tests o validaciones básicas en cada push.
+6. [ ] Si decides usarla, crea un workflow sencillo para lanzar tests o validaciones básicas en cada push.

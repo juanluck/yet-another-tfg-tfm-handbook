@@ -25,7 +25,7 @@ Aquí encontrarás:
 
 - Cómo organizaremos tu TFG/TFM usando **metodologías ágiles** (sprints, backlog, issues…).
 - Cómo usaremos **GitHub**:
-  - Creación de una **organización por proyecto** (con un nombre en clave, p.ej. `TempusUGR`, `PastilleroUGR`, etc.).
+  - Creación de una **organización por proyecto** (con un nombre en clave, p.ej. `TempusUGR`).
   - Repositorios de código y documentación.
   - Projects, Issues y Milestones para gestionar el trabajo.
 - Qué se espera de la **memoria del TFG/TFM** (estructura, contenido mínimo, calidad).
