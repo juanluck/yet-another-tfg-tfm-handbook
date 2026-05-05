@@ -23,7 +23,6 @@ jobs:
 
       - name: Install missing LaTeX packages
         run: |
-          quarto install tinytex --update
           tlmgr install luatexbase
           
       - name: Render website and book in pdf
