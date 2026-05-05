@@ -1,0 +1,150 @@
+---
+title: "Declaración de uso responsable de herramientas de IA generativa"
+format:
+  html:
+    toc: true
+---
+
+
+## Objetivo de este capítulo
+
+Durante la realización del Trabajo Fin de Grado es cada vez más habitual que el alumnado utilice herramientas de inteligencia artificial generativa, como modelos de lenguaje, asistentes de programación, traductores avanzados o sistemas de apoyo a la redacción.
+
+Estas herramientas pueden ser útiles en muchas fases del trabajo: organizar ideas, revisar la claridad de un texto, mejorar la redacción, generar ejemplos, ayudar a depurar código, documentar funciones, preparar pruebas o explorar alternativas técnicas. Sin embargo, su uso debe hacerse de forma ética, crítica y transparente.
+
+El objetivo de este capítulo es orientar al alumnado sobre cómo declarar el uso de estas herramientas en la memoria del TFG. No se trata de prohibir su uso ni de penalizarlo automáticamente, sino de fomentar una actitud responsable: el estudiante debe saber explicar qué herramientas ha utilizado, para qué las ha utilizado, qué partes del trabajo se han visto afectadas y cómo ha revisado o validado los resultados obtenidos.
+
+El TFG sigue siendo un trabajo académico individual, evaluable y defendible. Por tanto, el uso de IA generativa no puede sustituir la comprensión del problema, la toma de decisiones, el desarrollo técnico, el análisis de resultados ni la responsabilidad sobre el contenido entregado.
+
+Incluir una declaración de uso responsable de IA generativa permite mostrar transparencia académica y madurez profesional. Además, ayuda al tribunal a entender mejor el proceso seguido durante la elaboración del trabajo.
+
+## Recomendaciones para el alumnado
+
+Al redactar la declaración de uso de IA generativa, es recomendable tener en cuenta los siguientes aspectos.
+
+### Sé honesto y específico
+
+No basta con indicar de forma genérica que se ha utilizado una herramienta de IA. Conviene explicar qué herramientas se han usado y con qué finalidad.
+
+Por ejemplo, no es lo mismo utilizar una herramienta para corregir errores gramaticales que usarla para generar fragmentos de código, proponer una arquitectura software, resumir documentación técnica o redactar apartados completos de la memoria.
+
+Una buena declaración debe reflejar el uso real que se ha hecho de estas herramientas, sin exagerarlo ni minimizarlo.
+
+### Indica las herramientas utilizadas
+
+Es recomendable mencionar explícitamente las herramientas empleadas, por ejemplo:
+
+- ChatGPT
+- GitHub Copilot
+- Gemini
+- Claude
+- DeepL
+- Grammarly
+- Perplexity
+- otras herramientas similares
+
+También puede indicarse, si se considera relevante, el tipo de uso realizado con cada una de ellas.
+
+### Explica para qué se han usado
+
+La declaración debe describir las tareas concretas en las que la IA ha servido de apoyo. Algunos ejemplos pueden ser:
+
+- organización inicial de ideas;
+- revisión lingüística o mejora del estilo;
+- reformulación de textos redactados previamente;
+- generación de ejemplos o explicaciones alternativas;
+- apoyo en la escritura, depuración o refactorización de código;
+- generación de pruebas unitarias o casos de prueba;
+- documentación de funciones, clases o módulos;
+- traducción o revisión de textos en otros idiomas;
+- búsqueda inicial de enfoques o alternativas técnicas.
+
+El estudiante debe adaptar esta lista a su caso real.
+
+### Identifica las partes del trabajo afectadas
+
+Cuando proceda, conviene indicar qué partes del TFG se han visto afectadas por el uso de estas herramientas. Por ejemplo:
+
+- apartados concretos de la memoria;
+- módulos del código fuente;
+- scripts auxiliares;
+- pruebas unitarias;
+- documentación técnica;
+- diagramas, tablas o explicaciones;
+- textos traducidos o revisados.
+
+No siempre será necesario enumerarlo todo con mucho detalle, pero sí debe quedar claro el alcance aproximado del uso realizado.
+
+### Revisa críticamente todo resultado generado
+
+Los modelos de IA pueden producir respuestas incorrectas, incompletas, imprecisas o aparentemente convincentes pero falsas. Por ello, cualquier contenido sugerido por una herramienta de IA debe ser revisado por el estudiante.
+
+En el caso de texto, debe comprobarse que las afirmaciones sean correctas, que el contenido sea coherente con el trabajo y que no se introduzcan errores conceptuales.
+
+En el caso de código, el estudiante debe asegurarse de que lo comprende, que funciona correctamente, que se ajusta al diseño del proyecto y que ha sido probado adecuadamente.
+
+### Contrasta la información importante
+
+Cuando la IA se utilice para obtener explicaciones técnicas, referencias, bibliografía, definiciones, comparaciones o decisiones de diseño, la información relevante debe contrastarse con fuentes fiables: documentación oficial, artículos académicos, libros, normativa, repositorios del proyecto o materiales proporcionados por el tutor.
+
+La IA generativa no debe considerarse una fuente académica en sí misma salvo que la normativa del centro indique explícitamente cómo citarla.
+
+### Asume la responsabilidad del trabajo entregado
+
+El uso de IA no exime al estudiante de comprender y defender su trabajo. Todo lo incluido en la memoria, en el código o en los materiales entregados debe poder ser explicado y justificado por el autor o autora del TFG.
+
+No es aceptable incluir texto, código, resultados o afirmaciones generadas automáticamente si no han sido revisadas, comprendidas y validadas.
+
+### Consulta la normativa aplicable
+
+Cada universidad, escuela, facultad o titulación puede tener criterios específicos sobre el uso de herramientas de IA generativa. Antes de entregar la memoria, el estudiante debe comprobar si existe una normativa, guía o recomendación oficial sobre cómo declarar este uso.
+
+En caso de duda, es recomendable consultarlo con el tutor o tutora del TFG.
+
+## Plantilla de ejemplo
+
+A continuación se proporciona una plantilla que puede adaptarse a la realidad de cada TFG. No debe copiarse de forma automática: cada estudiante debe modificarla para reflejar honestamente el uso que haya hecho de herramientas de IA generativa.
+
+### Declaración de uso responsable de herramientas de IA generativa
+
+Durante la elaboración de este Trabajo Fin de Grado se han utilizado herramientas de inteligencia artificial generativa, como modelos de lenguaje de gran escala y/o asistentes de programación, de forma auxiliar y bajo criterios de uso ético, crítico y responsable.
+
+El uso de estas herramientas ha estado orientado a apoyar determinadas tareas del proceso de trabajo, sin sustituir la autoría, el criterio técnico ni la responsabilidad académica del/de la estudiante.
+
+En particular, las herramientas de IA se han utilizado para las siguientes finalidades:
+
+> **[Seleccionar, modificar o eliminar lo que corresponda]**
+>
+> - Apoyo en la organización inicial de ideas y estructura de la memoria.
+> - Revisión lingüística, mejora de estilo o reformulación de fragmentos redactados previamente por el/la estudiante.
+> - Generación de ejemplos, explicaciones alternativas o aclaraciones conceptuales.
+> - Apoyo en la depuración, documentación o refactorización de código.
+> - Generación de fragmentos de código auxiliares posteriormente revisados, adaptados y validados.
+> - Ayuda en la preparación de pruebas, casos de uso o documentación técnica.
+> - Traducción o revisión de textos en otros idiomas.
+> - Otros usos: **[describir aquí]**.
+
+En todos los casos, los resultados proporcionados por estas herramientas han sido revisados críticamente. El/la estudiante ha comprobado la corrección técnica, la coherencia con los objetivos del trabajo, la adecuación al contexto académico y, cuando ha sido necesario, la validez de las fuentes, algoritmos, fragmentos de código o afirmaciones generadas.
+
+El uso de IA generativa no ha sustituido el trabajo intelectual propio ni la toma de decisiones fundamentales del proyecto. El diseño, desarrollo, análisis, evaluación, redacción final y conclusiones del TFG son responsabilidad del/de la autor/a de este trabajo.
+
+Cuando se han utilizado herramientas de IA para asistir en la elaboración de código, el código resultante ha sido revisado, comprendido, probado y adaptado por el/la estudiante. Asimismo, se ha comprobado que su inclusión es compatible con las licencias, dependencias y requisitos técnicos del proyecto.
+
+El/la estudiante declara que ha utilizado estas herramientas de forma honesta y transparente, evitando presentar como propio trabajo no comprendido, no revisado o generado automáticamente sin supervisión crítica.
+
+**Herramientas utilizadas:**  
+**[Indicar nombre de la herramienta o herramientas, por ejemplo: ChatGPT, GitHub Copilot, Gemini, Claude, Perplexity, DeepL, Grammarly, etc.]**
+
+**Usos concretos realizados:**  
+**[Describir brevemente el uso real. Por ejemplo: “Se utilizó ChatGPT para revisar la claridad de algunos apartados de la memoria y GitHub Copilot como apoyo puntual en la escritura de pruebas unitarias. Todo el contenido fue revisado y validado por el autor.”]**
+
+**Partes del trabajo afectadas:**  
+**[Indicar, si procede, secciones de la memoria, módulos de código, scripts, documentación, pruebas, diagramas, traducciones, etc.]**
+
+**Validación realizada:**  
+**[Indicar cómo se revisaron los resultados. Por ejemplo: revisión manual, ejecución del código, pruebas unitarias, contraste con documentación oficial, revisión bibliográfica, validación con el tutor o tutora, etc.]**
+
+**Fecha o periodo aproximado de uso:**  
+**[Opcional: indicar el periodo de utilización, los modelos avanzan a una velocidad vertiginosa]**
+
+

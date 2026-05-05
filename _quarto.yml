@@ -16,6 +16,8 @@ website:
         text: GitHub & organización
       - href: docs/memoria-tfg-tfm.qmd
         text: Memoria
+      - href: docs/uso-responsable-ia.qmd
+        text: Uso de la IA
       - text: TFG/TFM dirigidos
         menu:
           - href: tfgs/2024-2025/tempusugr/tempusugr-resumen.qmd

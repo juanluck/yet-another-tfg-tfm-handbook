@@ -21,6 +21,7 @@ book:
     - ../docs/metodologia-agil.qmd
     - ../docs/github-organizacion.qmd
     - ../docs/memoria-tfg-tfm.qmd
+    - ../docs/uso-responsable-ia.qmd
 
 format:
   pdf:
