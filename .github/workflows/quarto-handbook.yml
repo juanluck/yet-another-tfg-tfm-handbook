@@ -20,20 +20,23 @@ jobs:
         uses: quarto-dev/quarto-actions/setup@v2
         with:
           tinytex: true
-
       - name: Install missing LaTeX packages
         run: |
           # Wait for TinyTeX to be fully initialized
           sleep 2
-          
+    
           # Find and add tlmgr to PATH
           export PATH="$HOME/.TinyTeX/bin/x86_64-linux:$PATH"
-          
+    
           # Verify tlmgr is available
           which tlmgr || tlmgr --version
-          
-          # Install the package
-          tlmgr install luatexbase
+    
+          # Set a more reliable repository mirror
+          tlmgr repository set https://mirror.ctan.org/systems/texlive/tlnet
+    
+          # Install the package with retry
+          tlmgr install luatexbase || (sleep 5 && tlmgr install luatexbase)
+     
           
       - name: Render website and book in pdf
         run: |
