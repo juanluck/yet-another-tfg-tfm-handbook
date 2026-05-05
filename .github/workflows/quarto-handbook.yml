@@ -21,6 +21,10 @@ jobs:
         with:
           tinytex: true
 
+      - name: Install missing LaTeX packages
+        run: |
+          tlmgr install luatexbase
+
       - name: Render website and book in pdf
         run: |
           quarto render                 # web (usa el _quarto.yml de la raíz)
