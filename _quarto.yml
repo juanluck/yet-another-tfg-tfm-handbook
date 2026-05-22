@@ -22,8 +22,7 @@ website:
         menu:
           - href: tfgs/2024-2025/tempusugr/tempusugr-resumen.qmd
             text: 2024–2025 · TempusUGR
-          - href: tfgs/2025-2026/pastillero-inteligente/pastillero-resumen.qmd
-            text: 2025–2026 · Pastillero
+
 
 format:
   html:
